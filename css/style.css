@@ -39,6 +39,10 @@ footer {
 }
 
 .menuB a li {
+    padding-left: 2.3%;
+    padding-right: 5.2%;
+    padding-bottom: 5px;
+    padding-top: 5px;
     font-size: 2em;
     display: flex;
     width: auto;
@@ -53,6 +57,10 @@ footer {
 
 .menuA a li:hover, .menuB a li:hover {
     background-color: grey;
+}
+
+.btnConnect{
+    width: fit-content;
 }
 @media screen and (min-width: 992px) {
     .globalMenu {
@@ -220,5 +228,63 @@ footer {
     word-wrap: break-word;
     text-decoration: none;
     width: 100%;
+}
+
+.divPhotoUser
+{
+    padding: 0px;
+    text-align: center;
+}
+
+.divInfosUser
+{
+
+    padding: 0px;
+}
+
+.photoUser
+{
+    text-align : center;
+
+}
+
+.cardPhotoUser
+{
+   padding-top: 30%;
+}
+
+.userName
+{
+    text-align : center;
+    font-size: 30px;
+}
+.infos{
+    float: left;
+    font-size: 25px;
+    padding: 30px;
+}
+
+.userInfos
+{
+    text-align: center;
+    vertical-align: center;
+}
+
+.infosTitle
+{
+    font-weight: bold;
+    float: left;
+    font-size: 25px;
+    padding: 30px;
+    color: darkgrey;
+}
+.divInfosUser{
+    background-color: #c9c9c9;
+    box-shadow: 1px 1px 10px black;
+}
+
+.fa
+{
+    padding-top: 20px ;
 }
 
