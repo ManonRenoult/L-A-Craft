@@ -33,7 +33,7 @@ if(isset($validation)) {
                         <a href="#" onclick="document.location.href='./index.php';"><li>Accueil</li></a>
                         <a href="#" onclick="document.location.href='./index.php';"><li>Map</li></a>
                         <a href="#" onclick="document.location.href='./index.php';"><li>Voter</li></a>
-                        <a href="#" onclick="document.location.href='./index.php';"><li>Wiki</li></a>
+                        <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
                     </ul>
                 </div>
                 <div class="col-2 col-md-6 maxHeight">

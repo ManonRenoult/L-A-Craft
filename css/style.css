@@ -333,3 +333,31 @@ footer {
         padding: 15px;
     }
 }
+
+/*Style page nous rejoindre*/
+
+.containerRejoindre
+{
+    font-size: 2em;
+    background-color: #c9c9c9;
+    box-shadow: 1px 1px 10px black;
+}
+
+
+.cardAllJoin{
+    background: url("../images/nousRejoindre.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+.cardCommands{
+    background: url("../images/commandes.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
