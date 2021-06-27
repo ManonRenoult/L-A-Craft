@@ -31,7 +31,7 @@ if(isset($validation)) {
                 <div class="col-10 col-md-6 maxHeight">
                     <ul class="menuA">
                         <a href="#" onclick="document.location.href='./index.php';"><li>Accueil</li></a>
-                        <a href="#" onclick="document.location.href='./index.php';"><li>Map</li></a>
+                        <a href="#" onclick="document.location.href='./map.php';"><li>Map</li></a>
                         <a href="#" onclick="document.location.href='./index.php';"><li>Voter</li></a>
                         <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
                     </ul>
@@ -47,7 +47,7 @@ if(isset($validation)) {
             <div class="row maxHeight">
                 <div class="offset-lg-4 offset-md-3 offset-sm-3 col-lg-4 col-md-6 col-sm-6 maxHeight rowNbPlayer">
 
-                    <div id="nbPLayer"><i class="fas fa-globe-europe"></i>&nbsp;&nbsp;Chargement ...</div>
+                    <div id="nbPLayer"><img src="images/world.png" width="10%">&nbsp;&nbsp;Chargement ...</div>
                 </div>
             </div>
         </div>

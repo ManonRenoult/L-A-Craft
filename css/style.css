@@ -98,6 +98,7 @@ footer {
 
 .containerAB {
     height: 85%;
+    box-shadow: 0px 0px 10px black;
 }
 
 #nbPLayer {
@@ -121,12 +122,16 @@ footer {
 .containerC {
     padding-top: 4%;
     padding-bottom: 4%;
+
 }
 
 .cardAll a {
     text-decoration: none;
 }
 
+.footer{
+    box-shadow: 0px 0px 15px black;
+}
 .cardAllJoin{
     background: url("../images/nousRejoindre.jpg") no-repeat center center;
     -webkit-background-size: cover;
@@ -339,7 +344,7 @@ footer {
 .containerRejoindre
 {
     font-size: 2em;
-    background-color: #c9c9c9;
+    background-color: #e3e3e3;
     box-shadow: 1px 1px 10px black;
 }
 
@@ -360,4 +365,8 @@ footer {
     -o-background-size: cover;
     background-size: cover;
     height: 100%;
+}
+
+.map{
+    height: 600px;
 }
