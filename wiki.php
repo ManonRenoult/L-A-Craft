@@ -17,7 +17,7 @@
                     <a class="cardLink" href="#"  onclick="document.location.href='./commandes.php';">
                         <div class="btn cardCommands">
                             <div class="cardTitle">
-                                <div class="tucasse">Les commandes</div>
+                                <div class="tucasse">Les pipi</div>
                             </div>
                         </div>
                     </a>
