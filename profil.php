@@ -5,7 +5,7 @@
         <div class="col-lg-3 col-md-12 col-sm-12 divPhotoUser">
             <div class="cardPhotoUser">
                 <div class="photoUser">
-                    <img src="images/userPhoto.jpg" width=60% style="border-radius : 50%; box-shadow: 1px 1px 10px black;" >
+                    <img class ="photo" src="images/userPhoto.jpg"   >
                 </div>
                 <div class="userName">
                     ManonTheGoat
