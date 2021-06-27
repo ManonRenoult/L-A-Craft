@@ -7,6 +7,7 @@ session_start();
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/3821d4a8a5.js" crossorigin="anonymous"></script>
 
     <title>Isayev Server</title>
 </head>
@@ -27,17 +28,17 @@ if(isset($validation)) {
     <div class="globalMenu">
         <div class="container-fluid containerA">
             <div class="row menuBar maxHeight">
-                <div class="col-10 maxHeight">
+                <div class="col-10 col-md-6 maxHeight">
                     <ul class="menuA">
                         <a href="#" onclick="document.location.href='./index.php';"><li>Accueil</li></a>
-                        <a href="#" onclick="document.location.href='./index.php';"><li>Map</li></a>
+                        <a href="#" onclick="document.location.href='./map.php';"><li>Map</li></a>
                         <a href="#" onclick="document.location.href='./index.php';"><li>Voter</li></a>
-                        <a href="#" onclick="document.location.href='./index.php';"><li>Wiki</li></a>
+                        <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
                     </ul>
                 </div>
-                <div class="col-2 maxHeight">
+                <div class="col-2 col-md-6 maxHeight">
                     <ul class="menuB">
-                        <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li><div class="btnConnect"><img src="images/user.svg" height="50%" width="20%">&nbsp;<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'Se déconnecter';}else {echo 'Se connecter';}?></div></li></a>'
+                        <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li><div class="btnConnect"><i class="far fa-user"></i>&nbsp;<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'Se déconnecter';}else {echo 'Se connecter';}?></div></li></a>'
                     </ul>
                 </div>
             </div>
@@ -46,7 +47,7 @@ if(isset($validation)) {
             <div class="row maxHeight">
                 <div class="offset-lg-4 offset-md-3 offset-sm-3 col-lg-4 col-md-6 col-sm-6 maxHeight rowNbPlayer">
 
-                    <div id="nbPLayer"><img src="images/world.png" width="10%" height="50%">&nbsp;&nbsp;Chargement ...</div>
+                    <div id="nbPLayer"><img src="images/world.png" width="10%">&nbsp;&nbsp;Chargement ...</div>
                 </div>
             </div>
         </div>
