@@ -2,7 +2,7 @@
 include 'menu.php';
 if (isset($_POST['forminscription'])) {
     try{
-        $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew' );
+        $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_7KenhMQwm4', '+Nw!9Wx@^j^enb9v2Rv=a8K4' );
         $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     catch(PDOException $e){
