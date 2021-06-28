@@ -8,6 +8,8 @@ body {
     background-color: lightgray;
 }
 
+/* Style menu/footer rpout*/
+
 footer {
     background-color: grey;
     margin-top: 6%;
@@ -39,6 +41,10 @@ footer {
 }
 
 .menuB a li {
+    padding-left: 2.3%;
+    padding-right: 5.2%;
+    padding-bottom: 5px;
+    padding-top: 5px;
     font-size: 2em;
     display: flex;
     width: auto;
@@ -53,6 +59,10 @@ footer {
 
 .menuA a li:hover, .menuB a li:hover {
     background-color: grey;
+}
+
+.btnConnect{
+    width: fit-content;
 }
 @media screen and (min-width: 992px) {
     .globalMenu {
@@ -88,6 +98,7 @@ footer {
 
 .containerAB {
     height: 85%;
+    box-shadow: 0px 0px 10px black;
 }
 
 #nbPLayer {
@@ -111,12 +122,16 @@ footer {
 .containerC {
     padding-top: 4%;
     padding-bottom: 4%;
+
 }
 
 .cardAll a {
     text-decoration: none;
 }
 
+.footer{
+    box-shadow: 0px 0px 15px black;
+}
 .cardAllJoin{
     background: url("../images/nousRejoindre.jpg") no-repeat center center;
     -webkit-background-size: cover;
@@ -187,6 +202,8 @@ footer {
     }
 }
 
+/* Style page connexion/inscription*/
+
 .connectCard {
     background-color: grey;
     border-radius : 10px;
@@ -222,3 +239,134 @@ footer {
     width: 100%;
 }
 
+/* Style page profil*/
+
+.divPhotoUser
+{
+    padding: 0px;
+    text-align: center;
+}
+
+.divInfosUser
+{
+
+    padding: 0px;
+}
+
+.photoUser
+{
+    text-align : center;
+
+}
+
+.cardPhotoUser
+{
+   padding-top: 30%;
+}
+
+.userName
+{
+    text-align : center;
+    font-size: 30px;
+}
+.infos{
+    float: left;
+    font-size: 25px;
+    padding: 30px;
+}
+
+.userInfos
+{
+    text-align: center;
+    vertical-align: center;
+}
+
+.infosTitle
+{
+    font-weight: bold;
+    float: left;
+    font-size: 25px;
+    padding: 30px;
+}
+.divInfosUser{
+    background-color: #c9c9c9;
+    box-shadow: 1px 1px 10px black;
+}
+
+.fa
+{
+    padding-top: 20px ;
+}
+
+.photo{
+    width : 60%;
+    border-radius : 50%; box-shadow: 1px 1px 10px black;
+}
+@media screen and (max-width: 992px) {
+
+    .photoUser {
+        width: 100%;
+
+    }
+    .cardPhotoUser{
+        padding-top: 0px;
+        text-align: center;
+    }
+    .userName
+    {
+        text-align : center;
+        font-size: 50px;
+    }
+    .infos{
+        float: left;
+        font-size: 35px;
+        padding: 15px;
+    }
+
+    .userInfos
+    {
+        text-align: center;
+        vertical-align: center;
+        padding-bottom: 10px;
+    }
+
+    .infosTitle
+    {
+        font-weight: bold;
+        float: left;
+        font-size: 40px;
+        padding: 15px;
+    }
+}
+
+/*Style page nous rejoindre*/
+
+.containerRejoindre
+{
+    font-size: 2em;
+    background-color: #e3e3e3;
+    box-shadow: 1px 1px 10px black;
+}
+
+
+.cardAllJoin{
+    background: url("../images/nousRejoindre.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+.cardCommands{
+    background: url("../images/commandes.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+.map{
+    height: 600px;
+}
