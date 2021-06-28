@@ -2,7 +2,7 @@
 include 'menu.php';
 
 try{
-    $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_7KenhMQwm4', '+Nw!9Wx@^j^enb9v2Rv=a8K4' );
+    $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew' );
     $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(PDOException $e){
@@ -37,7 +37,7 @@ if (isset($_POST['formconnect'])) {
         <form method="post" action="">
             <div class="row">
                 <h1 class="offset-3 col-4">Connexion</h1>
-                <div class="col-4"><a href="#" style="text-decoration: none;" onclick="document.location.href='./inscription.php';"><div class="btn" style="background-color: #0a58ca; color:white;">S'inscrire</div></a></div>
+                <div class="col-4"><a href="#" style="text-decoration: none;" onclick="document.location.href='./inscription.php';"><div class="btn" style="background-color: #0a58ca">S'inscrire</div></a></div>
             </div>
 
             <div class="row">
