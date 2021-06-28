@@ -3,7 +3,7 @@
     <div class="row maxHeight">
         <div class="col-lg-5 col-md-12 col-sm-12 boxCard">
             <div class="cardAll">
-                <a class="cardLink" href="#"  onclick="document.location.href='./index.php';">
+                <a class="cardLink" href="#"  onclick="document.location.href='./rejoindre.php';">
                     <div class="btn cardAllJoin">
                         <div class="cardTitle">
                             <div class="tucasse">Nous rejoindre</div>
