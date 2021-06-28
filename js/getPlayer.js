@@ -2,6 +2,7 @@ var urlServer = "https://api.minetools.eu/ping/frhb62360ds.ikexpress.com"
 
 $.getJSON(urlServer, function(r) {
     if(r.error){
+        //$('#nbPLayer').html('<img src="images/world.png" width="10%">&nbsp;&nbsp;<b>Le serveur est éteint</b>');
         $('#nbPLayer').html('<img src="images/world.png" width="10%">&nbsp;&nbsp;<b>Le serveur est éteint</b>');
         return false;
     }
