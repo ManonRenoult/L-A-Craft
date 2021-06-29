@@ -25,7 +25,9 @@ setInterval(function(){
 }, 4000)
 
 setTimeout(function(){
-    if ($('#errorCheck').length > 0) {
-        $('#errorCheck').remove();
-    }
+    $('#errorCheck').fadeOut(300, function (){
+        if ($('#errorCheck').length > 0) {
+            $('#errorCheck').remove();
+        }
+    })
 }, 8000);

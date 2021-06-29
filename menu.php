@@ -11,20 +11,31 @@ session_start();
 
     <title>Isayev Server</title>
 </head>
-<body class="maxHeight">
 <?php
 //    Erreur de connexion
-if (isset($_GET['bad_connect']) && $_GET['bad_connect'] == "1") {
-    echo '<div class="alert alert-danger" role="alert" id="errorCheck">Pseudo ou mot de passe incorrect</div>';
-}
-
-if(isset($erreur)) {
-    echo $erreur;
-}
-if(isset($validation)) {
-    echo $validation;
+if (isset($_GET['bad_connect'])) {
+    if($_GET['bad_connect'] == "1"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Pseudo ou mot de passe incorrect</div></div></div></div>';
+    }elseif ($_GET['bad_connect'] == "2"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Tous les champs doivent être complétés !</div></div></div></div>';
+    }
+} elseif (isset($_GET['bad_inscription'])){
+    if($_GET['bad_inscription'] == "1"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Vos Mot de passe de corresponde pas !</div></div></div></div>';
+    }elseif ($_GET['bad_inscription'] == "2"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Ce pseudo existe deja !</div></div></div></div>';
+    }elseif ($_GET['bad_inscription'] == "3"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Votre Pseudo est trop grand !</div></div></div></div>';
+    }elseif ($_GET['bad_inscription'] == "4"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Tous les champs doivent être complétés !</div></div></div></div>';
+    }
+} elseif (isset($_GET['ok_inscription'])){
+    if($_GET['ok_inscription'] == "1"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-success zIndex2" role="alert" >Votre compte a bien été crée !</div></div></div></div>';
+    }
 }
 ?>
+<body class="maxHeight zIndex1">
     <div class="globalMenu">
         <div class="container-fluid containerA">
             <div class="row menuBar maxHeight">
