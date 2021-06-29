@@ -1,5 +1,26 @@
 <?php
 include 'menu.php';
+
+$_SESSION['link'] = $_SERVER['PHP_SELF'];
+$link = $_SESSION['link'];
+
+function generateRandomString($length = 16) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyz';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
+function encryptPass($Pass, $randomSalt2) {
+    $firstHash = hash('sha256', $Pass);
+    $secondHash = hash('sha256', $firstHash.$randomSalt2);
+    $endPass = "$"."SHA$" . $randomSalt2 . "$" . $secondHash;
+    return $endPass;
+}
+
 if (isset($_POST['forminscription'])) {
     try{
         $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew' );
@@ -10,36 +31,31 @@ if (isset($_POST['forminscription'])) {
     }
     if (!empty($_POST['username']) && !empty($_POST['mdp']) && !empty($_POST['mdp2'])) {
         $username = htmlspecialchars($_POST['username']);
-        //$mdp = sha1($_POST['mdp']);
-        //$mdp2 = sha1($_POST['mdp2']);
-        $mdp = $_POST['mdp'];
-        $mdp2 = $_POST['mdp2'];
+        $randomSalt = generateRandomString();
+        $mdp = encryptPass($_POST['mdp'], $randomSalt);
+        $mdp2 = encryptPass($_POST['mdp2'], $randomSalt);
+
         if (strlen($username) <= 50) {
-            $reqpseudo = $bdh->prepare("SELECT * FROM membresWeb WHERE username = ?");
+            $reqpseudo = $bdh->prepare("SELECT * FROM authme WHERE realname = ?");
             $reqpseudo->execute(array($username));
             $pseudoexist = $reqpseudo->rowCount();
             if ($pseudoexist == 0) {
                 if ($mdp == $mdp2) {
-
-                    $insertmbr = $bdh->prepare("INSERT INTO membresWeb(username, password) VALUES(?, ?)");
-                    $insertmbr->execute(array($username, $mdp));
-                    $validation = header('./index.php');
-
+                    $usernameLower = strtolower($username);
+                    $insertmbr = $bdh->prepare("INSERT INTO authme(username,realname, password) VALUES(?,?, ?)");
+                    $insertmbr->execute(array($usernameLower,$username, $mdp));
+                    header('Location:  ./index.php?ok_inscription=1');
                 } else {
-                    $erreur = '<div class="alert alert-danger" role="alert" id="errorCheck">Vos Mot de passe de corresponde pas !</div>';
-
+                    header("location: $link" . "?bad_inscription=1");
                 }
             } else {
-                $erreur = '<div class="alert alert-danger" role="alert" id="errorCheck">Ce pseudo existe deja !</div>';
-
+                header("location: $link" . "?bad_inscription=2");
             }
         } else {
-            $erreur = '<div class="alert alert-danger" role="alert" id="errorCheck">Votre Pseudo est trop grand !</div>';
-
+            header("location: $link" . "?bad_inscription=3");
         }
     } else {
-        $erreur = '<div class="alert alert-danger" role="alert" id="errorCheck">Tous les champs doivent être complétés !</div>';
-
+        header("location: $link" . "?bad_inscription=4");
     }
 }
 ?>

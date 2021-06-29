@@ -371,3 +371,19 @@ footer {
 .map{
     height: 600px;
 }
+
+/*Style gestion des erreurs */
+
+#errorCheck {
+    position:absolute;
+    z-index: 2;
+}
+
+.zIndex1 {
+    z-index: 1;
+}
+.zIndex2 {
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
