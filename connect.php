@@ -10,15 +10,52 @@ function encryptPass($Pass, $randomSalt2) {
     return $endPass;
 }
 
-function getPass($userForTest, $bdh) {
+function getPass($userName, $bdh) {
     $endPass = '';
     $getPassword = $bdh->prepare("SELECT * FROM authme where realname = ?");
-    $getPassword->execute(array($userForTest));
+    $getPassword->execute(array($userName));
     $allPassGet = $getPassword->fetchAll();
     foreach ($allPassGet as $passGet) {
         $endPass = $passGet['password'];
     }
     return $endPass;
+}
+
+function getAllParameters($userName, $bdh) {
+    $userNameLower = strtolower($userName);
+    $getParams = $bdh->prepare("SELECT * FROM luckperms_players where username = ?");
+    $getParams->execute(array($userNameLower));
+    $allParamGet = $getParams->fetchAll();
+    foreach ($allParamGet as $paramGet) {
+        $_SESSION['uuidLuckPerm'] = $paramGet['uuid'];
+    }
+    $getParams = $bdh->prepare("SELECT * FROM luckperms_user_permissions where uuid = ?");
+    $getParams->execute(array($_SESSION['uuidLuckPerm']));
+    $allParamGet = $getParams->fetchAll();
+    foreach ($allParamGet as $paramGet) {
+        $rang = ucfirst(substr($paramGet['permission'], 6));
+        if ($rang == 'Default'){
+            $_SESSION['rang'] = 'Membre';
+        }else {
+            $_SESSION['rang'] = $rang;
+        }
+        $_SESSION['permission'] = $paramGet['permission'];
+    }
+    $getParams = $bdh->prepare("SELECT * FROM jobs_users where username = ?");
+    $getParams->execute(array($_SESSION['username']));
+    $allParamGet = $getParams->fetchAll();
+    foreach ($allParamGet as $paramGet) {
+        $arr = explode(":", $paramGet['quests'], 2);
+        $jobs= $arr[0];
+        $_SESSION['jobs'] = $jobs;
+        $_SESSION['uuidJob'] = $paramGet['player_uuid'];
+    }
+    $getParams = $bdh->prepare("SELECT * FROM Economy where Name = ?");
+    $getParams->execute(array($_SESSION['uuidLuckPerm']));
+    $allParamGet = $getParams->fetchAll();
+    foreach ($allParamGet as $paramGet) {
+        $_SESSION['moneyEconomy'] = $paramGet['Balance'];
+    }
 }
 
 try{
@@ -38,8 +75,10 @@ if (isset($_POST['formconnect'])) {
         $rescueSalt = substr($passBDD, -81,16 );
         $passACheck = encryptPass($passPost,$rescueSalt);
         if ($passACheck == $passBDD) {
-            $_SESSION['username'] = $_POST['username'];
-            $_SESSION['mdp'] = $_POST['mdp'];
+            $_SESSION['username'] = $pseudo;
+            $_SESSION['mdp'] = $passPost;
+            getAllParameters($_SESSION['username'],$bdh);
+
             header("Location: ./index.php");
         } else {
             header("location: $link" . "?bad_connect=1");

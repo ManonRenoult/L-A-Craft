@@ -8,7 +8,13 @@
                     <img class ="photo" src="images/userPhoto.jpg"   >
                 </div>
                 <div class="userName">
-                    ManonTheGoat
+                    <?php
+                        if (!empty ($_SESSION['username'])){
+                            echo $_SESSION['username'];
+                        }else {
+                            echo 'Connecter vous' ;
+                        }
+                    ?>
                 </div>
             </div>
         </div>
@@ -19,7 +25,13 @@
                         Ton rang
                     </div>
                     <div class="col-lg-5 col-md-12 col-sm-12 infos">
-                        Bolosse
+                        <?php
+                        if (!empty ($_SESSION['rang'])){
+                            echo $_SESSION['rang'];
+                        }else {
+                            echo 'Connecter vous' ;
+                        }
+                        ?>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 fa">
                         <i class="far fa-flag fa-3x"></i>
@@ -30,7 +42,13 @@
                         Ton métier
                     </div>
                     <div class="col-lg-5 col-md-12 col-sm-12 infos">
-                        Bolosse
+                        <?php
+                        if (!empty ($_SESSION['jobs'])){
+                            echo $_SESSION['jobs'];
+                        }else {
+                            echo 'Connecter vous' ;
+                        }
+                        ?>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 fa">
                         <i class="fas fa-briefcase fa-3x"></i>
@@ -41,7 +59,13 @@
                         Ton argent
                     </div>
                     <div class="col-lg-5 col-md-12 col-sm-12 infos">
-                        Bolosse
+                        <?php
+                        if (!empty ($_SESSION['moneyEconomy'])){
+                            echo $_SESSION['moneyEconomy'].'$';
+                        }else {
+                            echo 'Connecter vous' ;
+                        }
+                        ?>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 fa">
                         <i class="fas fa-dollar-sign fa-3x"></i>
@@ -52,7 +76,7 @@
                         Nombre de votes
                     </div>
                     <div class="col-lg-5 col-md-12 col-sm-12 infos">
-                        Bolosse
+                        Pas encore actif
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 fa">
                         <i class="fas fa-thumbs-up fa-3x"></i>
