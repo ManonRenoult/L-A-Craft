@@ -50,31 +50,43 @@ if (isset($_POST['formconnect'])) {
 }
 ?>
     <div class="container">
-        <form method="post" action="">
-            <div class="row">
-                <h1 class="offset-3 col-4">Connexion</h1>
-                <div class="col-4"><a href="#" style="text-decoration: none;" onclick="document.location.href='./inscription.php';"><div class="btn btn-primary" style="background-color: #0a58ca">S'inscrire</div></a></div>
-            </div>
-
-            <div class="row">
-                <label class="offset-3 col-6" for="username">Nom d'utilisateur :</label>
-            </div><div class="row">
-                <input class="offset-3 col-6" type="text" placeholder="Votre nom d'utilisateur" name="username" id="username">
-            </div>
-            <div class="row">
-                <label class="offset-3 col-6" for="mdp">Mot de passe :</label>
-            </div><div class="row">
-                <input class="offset-3 col-6" type="password" placeholder="Votre mot de passe" name="mdp" id="mdp">
-            </div>
-
-            <br>
-            <div class=" row">
-                <div class="offset-3 col-6">
+        <div class="row">
+            <div class="col-12">
+                <form method="post" action="">
                     <div class="row">
-                        <button class="btn btn-primary" name="formconnect" type="submit">Connexion</button>
+                        <h1 class="offset-3 col-4">Connexion</h1>
+                        <div class="col-4"><a href="#" style="text-decoration: none;" onclick="document.location.href='./inscription.php';"><div class="btn btn-primary" style="background-color: #0a58ca">S'inscrire</div></a></div>
                     </div>
-                </div>
+                    <div class="row">
+                        <label class="offset-3 col-6" for="username">Nom d'utilisateur Minecraft :</label>
+                    </div>
+                    <div class="row">
+                        <input class="offset-3 col-6" type="text" placeholder="Votre nom d'utilisateur" name="username" id="username">
+                    </div>
+
+                    <br>
+                    <div class="row">
+                        <label class="offset-3 col-6" for="mdp">Mot de passe :</label>
+                    </div>
+                    <div class="row">
+                        <input class="offset-3 col-6" type="password" placeholder="Votre mot de passe" name="mdp" id="mdp">
+                    </div>
+
+                    <br>
+                    <div class="row">
+                        <div class="offset-3 col-6 boxAttention">
+                            <p class="titleBoxAttention">Attention !!!</p>
+                            <p>Le Nom d'utilisateur dois être celui de vôtre compte Minecraft</p>
+                            <p>Et le mot de passe dois être le meme qu'a la connexion au serveur L-A-Craft</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="offset-3 col-6">
+                            <button class="btn btn-primary" name="formconnect" type="submit">Connexion</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 <?php include 'footer.php'; ?>

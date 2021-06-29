@@ -64,28 +64,40 @@ if (isset($_POST['forminscription'])) {
         <div class="row">
             <h1 class="offset-3 col-6">Inscription</h1>
         </div>
-
         <div class="row">
-            <label class="offset-3 col-6" for="username">Nom d'utilisateur :</label>
-        </div><div class="row">
+            <label class="offset-3 col-6" for="username">Nom d'utilisateur Minecraft :</label>
+        </div>
+        <div class="row">
             <input class="offset-3 col-6" type="text" placeholder="Votre nom d'utilisateur" name="username" id="username">
         </div>
+
+        <br>
         <div class="row">
             <label class="offset-3 col-6" for="mdp">Mot de passe :</label>
-        </div><div class="row">
+        </div>
+        <div class="row">
             <input class="offset-3 col-6" type="password" placeholder="Votre mot de passe" name="mdp" id="mdp">
         </div>
-        <div class=" row">
+
+        <br>
+        <div class="row">
             <label class="offset-3 col-6" for="mdp2">Confirmation du mot de passe :</label>
-        </div><div class="row">
+        </div>
+        <div class="row">
             <input class="offset-3 col-6" type="password" placeholder="Confirmez votre mot de passe" name="mdp2" id="mdp2">
         </div>
+
         <br>
-        <div class=" row">
+        <div class="row">
+            <div class="offset-3 col-6 boxAttention">
+                <p class="attentionBox">Attention !!!</p>
+                <p>Le Nom d'utilisateur dois étre celui de vôtre compte Minecraft</p>
+                <p>Et le mot de passe que vous rentrez serra demander a la connexion au serveur L-A-Craft</p>
+            </div>
+        </div>
+        <div class="row">
             <div class="offset-3 col-6">
-                <div class="row">
-                    <button class="btn btn-primary" name="forminscription" type="submit">Je m'inscris</button>
-                </div>
+                <button class="btn btn-primary" name="forminscription" type="submit">Je m'inscris</button>
             </div>
         </div>
     </form>
