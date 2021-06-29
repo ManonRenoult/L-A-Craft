@@ -59,6 +59,7 @@ footer {
 
 .menuA a li:hover, .menuB a li:hover {
     background-color: grey;
+    box-shadow : inset 0px -10px 10px -5px rgba(0,0,0,0.79);
 }
 
 .btnConnect{
@@ -239,6 +240,17 @@ footer {
     width: 100%;
 }
 
+.boxAttention {
+    background-color: gray;
+    padding: 1%;
+    border-radius : 10px;
+    margin-bottom: 2%;
+}
+
+.titleBoxAttention {
+    text-align: center;
+}
+
 /* Style page profil*/
 
 .divPhotoUser
@@ -369,4 +381,20 @@ footer {
 
 .map{
     height: 600px;
+}
+
+/*Style gestion des erreurs */
+
+#errorCheck {
+    position:absolute;
+    z-index: 2;
+}
+
+.zIndex1 {
+    z-index: 1;
+}
+.zIndex2 {
+    text-align: center;
+    width: 100%;
+    z-index: 2;
 }

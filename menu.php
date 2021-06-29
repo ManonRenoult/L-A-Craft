@@ -11,24 +11,41 @@ session_start();
 
     <title>Isayev Server</title>
 </head>
-<body class="maxHeight">
 <?php
 //    Erreur de connexion
-if (isset($_GET['bad_connect']) && $_GET['bad_connect'] == "1") {
-    echo '<div class="alert alert-danger" role="alert" id="errorCheck">Pseudo ou mot de passe incorrect</div>';
-}
-
-if(isset($erreur)) {
-    echo $erreur;
-}
-if(isset($validation)) {
-    echo $validation;
+if (isset($_GET['bad_connect'])) {
+    if($_GET['bad_connect'] == "1"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Pseudo ou mot de passe incorrect</div></div></div></div>';
+    }elseif ($_GET['bad_connect'] == "2"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Tous les champs doivent être complétés !</div></div></div></div>';
+    }
+} elseif (isset($_GET['bad_inscription'])){
+    if($_GET['bad_inscription'] == "1"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Vos Mot de passe de corresponde pas !</div></div></div></div>';
+    }elseif ($_GET['bad_inscription'] == "2"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Ce pseudo existe deja !</div></div></div></div>';
+    }elseif ($_GET['bad_inscription'] == "3"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Votre Pseudo est trop grand !</div></div></div></div>';
+    }elseif ($_GET['bad_inscription'] == "4"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Tous les champs doivent être complétés !</div></div></div></div>';
+    }
+} elseif (isset($_GET['ok_inscription'])){
+    if($_GET['ok_inscription'] == "1"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-success zIndex2" role="alert" >Votre compte a bien été crée !</div></div></div></div>';
+    }
 }
 ?>
+<body class="maxHeight zIndex1">
     <div class="globalMenu">
         <div class="container-fluid containerA">
             <div class="row menuBar maxHeight">
-                <div class="col-10 col-md-6 maxHeight">
+                <?php
+                if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
+                    echo '<div class="col-9 col-md-6 maxHeight">';
+                }else{
+                    echo '<div class="col-10 col-md-6 maxHeight">';
+                }
+                ?>
                     <ul class="menuA">
                         <a href="#" onclick="document.location.href='./index.php';"><li>Accueil</li></a>
                         <a href="#" onclick="document.location.href='./map.php';"><li>Map</li></a>
@@ -36,11 +53,28 @@ if(isset($validation)) {
                         <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
                     </ul>
                 </div>
-                <div class="col-2 col-md-6 maxHeight">
+                <?php
+                    if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
+                        echo '<div class="col-2 col-md-4 maxHeight">';
+                    }else{
+                        echo '<div class="col-2 col-md-6 maxHeight">';
+                    }
+                ?>
                     <ul class="menuB">
                         <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li><div class="btnConnect"><i class="far fa-user"></i>&nbsp;<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'Se déconnecter';}else {echo 'Se connecter';}?></div></li></a>'
                     </ul>
                 </div>
+                <?php
+                    if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
+                        echo '
+                            <div class="col-1 col-md-2 maxHeight">
+                                <ul class="menuB">
+                                    <a href="#" onclick="document.location.href=\'./profil.php\'"><li><div class="btnConnect">Mon profil</div></li></a>
+                                </ul>
+                            </div>
+                                ';
+                    }
+                ?>
             </div>
         </div>
         <div class="container-fluid containerAB">
