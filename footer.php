@@ -1,4 +1,5 @@
     <footer class="footer">
+        <div class="footersize">
         <div class="container containerC">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12">
@@ -18,6 +19,7 @@
                     &nbsp;&nbsp;Contrary to popular belief, Lorem Ipsum is not simply random text.
                 </div>
             </div>
+        </div>
         </div>
     </footer>
 </body>
