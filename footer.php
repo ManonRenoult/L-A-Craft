@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <footer class="footer">
     <div class="footersize">
+=======
+    <footer class="footer">
+        <div class="footersize">
+>>>>>>> 4b0b59d11f829d075386fd8b976da509e3cd7c09
         <div class="container containerC">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12">
@@ -19,8 +24,13 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
     </div>
 </footer>
+=======
+        </div>
+    </footer>
+>>>>>>> 4b0b59d11f829d075386fd8b976da509e3cd7c09
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/getPlayer.js"></script>

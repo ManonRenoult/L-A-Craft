@@ -22,6 +22,7 @@ body {
 p{
     margin-left: auto;
     margin-right: auto;
+<<<<<<< HEAD
     /*font-size: 4em;*/
     color: white;
 }
@@ -33,6 +34,12 @@ p{
 .menuAffsoustitre p {
     font-size:4em;
 }
+=======
+    font-size: 4em;
+    color: white;
+}
+
+>>>>>>> 4b0b59d11f829d075386fd8b976da509e3cd7c09
 .menuAffnbjoueurs
 {
     width: 100%;
@@ -110,7 +117,11 @@ footer {
 
 .menusize
 {
+<<<<<<< HEAD
     height: 90%;
+=======
+    height: 15%;
+>>>>>>> 4b0b59d11f829d075386fd8b976da509e3cd7c09
     position:relative;
 }
 
@@ -124,6 +135,7 @@ footersize{
         width: 100%;
         background-image: url("../images/testbanniere.png") /**no-repeat center center**/;
         background-position: 50% 50%;
+<<<<<<< HEAD
         /** -webkit-background-size: cover;
          -moz-background-size: cover;
          -o-background-size: cover;
@@ -133,6 +145,16 @@ footersize{
 
          position: fixed;
          */
+=======
+       /** -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        margin-bottom: 6%;*
+
+        */
+        position: fixed;
+>>>>>>> 4b0b59d11f829d075386fd8b976da509e3cd7c09
     }
 }
 .menuBar {
@@ -146,7 +168,10 @@ footersize{
 }
 
 .containerB {
+<<<<<<< HEAD
     z-index:3;
+=======
+>>>>>>> 4b0b59d11f829d075386fd8b976da509e3cd7c09
     box-shadow: 1px 1px 10px black inset;
     height: 100%;
     position: relative;
@@ -201,11 +226,18 @@ footersize{
     font-size: 2em;
     border-radius: 10px;
     width: auto;
+<<<<<<< HEAD
     bottom: 10%;
     margin-left: 34%;
     margin-top: 10%;
     padding-right:5%;
     padding-left: 5%;
+=======
+    height: 85px;
+    bottom: 10%;
+    margin-left: 25%;
+    margin-top: 5%
+>>>>>>> 4b0b59d11f829d075386fd8b976da509e3cd7c09
 }
 
 
@@ -289,6 +321,7 @@ footersize{
         max-width: 100%;
     }
 }
+<<<<<<< HEAD
 
 @media (min-width: 768px) {
     .container {
@@ -296,6 +329,15 @@ footersize{
     }
 }
 
+=======
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+>>>>>>> 4b0b59d11f829d075386fd8b976da509e3cd7c09
 @media (min-width: 992px) {
     .container {
         max-width: 100%;
@@ -488,9 +530,12 @@ footersize{
     font-size: large;
 }
 
+<<<<<<< HEAD
 .nousRejoindreexpl p {
     color: currentColor;
 }
+=======
+>>>>>>> 4b0b59d11f829d075386fd8b976da509e3cd7c09
 
 .commandesExpl p {
     padding-top:5%;

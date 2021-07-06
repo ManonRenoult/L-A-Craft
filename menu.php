@@ -47,6 +47,7 @@ if (isset($_GET['bad_connect'])) {
                     echo '<div class="col-10 col-md-6 maxHeight">';
                 }
                 ?>
+<<<<<<< HEAD
                 <ul class="menuA">
                     <a href="#" onclick="document.location.href='./index.php';"><li>Accueil</li></a>
                     <a href="https://map.l-a-craft-server.fr/" target="_blank"><li>Map</li></a>
@@ -68,6 +69,29 @@ if (isset($_GET['bad_connect'])) {
         <?php
         if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
             echo '
+=======
+                    <ul class="menuA">
+                        <a href="#" onclick="document.location.href='./index.php';"><li>Accueil</li></a>
+                        <a href="http://frhb62360ds.ikexpress.com:8123" target="_blank"><li>Map</li></a>
+                        <a href="#" onclick="document.location.href='./index.php';"><li>Voter</li></a>
+                        <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
+                    </ul>
+                </div>
+                <?php
+                    if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
+                        echo '<div class="col-2 col-md-4 maxHeight">';
+                    }else{
+                        echo '<div class="col-2 col-md-6 maxHeight">';
+                    }
+                ?>
+                    <ul class="menuB">
+                        <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li><div class="btnConnect"><i class="far fa-user"></i>&nbsp;<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'Se déconnecter';}else {echo 'Se connecter';}?></div></li></a>'
+                    </ul>
+                </div>
+                <?php
+                    if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
+                        echo '
+>>>>>>> 4b0b59d11f829d075386fd8b976da509e3cd7c09
                             <div class="col-1 col-md-2 maxHeight">
                                 <ul class="menuB">
                                     <a href="#" onclick="document.location.href=\'./profil.php\'"><li><div class="btnConnect">Mon profil</div></li></a>
@@ -83,6 +107,7 @@ if (isset($_GET['bad_connect'])) {
         <div class="row menuAfftitre">
             <p>Bienvenue sur L.A - server </p>
         </div>
+<<<<<<< HEAD
         <div class="row menuAffsoustitre">
             <p>Serveur en 1.16.5</p>
         </div>
@@ -93,3 +118,8 @@ if (isset($_GET['bad_connect'])) {
 </div>
 </div>
 </div>
+=======
+
+    </div>
+</div>
+>>>>>>> 4b0b59d11f829d075386fd8b976da509e3cd7c09
