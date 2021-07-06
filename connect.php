@@ -99,7 +99,7 @@ if (isset($_POST['formconnect'])) {
                 <form method="post" action="" class="formConnect">
                     <div class="row">
                         <h1 class="offset-3 col-4">Connexion</h1>
-                        <div class="col-4"><a href="#" style="text-decoration: none;" onclick="document.location.href='./inscription.php';"><div class="btn btn-primary" style="background-color: #0a58ca">S'inscrire</div></a></div>
+                        <div class="col-4">Pas encore inscrit ?&nbsp;<a href="#" style="text-decoration: none;" onclick="document.location.href='./inscription.php';"><div class="btn btn-success">S'inscrire</div></a></div>
                     </div>
                     <div class="row">
                         <label class="offset-3 col-6" for="username">Nom d'utilisateur Minecraft :</label>
