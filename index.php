@@ -1,28 +1,7 @@
 <?php include 'menu.php';?>
-<div class="container-fluid containerAB">
-
-    <div class="row menuTitre">
-        <div class="row menuAfftitre">
-
-            <p>Bienvenue sur L.A - server </p>
-
-        </div>
-        <div class="row menuAffsoustitre">
-
-            <p>Serveur en 1.16.5</p>
-
-        </div>
-        <div class="row menuAffnbjoueurs">
-
-
-            <div id="nbPLayer"><img src="images/world.png" width="10%">&nbsp;&nbsp;Chargement ...</div>
-
-        </div>
-    </div>
-</div>
 <div class="container containerB">
     <div class="row maxHeight">
-        <div class="offset-lg-1 col-lg-5 col-md-12 col-sm-12 boxCard">
+        <div class="col-lg-5 col-md-12 col-sm-12 boxCard">
             <div class="cardAll">
                 <a class="cardLink" href="#"  onclick="document.location.href='./rejoindre.php';">
                     <div class="btn cardAllJoin">
@@ -33,7 +12,7 @@
                 </a>
             </div>
         </div>
-        <div class=" col-lg-5 col-md-12 col-sm-12 boxCard mediaQueryCard">
+        <div class="offset-lg-2 col-lg-5 col-md-12 col-sm-12 boxCard mediaQueryCard">
             <div class="cardAll">
                 <a class="cardLink" href="#"  onclick="document.location.href='./index.php';">
                     <div class="btn cardAllEvent">

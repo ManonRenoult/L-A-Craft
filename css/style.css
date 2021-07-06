@@ -22,10 +22,17 @@ body {
 p{
     margin-left: auto;
     margin-right: auto;
-    font-size: 4em;
+    /*font-size: 4em;*/
     color: white;
 }
 
+.menuAfftitre p {
+    font-size:4em;
+}
+
+.menuAffsoustitre p {
+    font-size:4em;
+}
 .menuAffnbjoueurs
 {
     width: 100%;
@@ -93,8 +100,8 @@ footer {
 }
 
 .menuA a li:hover, .menuB a li:hover {
-    background-color: grey;
-    box-shadow : inset 0px -10px 10px -5px rgba(0,0,0,0.79);
+    background-color: rgba(100,100,100,0.8);
+    box-shadow : inset 0px -10px 10px -5px rgba(50,50,50,50.79);
 }
 
 .btnConnect{
@@ -103,7 +110,7 @@ footer {
 
 .menusize
 {
-    height: 15%;
+    height: 90%;
     position:relative;
 }
 
@@ -117,25 +124,29 @@ footersize{
         width: 100%;
         background-image: url("../images/testbanniere.png") /**no-repeat center center**/;
         background-position: 50% 50%;
-       /** -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        margin-bottom: 6%;*
+        /** -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+         margin-bottom: 6%;*
 
-        */
-        position: fixed;
+
+         position: fixed;
+         */
     }
 }
 .menuBar {
-    background: rgba(255,255,255,0.2);
+    background: rgba(100,100,100,0.4);
 }
 
 .containerA {
     height: 15%;
+    position: fixed;
+    z-index: 2;
 }
 
 .containerB {
+    z-index:3;
     box-shadow: 1px 1px 10px black inset;
     height: 100%;
     position: relative;
@@ -176,7 +187,7 @@ footersize{
 }
 
 .containerAB {
-    height: 85%;
+    height: 100%;
     box-shadow: 0px 0px 10px black;
     text-shadow: 1px 1px 50px black;
 }
@@ -190,10 +201,11 @@ footersize{
     font-size: 2em;
     border-radius: 10px;
     width: auto;
-    height: 85px;
     bottom: 10%;
-    margin-left: 25%;
-    margin-top: 5%
+    margin-left: 34%;
+    margin-top: 10%;
+    padding-right:5%;
+    padding-left: 5%;
 }
 
 
@@ -307,6 +319,10 @@ footersize{
 
 /* Style page connexion/inscription*/
 
+.formConnect {
+    padding-top: 5%;
+}
+
 .connectCard {
     background-color: grey;
     border-radius : 10px;
@@ -375,7 +391,7 @@ footersize{
 
 .cardPhotoUser
 {
-   padding-top: 30%;
+    padding-top: 30%;
 }
 
 .userName
@@ -457,9 +473,13 @@ footersize{
 
 .containerRejoindre
 {
+    position : relative;
+    z-index: 3;
     font-size: 2em;
     background-color: #e3e3e3;
     box-shadow: 1px 1px 10px black;
+    padding-top:5%;
+    padding-bottom: 5%;
 }
 
 .nousRejoindreexpl
@@ -468,7 +488,15 @@ footersize{
     font-size: large;
 }
 
+.nousRejoindreexpl p {
+    color: currentColor;
+}
 
+.commandesExpl p {
+    padding-top:5%;
+    padding-bottom: 5%;
+    color: currentColor;
+}
 .cardAllJoin{
     background: url("../images/nousRejoindre.jpg") no-repeat center center;
     -webkit-background-size: cover;
@@ -495,7 +523,7 @@ footersize{
 
 #errorCheck {
     position:absolute;
-    z-index: 2;
+    z-index: 3;
 }
 
 .zIndex1 {
@@ -505,4 +533,7 @@ footersize{
     text-align: center;
     width: 100%;
     z-index: 2;
+}
+.zIndex3 {
+    z-index: 3;
 }

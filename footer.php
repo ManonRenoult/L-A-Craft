@@ -1,5 +1,5 @@
-    <footer class="footer">
-        <div class="footersize">
+<footer class="footer">
+    <div class="footersize">
         <div class="container containerC">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12">
@@ -19,8 +19,8 @@
                 </div>
             </div>
         </div>
-        </div>
-    </footer>
+    </div>
+</footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/getPlayer.js"></script>
