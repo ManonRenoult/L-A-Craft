@@ -78,6 +78,26 @@ if (isset($_GET['bad_connect'])) {
                 ?>
             </div>
         </div>
+        <div class="container-fluid containerAB">
 
+            <div class="row maxHeight">
+                <div class="row menuAfftitre">
+
+                    <p>Bienvenue sur L.A - server </p>
+
+                </div>
+                <div class="row menuAffsoustitre">
+
+                    <p>Serveur en 1.16.5</p>
+
+                </div>
+                <div class="row menuAffnbjoueurs">
+
+
+                    <div id="nbPLayer"><img src="images/world.png" width="10%">&nbsp;&nbsp;Chargement ...</div>
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
