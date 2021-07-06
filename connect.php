@@ -34,11 +34,16 @@ function getAllParameters($userName, $bdh) {
     $allParamGet = $getParams->fetchAll();
     foreach ($allParamGet as $paramGet) {
         $rang = ucfirst(substr($paramGet['permission'], 6));
-        if ($rang == 'Default'){
-            $_SESSION['rang'] = 'Membre';
+        if($userName == 'RetroManiiia' || $userName == 'Ryukkk__'){
+            $_SESSION['rang'] = 'Fondateur';
         }else {
-            $_SESSION['rang'] = $rang;
+            if ($rang == 'Default'){
+                $_SESSION['rang'] = 'Membre';
+            }else {
+                $_SESSION['rang'] = $rang;
+            }
         }
+
         $_SESSION['permission'] = $paramGet['permission'];
     }
     $getParams = $bdh->prepare("SELECT * FROM jobs_users where username = ?");
@@ -88,7 +93,7 @@ if (isset($_POST['formconnect'])) {
     }
 }
 ?>
-    <div class="container zIndex3">
+    <div class="container zIndex3 containerConnect">
         <div class="row">
             <div class="col-12">
                 <form method="post" action="" class="formConnect">
