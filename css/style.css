@@ -162,6 +162,10 @@ footersize{
     padding: 0px;
 }
 
+.infosPres{
+    padding: 3%;
+}
+
 .cardAll {
     box-shadow: 1px 1px 10px black;
     height: 100%;
