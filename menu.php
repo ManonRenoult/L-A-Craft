@@ -49,7 +49,7 @@ if (isset($_GET['bad_connect'])) {
                 ?>
                 <ul class="menuA">
                     <a href="#" onclick="document.location.href='./index.php';"><li>Accueil</li></a>
-                    <a href="http://frhb62360ds.ikexpress.com:8123" target="_blank"><li>Map</li></a>
+                    <a href="https://map.l-a-craft-server.fr/" target="_blank"><li>Map</li></a>
                     <a href="#" onclick="document.location.href='./index.php';"><li>Voter</li></a>
                     <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
                 </ul>
