@@ -103,7 +103,7 @@ footer {
 
 .menusize
 {
-    height: 100%;
+    height: 15%;
     position:relative;
 }
 
@@ -136,13 +136,30 @@ footersize{
 }
 
 .containerB {
+    box-shadow: 1px 1px 10px black inset;
     height: 100%;
     position: relative;
     background: lightgrey;
-    padding-left: 55px;
-    padding-right: 55px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.menuTitre{
+    height: auto;
+    position: relative;
+}
+.containerBbis{
+    text-shadow: 1px 1px 50px black;
+    position: relative;
+}
+
+.infosPres{
+    text-align: center;
+    color: white;
+}
+.cardPres{
+    padding: 0px;
 }
 
 .cardAll {
@@ -157,6 +174,7 @@ footersize{
 .containerAB {
     height: 85%;
     box-shadow: 0px 0px 10px black;
+    text-shadow: 1px 1px 50px black;
 }
 
 #nbPLayer {
@@ -179,7 +197,8 @@ footersize{
 .containerC {
     padding-top: 4%;
     padding-bottom: 4%;
-
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .cardAll a {

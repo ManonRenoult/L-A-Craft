@@ -38,7 +38,6 @@ if (isset($_GET['bad_connect'])) {
 <body class="maxHeight zIndex1">
 <div class="menusize">
     <div class="globalMenu">
-        <!--<img src="images/testbanniere.png" id=fondecran class=fondecran>--!>
         <div class="container-fluid containerA">
             <div class="row menuBar maxHeight">
                 <?php
@@ -50,7 +49,7 @@ if (isset($_GET['bad_connect'])) {
                 ?>
                     <ul class="menuA">
                         <a href="#" onclick="document.location.href='./index.php';"><li>Accueil</li></a>
-                        <a href="http://frhb62360ds.ikexpress.com:8123" ><li>Map</li></a>
+                        <a href="http://frhb62360ds.ikexpress.com:8123" target="_blank"><li>Map</li></a>
                         <a href="#" onclick="document.location.href='./index.php';"><li>Voter</li></a>
                         <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
                     </ul>
@@ -79,26 +78,6 @@ if (isset($_GET['bad_connect'])) {
                 ?>
             </div>
         </div>
-        <div class="container-fluid containerAB">
 
-            <div class="row maxHeight">
-                <div class="row menuAfftitre">
-
-                    <p>Bienvenue sur L.A - server </p>
-
-                </div>
-                <div class="row menuAffsoustitre">
-
-                    <p>Serveur en 1.16.5</p>
-
-                </div>
-                <div class="row menuAffnbjoueurs">
-
-
-                    <div id="nbPLayer"><img src="images/world.png" width="10%">&nbsp;&nbsp;Chargement ...</div>
-
-                </div>
-            </div>
-        </div>
     </div>
 </div>
