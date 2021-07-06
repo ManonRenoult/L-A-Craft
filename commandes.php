@@ -2,7 +2,7 @@
 
     <div class="container containerRejoindre">
         <div class="row rejoindre">
-            <div class="col-lg-12 commandesExpl">
+            <div class="offset-2 col-8 commandesExpl">
 
                 <p>Suivez ces étapes pour nous rejoindre : <br>
                     Téléchargez la version premium de  <a href="https://www.minecraft.net/fr-fr/">minecraft</a> ou un <a href="https://tlauncher.org/en/">crack</a> <br>

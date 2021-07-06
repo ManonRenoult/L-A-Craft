@@ -88,10 +88,10 @@ if (isset($_POST['formconnect'])) {
     }
 }
 ?>
-    <div class="container">
+    <div class="container zIndex3">
         <div class="row">
             <div class="col-12">
-                <form method="post" action="">
+                <form method="post" action="" class="formConnect">
                     <div class="row">
                         <h1 class="offset-3 col-4">Connexion</h1>
                         <div class="col-4"><a href="#" style="text-decoration: none;" onclick="document.location.href='./inscription.php';"><div class="btn btn-primary" style="background-color: #0a58ca">S'inscrire</div></a></div>

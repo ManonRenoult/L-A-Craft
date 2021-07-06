@@ -2,8 +2,8 @@
 
 <div class="container containerRejoindre">
     <div class="row rejoindre">
-        </p>
-        <div class="col-lg-12 nousRejoindreexpl">
+
+        <div class="offset-2 col-8 nousRejoindreexpl">
             <p>Suivez ces étapes pour nous rejoindre : <br>
                 Téléchargez la version premium de  <a href="https://www.minecraft.net/fr-fr/">minecraft</a> ou un <a href="https://tlauncher.org/en/">crack</a> <br>
                 Sélectionnez une version du jeu se trouvant entre la 1.16 et 1.16.5 <br>

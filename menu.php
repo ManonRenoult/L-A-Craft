@@ -87,7 +87,7 @@ if (isset($_GET['bad_connect'])) {
             <p>Serveur en 1.16.5</p>
         </div>
         <div class="row menuAffnbjoueurs">
-            <div id="nbPLayer"><img src="images/world.png" width="10%">&nbsp;&nbsp;Chargement ...</div>
+            <div id="nbPLayer"><i class="fas fa-users"></i>&nbsp;&nbsp;Chargement ...</div>
         </div>
     </div>
 </div>
