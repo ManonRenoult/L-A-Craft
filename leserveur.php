@@ -2,8 +2,7 @@
 
     <div class="container containerRejoindre">
         <div class="row rejoindre">
-            </p>
-            <div class="col-lg-12 nousRejoindreexpl">
+            <div class="offset-2 col-8 nousRejoindreexpl">
                 <p>
                     L-A craft est un serveur semi rp dans lequel vous pouvez construire votre maison, travailler, vous amuser entre amis et bien plus!<br>
 
