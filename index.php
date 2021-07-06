@@ -25,4 +25,24 @@
         </div>
     </div>
 </div>
+<div class="container containerBbis">
+    <div class="row titreInfos">
+        <p>L-A craft c'est,</p>
+    </div>
+    <div class="row infosPres">
+        <div class="col-lg-4 col-md-12 col-sm-12 ">
+            <row><i class="fas fa-user-friends fa-10x"></i><br></row>
+            <row>Une communauté mature et impliquée</row>
+
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 ">
+            <row><i class="fas fa-server fa-10x"></i><br></row>
+            <row>Un serveur cracké en version 16.5</row>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 ">
+            <row><i class="fas fa-calendar-week fa-10x"></i><br></row>
+            <row>Des evenements pour mieux se retrouver</row>
+        </div>
+    </div>
+</div>
 <?php include 'footer.php';?>

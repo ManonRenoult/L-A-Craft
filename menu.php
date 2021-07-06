@@ -36,6 +36,7 @@ if (isset($_GET['bad_connect'])) {
 }
 ?>
 <body class="maxHeight zIndex1">
+<div class="menusize">
     <div class="globalMenu">
         <div class="container-fluid containerA">
             <div class="row menuBar maxHeight">
@@ -46,43 +47,49 @@ if (isset($_GET['bad_connect'])) {
                     echo '<div class="col-10 col-md-6 maxHeight">';
                 }
                 ?>
-                    <ul class="menuA">
-                        <a href="#" onclick="document.location.href='./index.php';"><li>Accueil</li></a>
-                        <a href="#" onclick="document.location.href='./map.php';"><li>Map</li></a>
-                        <a href="#" onclick="document.location.href='./index.php';"><li>Voter</li></a>
-                        <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
-                    </ul>
-                </div>
-                <?php
-                    if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
-                        echo '<div class="col-2 col-md-4 maxHeight">';
-                    }else{
-                        echo '<div class="col-2 col-md-6 maxHeight">';
-                    }
-                ?>
-                    <ul class="menuB">
-                        <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li><div class="btnConnect"><i class="far fa-user"></i>&nbsp;<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'Se déconnecter';}else {echo 'Se connecter';}?></div></li></a>'
-                    </ul>
-                </div>
-                <?php
-                    if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
-                        echo '
+                <ul class="menuA">
+                    <a href="#" onclick="document.location.href='./index.php';"><li>Accueil</li></a>
+                    <a href="https://map.l-a-craft-server.fr/" target="_blank"><li>Map</li></a>
+                    <a href="#" onclick="document.location.href='./index.php';"><li>Voter</li></a>
+                    <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
+                </ul>
+            </div>
+            <?php
+            if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
+                echo '<div class="col-2 col-md-4 maxHeight">';
+            }else{
+                echo '<div class="col-2 col-md-6 maxHeight">';
+            }
+            ?>
+            <ul class="menuB">
+                <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li><div class="btnConnect"><i class="far fa-user"></i>&nbsp;<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'Se déconnecter';}else {echo 'Se connecter';}?></div></li></a>'
+            </ul>
+        </div>
+        <?php
+        if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
+            echo '
                             <div class="col-1 col-md-2 maxHeight">
                                 <ul class="menuB">
                                     <a href="#" onclick="document.location.href=\'./profil.php\'"><li><div class="btnConnect">Mon profil</div></li></a>
                                 </ul>
                             </div>
                                 ';
-                    }
-                ?>
-            </div>
+        }
+        ?>
+    </div>
+</div>
+<div class="container-fluid containerAB">
+    <div class="row menuTitre">
+        <div class="row menuAfftitre">
+            <p>Bienvenue sur L.A - server </p>
         </div>
-        <div class="container-fluid containerAB">
-            <div class="row maxHeight">
-                <div class="offset-lg-4 offset-md-3 offset-sm-3 col-lg-4 col-md-6 col-sm-6 maxHeight rowNbPlayer">
-
-                    <div id="nbPLayer"><img src="images/world.png" width="10%">&nbsp;&nbsp;Chargement ...</div>
-                </div>
-            </div>
+        <div class="row menuAffsoustitre">
+            <p>Serveur en 1.16.5</p>
+        </div>
+        <div class="row menuAffnbjoueurs">
+            <div id="nbPLayer"><i class="fas fa-users"></i>&nbsp;&nbsp;Chargement ...</div>
         </div>
     </div>
+</div>
+</div>
+</div>
