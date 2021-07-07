@@ -305,6 +305,9 @@ footersize{
 }
 @media screen and (max-width: 992px)
 {
+    .btnconnect {
+        padding-left: 0% !important;
+    }
     .mediaQueryCard {
         margin-top: 5%;
     }
@@ -324,6 +327,7 @@ footersize{
 }
 
 /* Style page connexion/inscription*/
+
 
 .containerInscript {
     background: lightgrey;
@@ -575,13 +579,21 @@ footersize{
     padding-top: 3%;
 }
 
-.btnVoter{
+.btnVoter {
     margin: 0 auto;
-    margin-left: 41%;
-    margin-right: 41%;
     margin-top: 5%;
 }
 
+.btnVoterConnecter {
+    margin: 0 auto;
+    margin-top: 20%;
+    padding-right: 37%;
+    padding-left: 37%;
+}
+
+.width20 {
+    width: 20%;
+}
 .testCenter {
     display: flex;
     align-items: center;
