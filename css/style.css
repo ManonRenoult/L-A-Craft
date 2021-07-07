@@ -591,9 +591,14 @@ footersize{
     padding-left: 37%;
 }
 
+.rowBtnListeServer {
+    margin-top: 5%;
+}
+
 .width20 {
     width: 20%;
 }
+
 .testCenter {
     display: flex;
     align-items: center;

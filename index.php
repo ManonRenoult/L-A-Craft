@@ -24,6 +24,11 @@
             </div>
         </div>
     </div>
+    <div class="row rowBtnListeServer">
+        <div class="offset-3 col-6 testCenter">
+            <a href="https://www.liste-serveurs-minecraft.org"><img alt="TOP Serveurs Minecraft" src="https://www.liste-serveurs-minecraft.org/wp-content/themes/DL/framework/img/logo3.png"></a>
+        </div>
+    </div>
 </div>
 <div class="container containerBbis">
     <div class="row titreInfos">

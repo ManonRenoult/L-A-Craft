@@ -47,17 +47,41 @@
 
                     $allName = [];
                     $allVote = [];
-                    foreach ($allParamGet2 as $paramGet2) {
-                        array_push($allName,$paramGet2['username']);
-                        array_push($allVote,$paramGet2['nbVote']);
-                    }
+                    $allRang = [];
 
+                    foreach ($allParamGet2 as $paramGet2) {
+                        $userNameLower = strtolower($paramGet2['username']);
+                        $getParams = $bdh->prepare("SELECT * FROM luckperms_players where username = ?");
+                        $getParams->execute(array($userNameLower));
+                        $allParamGet = $getParams->fetchAll();
+                        foreach ($allParamGet as $paramGet) {
+                            $getParams3 = $bdh->prepare("SELECT * FROM luckperms_user_permissions where uuid = ?");
+                            $getParams3->execute(array($paramGet['uuid']));
+                            $allParamGet3 = $getParams3->fetchAll();
+                            foreach ($allParamGet3 as $paramGet3) {
+                                $rang = ucfirst(substr($paramGet3['permission'], 6));
+                                if ($rang == 'Admin'){
+                                    array_push($allName,$paramGet2['username']);
+                                    array_push($allVote,$paramGet2['nbVote']);
+                                    array_push($allRang, '[ Fondateur ]');
+                                }else if ($rang == 'Default'){
+                                    array_push($allName,$paramGet2['username']);
+                                    array_push($allVote,$paramGet2['nbVote']);
+                                    array_push($allRang, '[ Membre ]');
+                                }else {
+                                    array_push($allName,$paramGet2['username']);
+                                    array_push($allVote,$paramGet2['nbVote']);
+                                    array_push($allRang, '[ '.$rang.' ]');
+                                }
+                            }
+                        }
+                    }
                     if(!empty($allParamGet2) || $allParamGet2 != ''){
                         for ($i = 0 ; $i <= (int)count($allName)-1 ; $i++ ){
                             echo '
                             <tr>
                                 <th scope="row">'.($i+1).'</th>
-                                <td>'.$allName[$i].'</td>
+                                <td>'.$allRang[$i].' '.$allName[$i].'</td>
                                 <td>'.$allVote[$i].'</td>
                             </tr>
                             ';
@@ -67,6 +91,7 @@
                 </tbody>
             </table>
         </div>
+
     </div>
 
 <?php include 'footer.php';?>
