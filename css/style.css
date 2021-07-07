@@ -58,7 +58,6 @@ p{
 }
 footer {
     background-color: grey;
-
 }
 .menuA,.menuB {
     list-style-type: none;
@@ -216,7 +215,6 @@ footersize{
     padding-top: 4%;
     padding-bottom: 4%;
     padding-left: 10%;
-    padding-right: 10%;
 }
 
 .cardAll a {
@@ -227,6 +225,7 @@ footersize{
     box-shadow: 0px 0px 15px black;
     background-color: grey;
     position: absolute;
+    width: 100%;
 }
 .cardAllJoin{
     background: url("../images/nousRejoindre.jpg") no-repeat center center;
