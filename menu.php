@@ -56,9 +56,9 @@ if (isset($_GET['bad_connect'])) {
             <div class="row menuBar maxHeight">
                 <?php
                 if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
-                    echo '<div class="col-8 col-md-6 maxHeight">';
+                    echo '<div class="col-lg-6 maxHeight">';
                 }else{
-                    echo '<div class="col-9 col-md-6 maxHeight">';
+                    echo '<div class="col-6 maxHeight">';
                 }
                 ?>
                 <ul class="menuA">
@@ -68,33 +68,37 @@ if (isset($_GET['bad_connect'])) {
                     <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
                 </ul>
             </div>
-            <div class="col-2 col-md-4 maxHeight">
-            <?php
-            if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
-                echo '
-                            
-                           <ul class="menuB">
-                               <a href="#" onclick="document.location.href=\'./profil.php\'"><li><div class="btnConnect">Mon profil</div></li></a>
-                           </ul>
+        <div class="offset-2 col-4 maxHeight">
+            <div class="row maxHeight">
+                <?php
+                if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
+                    echo '
+                           <div class="offset-2 col-6">
+                                <ul class="menuB">
+                                    <a href="#" onclick="document.location.href=\'./profil.php\'"><li><div class="btnConnect">Mon profil</div></li></a>
+                                </ul>
+                           </div>
+                           <div class="offset-1 col-3 maxHeight">
                            ';
-            }
-            ?>
+                }else {
+                    echo '<div class="offset-3 col-8 maxHeight">';
+                }
+                ?>
 
+                    <ul class="menuB">
+                        <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li class="<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'btnLiDisconnect';}else {echo 'btnconnect';}?>"><?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo '<i class="fas fa-sign-out-alt iconConnec"></i>';}else {echo '<i class="fas fa-power-off"></i>&nbsp;Se connecter';}?></li></a>
+                    </ul>
+                </div>
             </div>
-        <div class="col-1 col-md-2 maxHeight">
 
-            <ul class="menuB">
-                <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li class="<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'btnLiDisconnect';}else {echo 'btnconnect';}?>"><?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo '<i class="fas fa-sign-out-alt iconConnec"></i>';}else {echo '<i class="fas fa-power-off"></i>Se connecter';}?></li></a>
-            </ul>
         </div>
-
 
     </div>
 </div>
 <div class="container-fluid containerAB">
     <div class="row menuTitre">
         <div class="row menuAfftitre">
-            <p>Bienvenue sur L.A - server </p>
+            <p>Bienvenue sur L.A - Craft </p>
         </div>
         <div class="row menuAffsoustitre">
             <p>Serveur en 1.16.5</p>
