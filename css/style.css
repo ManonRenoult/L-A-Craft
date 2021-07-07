@@ -318,6 +318,10 @@ footersize{
         background-size: cover;
         margin-bottom: 6%;
     }
+    .menusize
+    {
+        height: auto;
+    }
 }
 
 /* Style page connexion/inscription*/
