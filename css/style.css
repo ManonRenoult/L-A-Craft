@@ -309,13 +309,17 @@ footersize{
         margin-top: 5%;
     }
     .globalMenu {
-        height: 35%;
-        background: url("../images/banniereV32.JPG") no-repeat center center;
+        height: fit-content;
+        background: url("../images/testbanniere.png") no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        margin-bottom: 6%;
+    }
+
+    .menusize
+    {
+        height: fit-content;
     }
 }
 
@@ -556,4 +560,22 @@ footersize{
 .zIndex3 {
     z-index: 3;
     position: relative;
+}
+
+/*Style page voter*/
+.scoreBoard{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 5%;
+}
+
+.scoreTitle{
+    padding-left: 20%;
+    padding-top: 3%;
+}
+
+.btnVoter{
+    margin-left: 41%;
+    margin-right: 41%;
+    margin-top: 5%;
 }
