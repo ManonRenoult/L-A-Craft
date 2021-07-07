@@ -309,7 +309,7 @@ footersize{
         margin-top: 5%;
     }
     .globalMenu {
-        height: fit-content;
+        height: auto;
         background: url("../images/testbanniere.png") no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -319,7 +319,7 @@ footersize{
 
     .menusize
     {
-        height: fit-content;
+        height: auto;
     }
 }
 
