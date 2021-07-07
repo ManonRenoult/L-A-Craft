@@ -70,7 +70,7 @@ if (isset($_GET['bad_connect'])) {
         <div class="col-1 col-md-2 maxHeight">
 
             <ul class="menuB">
-                <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li class="<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'btnLiDisconnect';}else {echo 'btnconnect';}?>"><i class="fa fa-power-off" aria-hidden="true"></i><?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo '';}else {echo 'Se connecter';}?></li></a>
+                <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li class="<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'btnLiDisconnect';}else {echo 'btnconnect';}?>"><?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo '<i class="fas fa-sign-out-alt iconConnec"></i>';}else {echo '<i class="fas fa-power-off"></i>Se connecter';}?></li></a>
             </ul>
         </div>
 
