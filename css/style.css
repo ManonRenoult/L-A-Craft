@@ -58,7 +58,6 @@ p{
 }
 footer {
     background-color: grey;
-
 }
 .menuA,.menuB {
     list-style-type: none;
@@ -216,7 +215,6 @@ footersize{
     padding-top: 4%;
     padding-bottom: 4%;
     padding-left: 10%;
-    padding-right: 10%;
 }
 
 .cardAll a {
@@ -227,6 +225,7 @@ footersize{
     box-shadow: 0px 0px 15px black;
     background-color: grey;
     position: absolute;
+    width: 100%;
 }
 .cardAllJoin{
     background: url("../images/nousRejoindre.jpg") no-repeat center center;
@@ -639,4 +638,17 @@ footersize{
     -o-background-size: cover;
     background-size: cover;
     height: 100%;
+}
+
+.cardAllEvents{
+    box-shadow: 1px 1px 10px black;
+    border-radius: 6px;
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    height: auto   ;
+}
+
+.cardTwitter{
+    height: 50%;
 }
