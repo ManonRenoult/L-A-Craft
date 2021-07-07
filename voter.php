@@ -1,20 +1,22 @@
 <?php include 'menu.php';?>
 
     <div class="container containerVoter">
-        <div class="row  voter">
-            <?php
-            if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
-                echo '
-                            
-                           <button type="button" class="btn btn-primary btnVoter">Voter</button>
-                           ';
-            }
-            else{
-                echo'
-                <button type="button" class="btn btn-warning btnVoter">Veuillez vous connecter pour voter</button>
-                ';
-            }
-            ?>
+        <div class="row voter">
+            <div class="offset-3 col-6 testCenter">
+                <?php
+                if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
+                    echo '
+                                
+                               <button type="button" class="btn btn-primary btnVoter">Voter</button>
+                               ';
+                }
+                else{
+                    echo'
+                    <button type="button" class="btn btn-warning btnVoter">Veuillez vous connecter pour voter</button>
+                    ';
+                }
+                ?>
+            </div>
         </div>
         <div class="row scoreTitle">
             Classement des TOP Voteurs

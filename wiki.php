@@ -25,7 +25,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 boxCard">
+            <div class="col-lg-4 col-md-12 col-sm-12 boxCard mediaQueryCard">
                 <div class="cardAll">
                     <a class="cardLink" href="#"  onclick="document.location.href='./leserveur.php';">
                         <div class="btn cardAllJoin">

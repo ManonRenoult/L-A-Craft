@@ -309,21 +309,14 @@ footersize{
         margin-top: 5%;
     }
     .globalMenu {
-<<<<<<< HEAD
-        height: 35%;
-=======
         height: auto;
->>>>>>> ManonRenoult-dev
         background: url("../images/testbanniere.png") no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> ManonRenoult-dev
     .menusize
     {
         height: auto;
@@ -567,8 +560,7 @@ footersize{
 .zIndex3 {
     z-index: 3;
     position: relative;
-<<<<<<< HEAD
-=======
+
 }
 
 /*Style page voter*/
@@ -584,8 +576,15 @@ footersize{
 }
 
 .btnVoter{
+    margin: 0 auto;
     margin-left: 41%;
     margin-right: 41%;
     margin-top: 5%;
->>>>>>> ManonRenoult-dev
+}
+
+.testCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
