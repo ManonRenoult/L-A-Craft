@@ -14,7 +14,7 @@
         </div>
         <div class="offset-lg-2 col-lg-5 col-md-12 col-sm-12 boxCard mediaQueryCard">
             <div class="cardAll">
-                <a class="cardLink" href="#"  onclick="document.location.href='./index.php';">
+                <a class="cardLink" href="#"  onclick="document.location.href='./events.php';">
                     <div class="btn cardAllEvent">
                         <div class="cardTitle">
                             <div class="tucasse">Evenements</div>
