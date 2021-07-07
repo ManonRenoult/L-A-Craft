@@ -2,20 +2,21 @@
     <div class="footersize">
         <div class="container containerC">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="offset-1 col-lg-4 col-md-4 col-sm-12">
                     A propos <br>
                     &nbsp;&nbsp; L-A craft est un serveur semi rp dans lequel vous pouvez construire votre maison, travailler, vous amuser entre amis et bien plus!
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-2 col-md-4 col-sm-12">
                     Liens utiles <br>
-                    &nbsp;&nbsp;Contrary to popular belief, Lorem Ipsum is not simply random text.<br><br>
+                    &nbsp;&nbsp;<a href="#" onclick="document.location.href='./wiki.php';"><li style="color: #212529 ;list-style-type: none;">Wiki</li></a><br><br>
                     Nous contacter <br>
                     &nbsp;&nbsp;test@serveur.com
 
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    Nous contacter <br>
-                    &nbsp;&nbsp;Contrary to popular belief, Lorem Ipsum is not simply random text.
+                    Nous suivre sur nos réseaux<br>
+                    &nbsp;&nbsp;<i class="fab fa-discord fa-3x"></i>
+                    <i class="fab fa-twitter fa-3x"></i>
                 </div>
             </div>
         </div>

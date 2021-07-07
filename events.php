@@ -30,13 +30,7 @@
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12 boxCard mediaQueryCard">
                 <div class="cardAll">
-                    <a class="cardLink" href="#"  onclick="document.location.href='./leserveur.php';">
-                        <div class="cardEventAutre">
-                            <div class="cardTitle">
-                                <div class="tucasse">Les autres événements</div>
-                            </div>
-                        </div>
-                    </a>
+                    <a class="twitter-timeline" data-lang="fr" data-height="450" data-theme="dark" href="https://twitter.com/FrMinecraft?ref_src=twsrc%5Etfw">Tweets by FrMinecraft</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
         </div>
