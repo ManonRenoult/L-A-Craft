@@ -530,7 +530,7 @@ footersize{
 }
 
 .cardCommands{
-    background: url("../images/commandes.jpg") no-repeat center center;
+    background: url("../images/minecraft-commands.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -587,4 +587,44 @@ footersize{
     align-items: center;
     justify-content: center;
 
+}
+
+/*style page events*/
+
+.testcard
+{
+    margin-top: 65%;
+    font-size: 1.5em;
+    color: white;
+}
+.cardEvent:hover ~ .test {
+    opacity: .5;
+    display: block;
+}
+
+.cardHungerGame{
+    background: url("../images/hungergame.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+.cardBedWar{
+    background: url("../images/bedwar.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+.cardEventAutre{
+    background: url("../images/eventautre.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
 }
