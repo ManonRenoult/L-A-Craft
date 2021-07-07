@@ -593,7 +593,9 @@ footersize{
 
 .testcard
 {
-    margin-top: 75%;
+    margin-top: 65%;
+    font-size: 1.5em;
+    color: white;
 }
 .cardEvent:hover ~ .test {
     opacity: .5;

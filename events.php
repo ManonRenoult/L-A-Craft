@@ -8,7 +8,7 @@
                             <div class="cardTitle">
                                 <div class="tucasse">Les événements Hunger Game</div>
                             </div>
-                            <div class="card-text testcard">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
+                            <div class="card-text testcard">Prochain événement le 12.12.2012 la fin du monde</div>
 
                         </div>
                     </a>
@@ -23,6 +23,7 @@
                                 <div class="tucasse">Les événements Bed War</div>
 
                             </div>
+                            <div class="card-text testcard">Prochain événement le 12.12.2012 la fin du monde</div>
                         </div>
                     </a>
                 </div>
