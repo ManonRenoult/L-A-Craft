@@ -112,7 +112,6 @@ footer {
 
 .menusize
 {
-    height: 90%;
     position:relative;
 }
 
@@ -203,9 +202,9 @@ footersize{
     background: rgba(255,255,255,0.2);
     font-size: 2em;
     border-radius: 10px;
-    width: auto;
+    width: max-content;
     bottom: 10%;
-    margin-left: 34%;
+    margin: 0 auto;
     margin-top: 10%;
     padding-right:5%;
     padding-left: 5%;
@@ -311,12 +310,11 @@ footersize{
     }
     .globalMenu {
         height: 35%;
-        background: url("../images/banniereV32.JPG") no-repeat center center;
+        background: url("../images/testbanniere.png") no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        margin-bottom: 6%;
     }
     .menusize
     {
