@@ -50,7 +50,11 @@ if (isset($_GET['bad_connect'])) {
                 <ul class="menuA">
                     <a href="#" onclick="document.location.href='./index.php';"><li>Accueil</li></a>
                     <a href="#" onclick="document.location.href='./map.php';"><li>Map</li></a>
+<<<<<<< HEAD
                     <a href="#" onclick="document.location.href='./index.php';"><li>Voter</li></a>
+=======
+                    <a href="#" onclick="document.location.href='./voter.php';"><li>Voter</li></a>
+>>>>>>> ManonRenoult-dev
                     <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
                 </ul>
             </div>
