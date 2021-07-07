@@ -5,16 +5,9 @@
             <div class="offset-3 col-6 testCenter">
                 <?php
                 if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
-                    echo '
-                                
-                                    <a href="#" class="width20" onclick="document.location.href=\'https://www.liste-serveurs-minecraft.org/vote/?idc=202960&nickname='.$_SESSION['username'].'\';"><button type="button"  class="btn btn-primary btnVoterConnecter">Voter</button></a>
-                                
-                               ';
-                }
-                else{
-                    echo'
-                            <a href="#" onclick="document.location.href=\'./connect.php\'"> <button type="button" class="btn btn-warning btnVoter">Veuillez vous connecter pour voter</button></a>
-                    ';
+                    echo '<a href="#" class="width20" onclick="document.location.href=\'https://www.liste-serveurs-minecraft.org/vote/?idc=202960&nickname='.$_SESSION['username'].'\';"><button type="button"  class="btn btn-primary btnVoterConnecter">Voter</button></a>';
+                } else{
+                    echo'<a href="#" onclick="document.location.href=\'./connect.php\'"> <button type="button" class="btn btn-warning btnVoter">Veuillez vous connecter pour voter</button></a>';
                 }
                 ?>
             </div>
@@ -63,27 +56,37 @@
                                 if ($rang == 'Admin'){
                                     array_push($allName,$paramGet2['username']);
                                     array_push($allVote,$paramGet2['nbVote']);
-                                    array_push($allRang, '[ Fondateur ]');
+                                    $rangColor = '<div style="color:red">'.'[ Fondateur ]'.'</div>';
+                                    array_push($allRang, $rangColor);
                                 }else if ($rang == 'Default'){
                                     array_push($allName,$paramGet2['username']);
                                     array_push($allVote,$paramGet2['nbVote']);
-                                    array_push($allRang, '[ Membre ]');
+                                    array_push($allRang, );
+                                    $rangColor = '<div style="color:green">'.'[ Membre ]'.'</div>';
+                                    array_push($allRang, $rangColor);
                                 }else {
                                     array_push($allName,$paramGet2['username']);
                                     array_push($allVote,$paramGet2['nbVote']);
-                                    array_push($allRang, '[ '.$rang.' ]');
+                                    $rangColor = '';
+                                    if($rang == 'Vendeur'){
+                                        $rangColor = '<div style="color:yellow">'.'[ '.$rang.' ]'.'</div>';
+                                    }else if($rang == 'Moderateur'){
+                                        $rangColor = '<div style="color:#6610f2">'.'[ '.$rang.' ]'.'</div>';
+                                    }else {
+                                        $rangColor = '<div style="color:green">'.'[ '.$rang.' ]'.'</div>';
+                                    }
+                                    array_push($allRang, $rangColor);
                                 }
                             }
                         }
                     }
                     if(!empty($allParamGet2) || $allParamGet2 != ''){
                         for ($i = 0 ; $i <= (int)count($allName)-1 ; $i++ ){
-                            echo '
-                            <tr>
-                                <th scope="row">'.($i+1).'</th>
-                                <td>'.$allRang[$i].' '.$allName[$i].'</td>
-                                <td>'.$allVote[$i].'</td>
-                            </tr>
+                            echo '<tr>
+                                        <th scope="row">'.($i+1).'</th>
+                                        <td>'.$allRang[$i].' '.$allName[$i].'</td>
+                                        <td>'.$allVote[$i].'</td>
+                                   </tr>
                             ';
                         }
                     }
@@ -91,7 +94,5 @@
                 </tbody>
             </table>
         </div>
-
     </div>
-
 <?php include 'footer.php';?>
