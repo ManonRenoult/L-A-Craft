@@ -7,7 +7,7 @@
                 if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
                     echo '
                                 
-                                    <a href="#" onclick="document.location.href=\'https://www.liste-serveurs-minecraft.org/vote/?idc=202960&nickname='.$_SESSION['username'].'\';"><button type="button"  class="btn btn-primary btnVoter">Voter</button></a>
+                                    <a href="#" class="width20" onclick="document.location.href=\'https://www.liste-serveurs-minecraft.org/vote/?idc=202960&nickname='.$_SESSION['username'].'\';"><button type="button"  class="btn btn-primary btnVoterConnecter">Voter</button></a>
                                 
                                ';
                 }
