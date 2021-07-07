@@ -1,6 +1,6 @@
 <?php include 'menu.php';?>
 
-<div class="container containerProfil">
+<div class="container containerProfil zIndex3">
     <div class="row maxHeight">
         <div class="col-lg-3 col-md-12 col-sm-12 divPhotoUser">
             <div class="cardPhotoUser">

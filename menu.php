@@ -42,9 +42,9 @@ if (isset($_GET['bad_connect'])) {
             <div class="row menuBar maxHeight">
                 <?php
                 if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
-                    echo '<div class="col-9 col-md-6 maxHeight">';
+                    echo '<div class="col-8 col-md-6 maxHeight">';
                 }else{
-                    echo '<div class="col-10 col-md-6 maxHeight">';
+                    echo '<div class="col-9 col-md-6 maxHeight">';
                 }
                 ?>
                 <ul class="menuA">
@@ -54,28 +54,27 @@ if (isset($_GET['bad_connect'])) {
                     <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
                 </ul>
             </div>
+            <div class="col-2 col-md-4 maxHeight">
             <?php
             if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
-                echo '<div class="col-2 col-md-4 maxHeight">';
-            }else{
-                echo '<div class="col-2 col-md-6 maxHeight">';
+                echo '
+                            
+                           <ul class="menuB">
+                               <a href="#" onclick="document.location.href=\'./profil.php\'"><li><div class="btnConnect">Mon profil</div></li></a>
+                           </ul>
+                           ';
             }
             ?>
+
+            </div>
+        <div class="col-1 col-md-2 maxHeight">
+
             <ul class="menuB">
-                <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li><div class="btnConnect"><i class="far fa-user"></i>&nbsp;<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'Se déconnecter';}else {echo 'Se connecter';}?></div></li></a>'
+                <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li class="<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'btnLiDisconnect';}else {echo 'btnconnect';}?>"><i class="fa fa-power-off" aria-hidden="true"></i><?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo '';}else {echo 'Se connecter';}?></li></a>
             </ul>
         </div>
-        <?php
-        if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
-            echo '
-                            <div class="col-1 col-md-2 maxHeight">
-                                <ul class="menuB">
-                                    <a href="#" onclick="document.location.href=\'./profil.php\'"><li><div class="btnConnect">Mon profil</div></li></a>
-                                </ul>
-                            </div>
-                                ';
-        }
-        ?>
+
+
     </div>
 </div>
 <div class="container-fluid containerAB">

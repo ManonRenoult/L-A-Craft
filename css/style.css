@@ -10,6 +10,11 @@ body {
 
 /* Style menu/footer rpout*/
 
+.btnLiDisconnect {
+    padding-left: 6% !important;
+    padding-right: 6% !important;
+}
+
 #fondecran {
     /* Fixe l'image en haut à gauche de la page */
     position: fixed;
@@ -104,9 +109,6 @@ footer {
     box-shadow : inset 0px -10px 10px -5px rgba(50,50,50,50.79);
 }
 
-.btnConnect{
-    width: fit-content;
-}
 
 .menusize
 {
@@ -319,8 +321,19 @@ footersize{
 
 /* Style page connexion/inscription*/
 
+.containerInscript {
+    background: lightgrey;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.containerConnect {
+    background: lightgrey;
+}
+
 .formConnect {
     padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .connectCard {
@@ -371,6 +384,12 @@ footersize{
 
 /* Style page profil*/
 
+.containerProfil {
+    background: lightgray;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
 .divPhotoUser
 {
     padding: 0px;
@@ -391,7 +410,7 @@ footersize{
 
 .cardPhotoUser
 {
-    padding-top: 30%;
+    padding-top: 15%;
 }
 
 .userName
@@ -536,4 +555,5 @@ footersize{
 }
 .zIndex3 {
     z-index: 3;
+    position: relative;
 }

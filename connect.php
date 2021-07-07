@@ -34,11 +34,16 @@ function getAllParameters($userName, $bdh) {
     $allParamGet = $getParams->fetchAll();
     foreach ($allParamGet as $paramGet) {
         $rang = ucfirst(substr($paramGet['permission'], 6));
-        if ($rang == 'Default'){
-            $_SESSION['rang'] = 'Membre';
+        if($userName == 'RetroManiiia' || $userName == 'Ryukkk__'){
+            $_SESSION['rang'] = 'Fondateur';
         }else {
-            $_SESSION['rang'] = $rang;
+            if ($rang == 'Default'){
+                $_SESSION['rang'] = 'Membre';
+            }else {
+                $_SESSION['rang'] = $rang;
+            }
         }
+
         $_SESSION['permission'] = $paramGet['permission'];
     }
     $getParams = $bdh->prepare("SELECT * FROM jobs_users where username = ?");
@@ -88,13 +93,13 @@ if (isset($_POST['formconnect'])) {
     }
 }
 ?>
-    <div class="container zIndex3">
+    <div class="container zIndex3 containerConnect">
         <div class="row">
             <div class="col-12">
                 <form method="post" action="" class="formConnect">
                     <div class="row">
                         <h1 class="offset-3 col-4">Connexion</h1>
-                        <div class="col-4"><a href="#" style="text-decoration: none;" onclick="document.location.href='./inscription.php';"><div class="btn btn-primary" style="background-color: #0a58ca">S'inscrire</div></a></div>
+                        <div class="col-4">Pas encore inscrit ?&nbsp;<a href="#" style="text-decoration: none;" onclick="document.location.href='./inscription.php';"><div class="btn btn-success">S'inscrire</div></a></div>
                     </div>
                     <div class="row">
                         <label class="offset-3 col-6" for="username">Nom d'utilisateur Minecraft :</label>

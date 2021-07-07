@@ -59,7 +59,7 @@ if (isset($_POST['forminscription'])) {
     }
 }
 ?>
-<div class="container">
+<div class="container zIndex3 containerInscript">
     <form method="post" action="">
         <div class="row">
             <h1 class="offset-3 col-6">Inscription</h1>

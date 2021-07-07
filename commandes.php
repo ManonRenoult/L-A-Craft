@@ -11,7 +11,7 @@
                     Tapez l'adresse "frhb62360ds.ikexpress.com:25565" dans "Adresse du serveur". <br>
                     Connectez-vous et profitez du meilleur serveur survie ! <br>
                 </p>
-                <iframe src="http://frhb62360ds.ikexpress.com:8123/"></iframe>
+                <iframe src="https://map.l-a-craft-server.fr/"></iframe>
             </div>
         </div>
     </div>
