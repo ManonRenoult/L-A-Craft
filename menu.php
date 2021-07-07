@@ -33,6 +33,20 @@ if (isset($_GET['bad_connect'])) {
     if($_GET['ok_inscription'] == "1"){
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-success zIndex2" role="alert" >Votre compte a bien été crée !</div></div></div></div>';
     }
+} elseif (isset($_GET['bad_vote'])){
+    if($_GET['bad_vote'] == "1"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" >Vous devez etre connecter pour voter !</div></div></div></div>';
+    }elseif($_GET['bad_vote'] == "2"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" >Vous avez deja voter il y a moins de 3H !</div></div></div></div>';
+    }elseif($_GET['bad_vote'] == "3"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" >[ID INVALIDE] L ID du serveur ne correspond pas !</div></div></div></div>';
+    }elseif($_GET['bad_vote'] == "4"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" >[IP INVALIDE] La requête ne vient pas de Liste-serveurs-minecraft.org !</div></div></div></div>';
+    }
+} elseif (isset($_GET['ok_vote'])){
+    if($_GET['ok_vote'] == "1"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-success zIndex2" role="alert" >Votre vote a ete pris en compte !</div></div></div></div>';
+    }
 }
 ?>
 <body class="maxHeight zIndex1">
