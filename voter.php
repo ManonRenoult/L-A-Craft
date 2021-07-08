@@ -4,8 +4,47 @@
         <div class="row voter">
             <div class="offset-3 col-6 testCenter">
                 <?php
+                try{
+                    $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew' );
+                    $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                }
+                catch(PDOException $e){
+                    echo "Erreur : " . $e->getMessage();
+                }
+                function getTimeLastVote($bdh, $nbFunc){
+                    if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
+                        if($nbFunc == 1) {
+                            $getParams2 = $bdh->prepare("SELECT * FROM votes where username = ?");
+                            $getParams2->execute(array($_SESSION['username']));
+                            $allParamGet2 = $getParams2->fetchAll();
+                            foreach ($allParamGet2 as $paramGet2) {
+                                $date = date_create();
+                                $result2 = date_timestamp_set($date, $paramGet2['timetamp']);
+                                $date1 = new DateTime("now");
+                                $interval = $result2->diff($date1);
+                                return $interval->format('Tu a voter il y a %H heures et %i minutes');
+                            }
+                        }elseif($nbFunc == 2){
+                            $getParams2 = $bdh->prepare("SELECT * FROM votes where username = ?");
+                            $getParams2->execute(array($_SESSION['username']));
+                            $allParamGet2 = $getParams2->fetchAll();
+                            foreach ($allParamGet2 as $paramGet2) {
+                                $date = date_create();
+                                $result2 = date_timestamp_set($date, $paramGet2['timetamp']);
+                                $date1 = new DateTime("now");
+                                $interval = $result2->diff($date1);
+                                return $interval->format('%H');
+                            }
+                        }
+                    }
+                }
+
                 if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
-                    echo '<a href="#" class="width20" onclick="document.location.href=\'https://www.liste-serveurs-minecraft.org/vote/?idc=202960&nickname='.$_SESSION['username'].'\';"><button type="button"  class="btn btn-primary btnVoterConnecter">Voter</button></a>';
+                    if((int)getTimeLastVote($bdh,2) >= 3){
+                        echo '<a href="#" class="width20" onclick="window.open(\'https://www.liste-serveurs-minecraft.org/vote/?idc=202960&nickname='.$_SESSION['username'].'\',\'_blank\');"><button type="button"  class="btn btn-primary btnVoterConnecter">Voter</button></a>';
+                    }else {
+                        echo '<button type="button" class="btn btn-danger btnVoterWait">Vous devez attendre 3H entre chaque vote !</button>';
+                    }
                 } else{
 
                     echo '<a href="#" onclick="document.location.href=\'./connect.php\'"> <button type="button" class="btn btn-warning btnVoter">Veuillez vous connecter pour voter</button></a>';
@@ -14,7 +53,12 @@
             </div>
         </div>
         <div class="row scoreTitle">
-            Classement des TOP Voteurs
+            <div class="col-3">Classement des TOP Voteurs</div>
+            <div class="offset-3 col-6">
+                <?php
+                    echo getTimeLastVote($bdh,1);
+                ?>
+            </div>
         </div>
         <div class="row scoreBoard">
             <table class="table table-dark">
@@ -27,13 +71,7 @@
                 </thead>
                 <tbody>
                 <?php
-                    try{
-                        $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew' );
-                        $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    }
-                    catch(PDOException $e){
-                        echo "Erreur : " . $e->getMessage();
-                    }
+
 
                     $getParams2 = $bdh->prepare("SELECT * FROM votes ORDER BY nbVote DESC LIMIT 10");
                     $getParams2->execute();

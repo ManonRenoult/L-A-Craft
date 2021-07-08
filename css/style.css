@@ -578,6 +578,12 @@ footersize{
     padding-top: 3%;
 }
 
+.containerVoter {
+    position: relative;
+    background: lightgrey;
+    z-index: 3;
+}
+
 .btnVoter {
     margin: 0 auto;
     margin-top: 5%;
@@ -588,6 +594,13 @@ footersize{
     margin-top: 20%;
     padding-right: 37%;
     padding-left: 37%;
+}
+
+.btnVoterWait {
+    margin: 0 auto;
+    margin-top: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 
 .rowBtnListeServer {
