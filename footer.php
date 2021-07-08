@@ -10,7 +10,7 @@
                     Liens utiles <br>
                     &nbsp;&nbsp;<a href="#" onclick="document.location.href='./wiki.php';"><li style="color: #212529 ;list-style-type: none;">Wiki</li></a><br><br>
                     Nous contacter <br>
-                    &nbsp;&nbsp;test@serveur.com
+                    &nbsp;&nbsp;<a href="mailto:dev@l-a-craft-server.fr"> dev@l-a-craft-server.fr </a>
 
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">

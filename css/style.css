@@ -161,20 +161,20 @@ footersize{
     position: relative;
 }
 .containerBbis{
-    text-shadow: 1px 1px 50px black;
+    text-shadow: 1px 1px 50px #212529;
     position: relative;
 }
 
+.titreInfos p {
+    color: #212529 !important;
+}
 .infosPres{
     text-align: center;
-    color: white;
+    padding: 3%;
+
 }
 .cardPres{
     padding: 0px;
-}
-
-.infosPres{
-    padding: 3%;
 }
 
 .cardAll {
@@ -567,6 +567,10 @@ footersize{
 }
 
 /*Style page voter*/
+.iframeListeServeur iframe {
+    margin-top: 40%;
+}
+
 .scoreBoard{
     padding-left: 20%;
     padding-right: 20%;

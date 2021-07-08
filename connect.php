@@ -83,8 +83,15 @@ if (isset($_POST['formconnect'])) {
             $_SESSION['username'] = $pseudo;
             $_SESSION['mdp'] = $passPost;
             getAllParameters($_SESSION['username'],$bdh);
-
-            header("Location: ./index.php");
+            if((isset($_GET['connectOption']))){
+                if($_GET['connectOption']=1){
+                    header("Location: ./voter.php");
+                }else {
+                    header("Location: ./index.php");
+                }
+            }else{
+                header("Location: ./index.php");
+            }
         } else {
             header("location: $link" . "?bad_connect=1");
         }

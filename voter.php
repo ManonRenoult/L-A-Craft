@@ -22,7 +22,12 @@
                                 $result2 = date_timestamp_set($date, $paramGet2['timetamp']);
                                 $date1 = new DateTime("now");
                                 $interval = $result2->diff($date1);
-                                return $interval->format('Tu a voter il y a %H heures et %i minutes');
+                                if((int)$interval->format('%i') == 0 || (int)$interval->format('%i') == 00){
+                                    return $interval->format('Tu as voté il y a %H heures');
+                                }else {
+                                    return $interval->format('Tu as voté il y a %H heures et %i minutes');
+                                }
+
                             }
                         }elseif($nbFunc == 2){
                             $getParams2 = $bdh->prepare("SELECT * FROM votes where username = ?");
@@ -41,13 +46,13 @@
 
                 if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
                     if((int)getTimeLastVote($bdh,2) >= 3){
-                        echo '<a href="#" class="width20" onclick="window.open(\'https://www.liste-serveurs-minecraft.org/vote/?idc=202960&nickname='.$_SESSION['username'].'\',\'_blank\');"><button type="button"  class="btn btn-primary btnVoterConnecter">Voter</button></a>';
+                        echo '<a href="#" class="width20" onclick="window.open(\'https://www.liste-serveurs-minecraft.org/vote/?idc=202960&nickname='.$_SESSION['username'].'\',\'_blank\');"><button type="button"  class="btn btn-primary btnVoterConnecter"><i class="fa fa-thumbs-up"></i>&nbsp;Voter</button></a>';
                     }else {
                         echo '<button type="button" class="btn btn-danger btnVoterWait">Vous devez attendre 3H entre chaque vote !</button>';
                     }
                 } else{
 
-                    echo '<a href="#" onclick="document.location.href=\'./connect.php\'"> <button type="button" class="btn btn-warning btnVoter">Veuillez vous connecter pour voter</button></a>';
+                    echo '<a href="#" onclick="document.location.href=\'./connect.php?connectOption=1\'"> <button type="button" class="btn btn-warning btnVoter">Veuillez vous connecter pour voter</button></a>';
                 }
                 ?>
             </div>
