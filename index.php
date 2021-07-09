@@ -36,17 +36,41 @@
     </div>
     <div class="row infosPres">
         <div class="col-lg-4 col-md-12 col-sm-12 ">
-            <row><i class="fas fa-user-friends fa-10x"></i><br></row>
-            <row>Une communauté mature et impliquée</row>
+            <row>
+                <div class="col-12">
+                    <i class="fas fa-user-friends fa-10x logoIndex"></i>
+                </div>
+            </row>
+            <row>
+                <div class="col-12">
+                    <p>Une communauté mature et impliquée</p>
+                </div>
+            </row>
 
         </div>
         <div class="col-lg-4 col-md-12 col-sm-12 ">
-            <row><i class="fas fa-server fa-10x"></i><br></row>
-            <row>Un serveur cracké en version 16.5</row>
+            <row>
+                <div class="col-12">
+                    <i class="fas fa-server fa-10x logoIndex"></i>
+                </div>
+            </row>
+            <row>
+                <div class="col-12">
+                    <p>Un serveur cracké en version 16.5</p>
+                </div>
+            </row>
         </div>
         <div class="col-lg-4 col-md-12 col-sm-12 ">
-            <row><i class="fas fa-calendar-week fa-10x"></i><br></row>
-            <row>Des evenements pour mieux se retrouver</row>
+            <row>
+                <div class="col-12">
+                    <i class="fas fa-calendar-week fa-10x logoIndex"></i>
+                </div>
+            </row>
+            <row>
+                <div class="col-12">
+                    <p>Des evenements pour mieux se retrouver</p>
+                </div>
+            </row>
         </div>
     </div>
 </div>
