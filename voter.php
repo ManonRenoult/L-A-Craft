@@ -46,7 +46,7 @@
 
                 if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
                     if((int)getTimeLastVote($bdh,2) >= 3){
-                        echo '<a href="#" class="width20" onclick="window.open(\'https://www.liste-serveurs-minecraft.org/vote/?idc=202960&nickname='.$_SESSION['username'].'\',\'_blank\');"><button type="button"  class="btn btn-primary btnVoterConnecter"><i class="fa fa-thumbs-up"></i>&nbsp;Voter</button></a>';
+                        echo '<a href="#" class="width20" onclick="window.open(\'https://www.liste-serveurs-minecraft.org/vote/?idc=202960&nickname='.$_SESSION['username'].'\',\'_blank\');"><button type="button"  class="btn btn-primary btnVoterConnecter"><i class="fas fa-thumbs-up"></i>&nbsp;Voter</button></a>';
                     }else {
                         echo '<button type="button" class="btn btn-danger btnVoterWait">Vous devez attendre 3H entre chaque vote !</button>';
                     }

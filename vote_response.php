@@ -8,9 +8,7 @@ define("LOG_FILE", "_postback.log");
 $lsm_ip = file_get_contents('http://www.liste-serveurs-minecraft.org/get_ip.php');
 
 if($_SERVER['REMOTE_ADDR'] == $lsm_ip) {
-
     if($_GET['server_id'] == SERVER_ID) {
-
         $player = $_GET['player'];
         $user_ip = $_GET['user_ip'];
 
@@ -26,33 +24,28 @@ if($_SERVER['REMOTE_ADDR'] == $lsm_ip) {
         }
 
         $requser = $bdh->prepare("SELECT * FROM authme WHERE realname = ?");
-        $requser->execute(array($player));
+        $requser->execute(array($_SESSION['username']));
         $userexist = $requser->rowCount();
-        if($userexist !== 0) {
-            $userName = $player;
-            $endPass = '';
 
+        if($userexist !== 0) {
+            $userName = $_SESSION['username'];
+            $endPass = '';
 
             $userNameLower = strtolower($userName);
             $getParams = $bdh->prepare("SELECT * FROM luckperms_players where username = ?");
             $getParams->execute(array($userNameLower));
             $allParamGet = $getParams->fetchAll();
-            foreach ($allParamGet as $paramGet) {
+            foreach ($allParamGet as $paramGet9) {
                 $getParams = $bdh->prepare("SELECT * FROM Economy where Name = ?");
-                $getParams->execute(array($paramGet['uuid']));
+                $getParams->execute(array($paramGet9['uuid']));
                 $allParamGet = $getParams->fetchAll();
                 foreach ($allParamGet as $paramGet) {
                     $_SESSION['moneyEconomy'] = $paramGet['Balance'];
                     $moneySend = (int)$paramGet['Balance'] + 300;
                     $addMoney = $bdh->prepare("UPDATE Economy SET Balance = ? WHERE Name = ?");
-                    $addMoney->execute(array($moneySend,$paramGet['uuid']));
+                    $addMoney->execute(array($moneySend, $paramGet9['uuid']));
                 }
-
-
             }
-
-
-
 
             $getTimeLastVote = $bdh->prepare("SELECT * FROM votes where username = ?");
             $getTimeLastVote->execute(array($userName));
@@ -88,11 +81,6 @@ if($_SERVER['REMOTE_ADDR'] == $lsm_ip) {
                 }
             }
         }
-        //AJOUTEZ VOTRE CODE ICI
-        //Vous pouvez par exemple contrôler si ce joueur existe dans votre base de données
-        //Vérifier si le joueur a déjà voté durant les 3 dernières heures
-        //Interroger la base de données depuis votre serveur et récompenser le joueur
-
     } else {
         if(DEBUG == true) {
             error_log(date('[Y-m-d H:i] ')."[ID INVALIDE] L'ID du serveur ne correspond pas".PHP_EOL, 3, LOG_FILE);
