@@ -8,7 +8,9 @@ define("LOG_FILE", "_postback.log");
 $lsm_ip = file_get_contents('http://www.liste-serveurs-minecraft.org/get_ip.php');
 
 if($_SERVER['REMOTE_ADDR'] == $lsm_ip) {
+
     if($_GET['server_id'] == SERVER_ID) {
+
         $player = $_GET['player'];
         $user_ip = $_GET['user_ip'];
 
@@ -24,11 +26,10 @@ if($_SERVER['REMOTE_ADDR'] == $lsm_ip) {
         }
 
         $requser = $bdh->prepare("SELECT * FROM authme WHERE realname = ?");
-        $requser->execute(array($_SESSION['username']));
+        $requser->execute(array($player));
         $userexist = $requser->rowCount();
-
         if($userexist !== 0) {
-            $userName = $_SESSION['username'];
+            $userName = $player;
             $endPass = '';
 
             $userNameLower = strtolower($userName);
@@ -46,6 +47,9 @@ if($_SERVER['REMOTE_ADDR'] == $lsm_ip) {
                     $addMoney->execute(array($moneySend, $paramGet9['uuid']));
                 }
             }
+
+
+
 
             $getTimeLastVote = $bdh->prepare("SELECT * FROM votes where username = ?");
             $getTimeLastVote->execute(array($userName));
@@ -81,6 +85,11 @@ if($_SERVER['REMOTE_ADDR'] == $lsm_ip) {
                 }
             }
         }
+        //AJOUTEZ VOTRE CODE ICI
+        //Vous pouvez par exemple contrôler si ce joueur existe dans votre base de données
+        //Vérifier si le joueur a déjà voté durant les 3 dernières heures
+        //Interroger la base de données depuis votre serveur et récompenser le joueur
+
     } else {
         if(DEBUG == true) {
             error_log(date('[Y-m-d H:i] ')."[ID INVALIDE] L'ID du serveur ne correspond pas".PHP_EOL, 3, LOG_FILE);
