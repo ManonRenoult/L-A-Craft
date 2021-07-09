@@ -126,7 +126,6 @@
                             }
                         }
                     }
-
                     function whatNum($num){
                         $final = '';
                         if(($num+1) == 1){
@@ -141,11 +140,9 @@
 
                     if(!empty($allParamGet2) || $allParamGet2 != ''){
                         for ($i = 0 ; $i <= (int)count($allName)-1 ; $i++ ){
-
-
                             echo '<tr>
                                         <th scope="row">'.whatNum($i).($i+1).'</th>
-                                        <td>'.$allRang[$i].' '.$allName[$i].'</td>
+                                        <td><a href="#" class="noStyleLink" onclick="document.location.href=\'./infoPlayer.php?player='.$allName[$i].'\'"> '.$allRang[$i].'<p class="colorBlack">'.$allName[$i].'</p></a></td>
                                         <td>'.$allVote[$i].'</td>
                                    </tr>
                             ';

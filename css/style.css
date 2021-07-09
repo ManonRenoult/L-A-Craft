@@ -136,6 +136,7 @@ footer {
 .menuA a li:hover, .menuB a li:hover {
     /*background-color: rgba(100,100,100,0.8);*/
     color: #FFD700;
+    text-shadow: 1px 1px 50px black;
     /*box-shadow : inset 0px -10px 10px -5px rgba(50,50,50,50.79);*/
 }
 
@@ -744,4 +745,25 @@ footersize{
 
 .cardTwitter{
     height: 50%;
+}
+
+/*Info player */
+
+a:link, a:visited {
+    text-decoration: none;
+}
+.noStyleLink div {
+    text-decoration: none;
+}
+
+.noStyleLink {
+    text-decoration: none;
+}
+
+.noStyleLink p {
+    text-decoration: none;
+}
+
+.colorBlack {
+    color: #ccc!important;
 }
