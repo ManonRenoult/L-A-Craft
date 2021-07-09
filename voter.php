@@ -24,6 +24,8 @@
                                 $interval = $result2->diff($date1);
                                 if((int)$interval->format('%i') == 0 || (int)$interval->format('%i') == 00){
                                     return $interval->format('Tu as voté il y a %H heures');
+                                }elseif((int)$interval->format('%H') == 0 || (int)$interval->format('%H') == 00) {
+                                    return $interval->format('Tu as voté il y a %i minutes');
                                 }else {
                                     return $interval->format('Tu as voté il y a %H heures et %i minutes');
                                 }
@@ -57,6 +59,9 @@
                 ?>
             </div>
         </div>
+        <div class="row">
+            <p class="rowInfoVote">Pour chaque vote, 300$ vous sont crédité sur L-A.Craft !!<br>Profitez en !</p>
+        </div>
         <div class="row scoreTitle">
             <div class="col-3">Classement des TOP Voteurs</div>
             <div class="offset-3 col-6">
@@ -76,8 +81,6 @@
                 </thead>
                 <tbody>
                 <?php
-
-
                     $getParams2 = $bdh->prepare("SELECT * FROM votes ORDER BY nbVote DESC LIMIT 10");
                     $getParams2->execute();
                     $allParamGet2 = $getParams2->fetchAll();
@@ -123,10 +126,25 @@
                             }
                         }
                     }
+
+                    function whatNum($num){
+                        $final = '';
+                        if(($num+1) == 1){
+                            $final = '<i class="fas fa-trophy trophe1"></i>&nbsp;';
+                        }elseif(($num+1) == 2) {
+                            $final = '<i class="fas fa-trophy trophe2"></i>&nbsp;';
+                        }elseif(($num+1) == 3) {
+                            $final = '<i class="fas fa-trophy trophe3"></i>&nbsp;';
+                        }
+                        return $final;
+                    }
+
                     if(!empty($allParamGet2) || $allParamGet2 != ''){
                         for ($i = 0 ; $i <= (int)count($allName)-1 ; $i++ ){
+
+
                             echo '<tr>
-                                        <th scope="row">'.($i+1).'</th>
+                                        <th scope="row">'.whatNum($i).($i+1).'</th>
                                         <td>'.$allRang[$i].' '.$allName[$i].'</td>
                                         <td>'.$allVote[$i].'</td>
                                    </tr>

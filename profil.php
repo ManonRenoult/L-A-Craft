@@ -76,7 +76,28 @@
                         Nombre de votes
                     </div>
                     <div class="col-lg-5 col-md-12 col-sm-12 infos">
-                        Pas encore actif
+                        <?php
+                        try{
+                            $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew' );
+                            $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                        }
+                        catch(PDOException $e){
+                            echo "Erreur : " . $e->getMessage();
+                        }
+
+                        if (!empty ($_SESSION['username']) && !empty ($_SESSION['mdp'])){
+                            $getTimeNbVote = $bdh->prepare("SELECT * FROM votes where username = ?");
+                            $getTimeNbVote->execute(array($_SESSION['username']));
+                            $allLastGet = $getTimeNbVote->fetchAll();
+                            foreach ($allLastGet as $passGet) {
+                                $nbVote = strval($passGet['nbVote']);
+                                echo $nbVote;
+                            }
+                        }else {
+                            echo 'Connecter vous' ;
+                        }
+                        ?>
+
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 fa">
                         <i class="fas fa-thumbs-up fa-3x"></i>

@@ -10,6 +10,21 @@ body {
 
 /* Style menu/footer rpout*/
 
+.linkWikiFooter {
+    text-decoration: none;
+    color: #212529;
+}
+
+.fa-discord {
+    text-decoration: none;
+    color: #212529;
+}
+
+.fa-twitter {
+    text-decoration: none;
+    color: #212529;
+}
+
 .btnLiDisconnect {
     padding-left: 20% !important;
     padding-right: 20% !important;
@@ -567,6 +582,26 @@ footersize{
 }
 
 /*Style page voter*/
+
+.trophe1 {
+    color: yellow!important;
+}
+
+.trophe2 {
+    color : grey !important;
+}
+
+.trophe3 {
+    color: #6f2600 !important;
+ }
+
+.rowInfoVote {
+    padding-top: 5%;
+    color: #212529;
+    padding-left: 20%;
+    margin-left: unset !important;
+}
+
 .iframeListeServeur iframe {
     margin-top: 40%;
 }
