@@ -10,29 +10,15 @@ body {
 
 /* Style menu/footer rpout*/
 
-.titelApropos p {
+.containerC p {
     color: #ccc !important;
 }
 
-.titelApropos h3 {
+.containerC h4 {
     color: #fff !important;
 }
 
-.titleNousContacter h3 {
-    color: #fff !important;
-}
 
-.titleNousContacter a {
-    color: #ccc !important;
-}
-
-.titleReseauSociaux h3 {
-    color: #fff !important;
-}
-
-.titleReseauSociaux a {
-    color: #ccc !important;
-}
 
 .linkWikiFooter {
     text-decoration: none;
@@ -269,10 +255,13 @@ footersize{
 
 .containerC {
     padding-top: 4%;
-    padding-bottom: 4%;
+    padding-bottom: 1%;
     padding-left: 10%;
 }
 
+.containerC hr {
+    border-top: 1px solid rgba(200,200,200,.2);
+}
 .cardAll a {
     text-decoration: none;
 }
