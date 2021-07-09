@@ -145,6 +145,7 @@ footer {
     position:relative;
 }
 
+
 footersize{
     height: 100%;
     position:relative;
@@ -254,7 +255,7 @@ footersize{
 
 
 .containerC {
-    padding-top: 4%;
+
     padding-bottom: 1%;
     padding-left: 10%;
 }
@@ -267,16 +268,16 @@ footersize{
 }
 
 .footer{
-    border-top: solid 5px #3a3a3b;
-    border-top-color: rgb(58, 58, 59);
-    border-top-style: solid;
-    border-top-width: 5px;
-    box-shadow: 0px 0px 15px black;
+    /*border-top: solid 5px #3a3a3b;
+    border-top-color: rgb(58, 58, 59);*/
+    /*box-shadow: 0px 0px 15px black;*/
     /*background-color: grey;*/
     background-color: #1a1a1b;
     position: absolute;
     width: 100%;
 }
+
+
 .cardAllJoin{
     background: url("../images/nousRejoindre.jpg") no-repeat center center;
     -webkit-background-size: cover;
