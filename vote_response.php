@@ -8,12 +8,9 @@ define("LOG_FILE", "_postback.log");
 $lsm_ip = file_get_contents('http://www.liste-serveurs-minecraft.org/get_ip.php');
 
 if($_SERVER['REMOTE_ADDR'] == $lsm_ip) {
-
     if($_GET['server_id'] == SERVER_ID) {
-
         $player = $_GET['player'];
         $user_ip = $_GET['user_ip'];
-
         if(DEBUG == true) {
             error_log(date('[Y-m-d H:i] ')."[VOTE OK] [player]=$player [ip]=$user_ip".PHP_EOL, 3, LOG_FILE);
         }
@@ -31,6 +28,23 @@ if($_SERVER['REMOTE_ADDR'] == $lsm_ip) {
         if($userexist !== 0) {
             $userName = $player;
             $endPass = '';
+
+            $userNameLower = strtolower($userName);
+            $getParams = $bdh->prepare("SELECT * FROM luckperms_players where username = ?");
+            $getParams->execute(array($userNameLower));
+            $allParamGet = $getParams->fetchAll();
+            foreach ($allParamGet as $paramGet9) {
+                $getParams = $bdh->prepare("SELECT * FROM Economy where Name = ?");
+                $getParams->execute(array($paramGet9['uuid']));
+                $allParamGet = $getParams->fetchAll();
+                foreach ($allParamGet as $paramGet) {
+                    $_SESSION['moneyEconomy'] = $paramGet['Balance'];
+                    $moneySend = (int)$paramGet['Balance'] + 300;
+                    $addMoney = $bdh->prepare("UPDATE Economy SET Balance = ? WHERE Name = ?");
+                    $addMoney->execute(array($moneySend, $paramGet9['uuid']));
+                }
+            }
+
             $getTimeLastVote = $bdh->prepare("SELECT * FROM votes where username = ?");
             $getTimeLastVote->execute(array($userName));
             $allLastGet = $getTimeLastVote->fetchAll();
@@ -65,11 +79,6 @@ if($_SERVER['REMOTE_ADDR'] == $lsm_ip) {
                 }
             }
         }
-        //AJOUTEZ VOTRE CODE ICI
-        //Vous pouvez par exemple contrôler si ce joueur existe dans votre base de données
-        //Vérifier si le joueur a déjà voté durant les 3 dernières heures
-        //Interroger la base de données depuis votre serveur et récompenser le joueur
-
     } else {
         if(DEBUG == true) {
             error_log(date('[Y-m-d H:i] ')."[ID INVALIDE] L'ID du serveur ne correspond pas".PHP_EOL, 3, LOG_FILE);
