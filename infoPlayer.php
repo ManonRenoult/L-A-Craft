@@ -46,7 +46,7 @@ $uuidLuckPerm = '';
                                     $uuidLuckPerm = $paramGet['uuid'];
                                 }
                                 $getParams = $bdh->prepare("SELECT * FROM luckperms_user_permissions where uuid = ?");
-                                $getParams->execute(array($_SESSION['uuidLuckPerm']));
+                                $getParams->execute(array($uuidLuckPerm));
                                 $allParamGet = $getParams->fetchAll();
                                 foreach ($allParamGet as $paramGet) {
                                     $rang = ucfirst(substr($paramGet['permission'], 6));
@@ -77,8 +77,10 @@ $uuidLuckPerm = '';
                     <div class="col-lg-5 col-md-12 col-sm-12 infos">
                         <?php
                             if(!empty($_GET['player'])) {
+
                                 $getParams = $bdh->prepare("SELECT * FROM jobs_users where username = ?");
-                                $getParams->execute(array($player));
+                                mysql_real_escape_string($bdh,json_encode($_GET['player']));
+                                $getParams->execute(array($_GET['player']));
                                 $allParamGet = $getParams->fetchAll();
                                 foreach ($allParamGet as $paramGet) {
                                     $arr = explode(":", $paramGet['quests'], 2);
@@ -99,14 +101,16 @@ $uuidLuckPerm = '';
                     <div class="col-lg-5 col-md-12 col-sm-12 infos">
                         <?php
                         if(!empty($_GET['player'])) {
-                            if(false){
+                            if(true){
                                 $getParams = $bdh->prepare("SELECT * FROM authme where realname = ?");
                                 $getParams->execute(array($player));
                                 $allParamGet = $getParams->fetchAll();
                                 foreach ($allParamGet as $paramGet) {
-                                    echo $paramGet['regdate'].'<br>';
-
-                                    echo date('m/d/Y H:i:s', (int)$paramGet['regdate']);
+                                    if(!empty($paramGet['timetampWeb'])){
+                                        echo $paramGet['timetampWeb'];
+                                    }else {
+                                        echo 'Pas encore disponible';
+                                    }
                                 }
                             }else {
                                 echo 'Pas encore disponible';
