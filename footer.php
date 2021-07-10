@@ -28,10 +28,10 @@
                     <h4>Réseaux sociaux</h4>
                     <div class="row">
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a style="text-decoration: none; float: left;" href="#" onclick="window.open('https://discord.gg/9GTTT6y8tH');">&nbsp;&nbsp;<i class="fab fa-discord fa-3x"></i></a>
+                            <a style="text-decoration: none; float: left;" href="#" onclick="window.open('https://discord.gg/9GTTT6y8tH');"><i class="fab fa-discord fa-3x"></i></a>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <a style="text-decoration: none; float: right" href="#">&nbsp;&nbsp;<i class="fab fa-twitter fa-3x"></i></a>
+                            <a style="text-decoration: none; float: right" href="#"><i class="fab fa-twitter fa-3x"></i></a>
                         </div>
                     </div>
 
