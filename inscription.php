@@ -3,7 +3,9 @@ include 'menu.php';
 
 $_SESSION['link'] = $_SERVER['PHP_SELF'];
 $link = $_SESSION['link'];
-
+if (!empty ($_SESSION['username'])){
+    header("Location: ./index.php");
+}
 function generateRandomString($length = 16) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyz';
     $charactersLength = strlen($characters);

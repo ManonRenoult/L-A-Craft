@@ -119,7 +119,7 @@ $uuidLuckPerm = '';
                         ?>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 fa">
-                        <i class="fas fa-briefcase fa-3x"></i>
+                        <i class="fas fa-birthday-cake fa-3x"></i>
                     </div>
                 </div>
                 <div class="row userInfos">

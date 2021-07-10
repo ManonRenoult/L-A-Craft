@@ -1,4 +1,8 @@
-<?php include 'menu.php';?>
+<?php include 'menu.php';
+    if (empty ($_SESSION['username'])){
+        header("Location: ./index.php");
+    }
+?>
 
 <div class="container containerProfil zIndex3">
     <div class="row maxHeight">

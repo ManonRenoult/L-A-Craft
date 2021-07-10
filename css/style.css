@@ -196,6 +196,7 @@ footersize{
     position: relative;
 }
 .containerBbis{
+    z-index: 3;
     position: relative;
     background: #E0E0E0;
 }
@@ -555,7 +556,6 @@ footersize{
     z-index: 3;
     font-size: 2em;
     background-color: #e3e3e3;
-    box-shadow: 1px 1px 10px black;
     padding-top:5%;
     padding-bottom: 5%;
 }

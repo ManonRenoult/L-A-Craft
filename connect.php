@@ -2,7 +2,9 @@
 include 'menu.php';
 $_SESSION['link'] = $_SERVER['PHP_SELF'];
 $link = $_SESSION['link'];
-
+if (!empty ($_SESSION['username'])){
+    header("Location: ./index.php");
+}
 function encryptPass($Pass, $randomSalt2) {
     $firstHash = hash('sha256', $Pass);
     $secondHash = hash('sha256', $firstHash.$randomSalt2);
@@ -28,7 +30,6 @@ function getAllParameters($userName, $bdh) {
     $allParamGet = $getParams->fetchAll();
     foreach ($allParamGet as $paramGet) {
         $_SESSION['uuidLuckPerm'] = $paramGet['uuid'];
-
     }
     $getParams = $bdh->prepare("SELECT * FROM luckperms_user_permissions where uuid = ?");
     $getParams->execute(array($_SESSION['uuidLuckPerm']));
@@ -44,7 +45,6 @@ function getAllParameters($userName, $bdh) {
                 $_SESSION['rang'] = $rang;
             }
         }
-
         $_SESSION['permission'] = $paramGet['permission'];
     }
     $getParams = $bdh->prepare("SELECT * FROM jobs_users where username = ?");
@@ -52,12 +52,8 @@ function getAllParameters($userName, $bdh) {
     $allParamGet = $getParams->fetchAll();
     foreach ($allParamGet as $paramGet) {
         $arr = explode(":", $paramGet['quests'], 2);
-
-
         $jobs= $arr[0];
-
         $_SESSION['jobs'] = $jobs;
-        echo $_SESSION['jobs'];
         $_SESSION['uuidJob'] = $paramGet['player_uuid'];
     }
     $getParams = $bdh->prepare("SELECT * FROM Economy where Name = ?");
@@ -92,6 +88,8 @@ if (isset($_POST['formconnect'])) {
                 if ($passACheck == $passBDD) {
                     $_SESSION['username'] = $pseudo;
                     $_SESSION['mdp'] = $passPost;
+                    $_SESSION['start'] = time();
+                    $_SESSION['expire'] = $_SESSION['start'] + (30 * 60);
                     getAllParameters($_SESSION['username'], $bdh);
                     if ((isset($_GET['connectOption']))) {
                         if ($_GET['connectOption'] = 1) {
@@ -101,13 +99,7 @@ if (isset($_POST['formconnect'])) {
                             header("Location: ./index.php");
                         }
                     } else {
-                        echo $_SESSION['username'].'<br>';
-                        echo $_SESSION['rang'].'<br>';
-                        echo $_SESSION['uuidLuckPerm'].'<br>';
-                        echo $_SESSION['jobs'].'<br>';
-                        echo $_SESSION['uuidJob'].'<br>';
-                        echo $_SESSION['permission'].'<br>';
-                        /*header("Location: ./index.php");*/
+                        header("Location: ./index.php");
                     }
                 } else {
                     header("location: $link" . "?bad_connect=1");
@@ -144,7 +136,7 @@ if (isset($_POST['formconnect'])) {
                         <input class="offset-3 col-6" type="password" placeholder="Votre mot de passe" name="mdp" id="mdp">
                     </div>
                     <div class="row" style="padding-top:2.5%">
-                        <!--<div class="offset-3 col-6 g-recaptcha" data-sitekey="6Le1u4kbAAAAACM8ajaPEq-kw0S0RzCuRV9FRPy1"></div>-->
+                        <div class="offset-3 col-6 g-recaptcha" data-sitekey="6Le1u4kbAAAAACM8ajaPEq-kw0S0RzCuRV9FRPy1"></div>
                     </div>
                     <br>
                     <div class="row">

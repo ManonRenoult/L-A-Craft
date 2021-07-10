@@ -12,6 +12,8 @@ session_start();
     <title>Isayev Server</title>
 </head>
 <?php
+$_SESSION['link'] = $_SERVER['PHP_SELF'];
+$link = $_SESSION['link'];
 //    Erreur de connexion
 if (isset($_GET['bad_connect'])) {
     if($_GET['bad_connect'] == "1"){
@@ -51,6 +53,18 @@ if (isset($_GET['bad_connect'])) {
     if($_GET['ok_vote'] == "1"){
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-success zIndex2" role="alert" >Votre vote a ete pris en compte !</div></div></div></div>';
     }
+}elseif (isset($_GET['expireSession'])){
+    if($_GET['expireSession'] == "1"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" >Votre session a expiré !</div></div></div></div>';
+    }
+}
+
+if(!empty($_SESSION['expire'])) {
+    $now = time();
+    if ($now > $_SESSION['expire']) {
+        session_destroy();
+        header("Location: ".$link."?expireSession=1");
+        }
 }
 ?>
 <body class="maxHeight zIndex1">
