@@ -79,7 +79,7 @@ $uuidLuckPerm = '';
                             if(!empty($_GET['player'])) {
 
                                 $getParams = $bdh->prepare("SELECT * FROM jobs_users where username = ?");
-                                mysql_real_escape_string($bdh,json_encode($_GET['player']));
+                                /*mysqli_real_escape_string($bdh,json_encode($_GET['player']));*/
                                 $getParams->execute(array($_GET['player']));
                                 $allParamGet = $getParams->fetchAll();
                                 foreach ($allParamGet as $paramGet) {
