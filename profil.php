@@ -43,8 +43,23 @@
                     </div>
                     <div class="col-lg-5 col-md-12 col-sm-12 infos">
                         <?php
-                        if (!empty ($_SESSION['jobs'])){
-                            echo $_SESSION['jobs'];
+                        try{
+                            $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew' );
+                            $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                        }
+                        catch(PDOException $e){
+                            echo "Erreur : " . $e->getMessage();
+                        }
+                        if (!empty ($_SESSION['username'])){
+                            $getParams = $bdh->prepare("SELECT * FROM jobs_users where username = ?");
+                            /*mysqli_real_escape_string($bdh,json_encode($_GET['player']));*/
+                            $getParams->execute(array($_SESSION['username']));
+                            $allParamGet = $getParams->fetchAll();
+                            foreach ($allParamGet as $paramGet) {
+                                $arr = explode(":", $paramGet['quests'], 2);
+                                $jobs = $arr[0];
+                                echo $jobs;
+                            }
                         }else {
                             echo 'Connecter vous' ;
                         }

@@ -28,6 +28,7 @@ function getAllParameters($userName, $bdh) {
     $allParamGet = $getParams->fetchAll();
     foreach ($allParamGet as $paramGet) {
         $_SESSION['uuidLuckPerm'] = $paramGet['uuid'];
+
     }
     $getParams = $bdh->prepare("SELECT * FROM luckperms_user_permissions where uuid = ?");
     $getParams->execute(array($_SESSION['uuidLuckPerm']));
@@ -51,8 +52,12 @@ function getAllParameters($userName, $bdh) {
     $allParamGet = $getParams->fetchAll();
     foreach ($allParamGet as $paramGet) {
         $arr = explode(":", $paramGet['quests'], 2);
+
+
         $jobs= $arr[0];
+
         $_SESSION['jobs'] = $jobs;
+        echo $_SESSION['jobs'];
         $_SESSION['uuidJob'] = $paramGet['player_uuid'];
     }
     $getParams = $bdh->prepare("SELECT * FROM Economy where Name = ?");
@@ -72,32 +77,48 @@ catch(PDOException $e){
 }
 
 if (isset($_POST['formconnect'])) {
-    if (isset($_POST['username']) && isset($_POST['mdp'])) {
-        $pseudo = $_POST['username'];
-        $passPost = $_POST['mdp'];
-        $passBDD = getPass($pseudo,$bdh);
-        $RescueSha = substr($passBDD, -64);
-        $rescueSalt = substr($passBDD, -81,16 );
-        $passACheck = encryptPass($passPost,$rescueSalt);
-        if ($passACheck == $passBDD) {
-            $_SESSION['username'] = $pseudo;
-            $_SESSION['mdp'] = $passPost;
-            getAllParameters($_SESSION['username'],$bdh);
-            if((isset($_GET['connectOption']))){
-                if($_GET['connectOption']=1){
-                    header("Location: ./voter.php");
-                }else {
-                    header("Location: ./index.php");
+    /*if($_POST['g-recaptcha-response'] != ""){*/
+        if (isset($_POST['username']) && isset($_POST['mdp'])) {
+            /*$secret = '6Le1u4kbAAAAAIwrtgRaFB5ad7YCOB8iLlC7A8Dn';
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
+            $responseData = json_decode($verifyResponse);
+            if ($responseData->success) {*/
+                $pseudo = $_POST['username'];
+                $passPost = $_POST['mdp'];
+                $passBDD = getPass($pseudo, $bdh);
+                $RescueSha = substr($passBDD, -64);
+                $rescueSalt = substr($passBDD, -81, 16);
+                $passACheck = encryptPass($passPost, $rescueSalt);
+                if ($passACheck == $passBDD) {
+                    $_SESSION['username'] = $pseudo;
+                    $_SESSION['mdp'] = $passPost;
+                    getAllParameters($_SESSION['username'], $bdh);
+                    if ((isset($_GET['connectOption']))) {
+                        if ($_GET['connectOption'] = 1) {
+                            header("Location: ./voter.php");
+                        } else {
+
+                            header("Location: ./index.php");
+                        }
+                    } else {
+                        echo $_SESSION['username'].'<br>';
+                        echo $_SESSION['rang'].'<br>';
+                        echo $_SESSION['uuidLuckPerm'].'<br>';
+                        echo $_SESSION['jobs'].'<br>';
+                        echo $_SESSION['uuidJob'].'<br>';
+                        echo $_SESSION['permission'].'<br>';
+                        /*header("Location: ./index.php");*/
+                    }
+                } else {
+                    header("location: $link" . "?bad_connect=1");
                 }
-            }else{
-                header("Location: ./index.php");
-            }
-        } else {
-            header("location: $link" . "?bad_connect=1");
+            /*}*/
+        }else {
+            header("location: $link" . "?bad_connect=2");
         }
-    }else {
-        header("location: $link" . "?bad_connect=2");
-    }
+    /*}else{
+        header("location: $link" . "?bad_connect=3");
+    }*/
 }
 ?>
     <div class="container zIndex3 containerConnect">
@@ -122,7 +143,9 @@ if (isset($_POST['formconnect'])) {
                     <div class="row">
                         <input class="offset-3 col-6" type="password" placeholder="Votre mot de passe" name="mdp" id="mdp">
                     </div>
-
+                    <div class="row" style="padding-top:2.5%">
+                        <!--<div class="offset-3 col-6 g-recaptcha" data-sitekey="6Le1u4kbAAAAACM8ajaPEq-kw0S0RzCuRV9FRPy1"></div>-->
+                    </div>
                     <br>
                     <div class="row">
                         <div class="offset-3 col-6 boxAttention">

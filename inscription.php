@@ -29,33 +29,40 @@ if (isset($_POST['forminscription'])) {
     catch(PDOException $e){
         echo "Erreur : " . $e->getMessage();
     }
-    if (!empty($_POST['username']) && !empty($_POST['mdp']) && !empty($_POST['mdp2'])) {
-        $username = htmlspecialchars($_POST['username']);
-        $randomSalt = generateRandomString();
-        $mdp = encryptPass($_POST['mdp'], $randomSalt);
-        $mdp2 = encryptPass($_POST['mdp2'], $randomSalt);
+    if($_POST['g-recaptcha-response'] != "") {
+        if (!empty($_POST['username']) && !empty($_POST['mdp']) && !empty($_POST['mdp2'])) {
 
-        if (strlen($username) <= 50) {
-            $reqpseudo = $bdh->prepare("SELECT * FROM authme WHERE realname = ?");
-            $reqpseudo->execute(array($username));
-            $pseudoexist = $reqpseudo->rowCount();
-            if ($pseudoexist == 0) {
-                if ($mdp == $mdp2) {
-                    $usernameLower = strtolower($username);
-                    $insertmbr = $bdh->prepare("INSERT INTO authme(username,realname, password) VALUES(?,?, ?)");
-                    $insertmbr->execute(array($usernameLower,$username, $mdp));
-                    header('Location:  ./index.php?ok_inscription=1');
+            $username = htmlspecialchars($_POST['username']);
+            $randomSalt = generateRandomString();
+            $mdp = encryptPass($_POST['mdp'], $randomSalt);
+            $mdp2 = encryptPass($_POST['mdp2'], $randomSalt);
+
+            if (strlen($username) <= 50) {
+                $reqpseudo = $bdh->prepare("SELECT * FROM authme WHERE realname = ?");
+                $reqpseudo->execute(array($username));
+                $pseudoexist = $reqpseudo->rowCount();
+                if ($pseudoexist == 0) {
+                    if ($mdp == $mdp2) {
+                        $date = date_create();
+                        $result = $date->format('d/m/Y');
+                        $usernameLower = strtolower($username);
+                        $insertmbr = $bdh->prepare("INSERT INTO authme(username,realname, password, timetampWeb) VALUES(?,?,?,?)");
+                        $insertmbr->execute(array($usernameLower, $username, $mdp, $result));
+                        header('Location:  ./index.php?ok_inscription=1');
+                    } else {
+                        header("location: $link" . "?bad_inscription=1");
+                    }
                 } else {
-                    header("location: $link" . "?bad_inscription=1");
+                    header("location: $link" . "?bad_inscription=2");
                 }
             } else {
-                header("location: $link" . "?bad_inscription=2");
+                header("location: $link" . "?bad_inscription=3");
             }
         } else {
-            header("location: $link" . "?bad_inscription=3");
+            header("location: $link" . "?bad_inscription=4");
         }
-    } else {
-        header("location: $link" . "?bad_inscription=4");
+    }else{
+        header("location: $link" . "?bad_inscription=5");
     }
 }
 ?>
@@ -86,7 +93,9 @@ if (isset($_POST['forminscription'])) {
         <div class="row">
             <input class="offset-3 col-6" type="password" placeholder="Confirmez votre mot de passe" name="mdp2" id="mdp2">
         </div>
-
+        <div class="row" style="padding-top:2.5%">
+            <div class="offset-3 col-6 g-recaptcha" data-sitekey="6Le1u4kbAAAAACM8ajaPEq-kw0S0RzCuRV9FRPy1"></div>
+        </div>
         <br>
         <div class="row">
             <div class="offset-3 col-6 boxAttention">

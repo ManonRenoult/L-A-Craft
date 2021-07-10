@@ -8,7 +8,7 @@ session_start();
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/3821d4a8a5.js" crossorigin="anonymous"></script>
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Isayev Server</title>
 </head>
 <?php
@@ -18,6 +18,8 @@ if (isset($_GET['bad_connect'])) {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Pseudo ou mot de passe incorrect</div></div></div></div>';
     }elseif ($_GET['bad_connect'] == "2"){
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Tous les champs doivent être complétés !</div></div></div></div>';
+    }elseif ($_GET['bad_connect'] == "3"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Veuillez coché le Captcha !</div></div></div></div>';
     }
 } elseif (isset($_GET['bad_inscription'])){
     if($_GET['bad_inscription'] == "1"){
@@ -28,6 +30,8 @@ if (isset($_GET['bad_connect'])) {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Votre Pseudo est trop grand !</div></div></div></div>';
     }elseif ($_GET['bad_inscription'] == "4"){
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Tous les champs doivent être complétés !</div></div></div></div>';
+    }elseif ($_GET['bad_inscription'] == "5"){
+        echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Veuillez coché le Captcha !</div></div></div></div>';
     }
 } elseif (isset($_GET['ok_inscription'])){
     if($_GET['ok_inscription'] == "1"){
