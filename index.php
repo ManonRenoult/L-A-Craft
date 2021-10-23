@@ -1,9 +1,9 @@
-<?php include 'menu.php';?>
+<?php include 'menu.php'; ?>
 <div class="container containerB">
     <div class="row maxHeight">
         <div class="col-lg-5 col-md-12 col-sm-12 boxCard">
             <div class="cardAll">
-                <a class="cardLink" href="#"  onclick="document.location.href='./rejoindre.php';">
+                <a class="cardLink" href="#" onclick="document.location.href='./rejoindre';">
                     <div class="btn cardAllJoin">
                         <div class="cardTitle">
                             <div class="tucasse">Nous rejoindre</div>
@@ -14,7 +14,7 @@
         </div>
         <div class="offset-lg-2 col-lg-5 col-md-12 col-sm-12 boxCard mediaQueryCard">
             <div class="cardAll">
-                <a class="cardLink" href="#"  onclick="document.location.href='./events.php';">
+                <a class="cardLink" href="#" onclick="document.location.href='./evenement';">
                     <div class="btn cardAllEvent">
                         <div class="cardTitle">
                             <div class="tucasse">Evenements</div>
@@ -26,7 +26,8 @@
     </div>
     <div class="row rowBtnListeServer">
         <div class="offset-3 col-6 testCenter">
-            <a href="https://www.liste-serveurs-minecraft.org"><img alt="TOP Serveurs Minecraft" src="https://www.liste-serveurs-minecraft.org/wp-content/themes/DL/framework/img/logo3.png"></a>
+            <a href="https://www.liste-serveurs-minecraft.org"><img alt="TOP Serveurs Minecraft"
+                                                                    src="https://www.liste-serveurs-minecraft.org/wp-content/themes/DL/framework/img/logo3.png"></a>
         </div>
     </div>
 </div>
@@ -49,29 +50,29 @@
 
         </div>
         <div class="col-lg-4 col-md-12 col-sm-12 ">
-            <row>
+            <div class="row">
                 <div class="col-12">
                     <i class="fas fa-server fa-10x logoIndex"></i>
                 </div>
-            </row>
-            <row>
+            </div>
+            <div class="row">
                 <div class="col-12">
                     <p>Un serveur cracké en version 16.5</p>
                 </div>
-            </row>
+            </div>
         </div>
         <div class="col-lg-4 col-md-12 col-sm-12 ">
-            <row>
+            <div class="row">
                 <div class="col-12">
                     <i class="fas fa-calendar-week fa-10x logoIndex"></i>
                 </div>
-            </row>
-            <row>
+            </div>
+            <div class="row">
                 <div class="col-12">
                     <p>Des evenements pour mieux se retrouver</p>
                 </div>
-            </row>
+            </div>
         </div>
     </div>
 </div>
-<?php include 'footer.php';?>
+<?php include 'footer.php'; ?>
