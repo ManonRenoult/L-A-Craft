@@ -16,45 +16,45 @@ $_SESSION['link'] = $_SERVER['PHP_SELF'];
 $link = $_SESSION['link'];
 //    Erreur de connexion
 if (isset($_GET['bad_connect'])) {
-    if ($_GET['bad_connect'] == "1") {
+    if ($_GET['bad_connect'] === "1") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Pseudo ou mot de passe incorrect</div></div></div></div>';
-    } elseif ($_GET['bad_connect'] == "2") {
+    } elseif ($_GET['bad_connect'] === "2") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Tous les champs doivent être complétés !</div></div></div></div>';
-    } elseif ($_GET['bad_connect'] == "3") {
+    } elseif ($_GET['bad_connect'] === "3") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Veuillez coché le Captcha !</div></div></div></div>';
     }
 } elseif (isset($_GET['bad_inscription'])) {
-    if ($_GET['bad_inscription'] == "1") {
+    if ($_GET['bad_inscription'] === "1") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Vos Mot de passe de corresponde pas !</div></div></div></div>';
-    } elseif ($_GET['bad_inscription'] == "2") {
+    } elseif ($_GET['bad_inscription'] === "2") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Ce pseudo existe deja !</div></div></div></div>';
-    } elseif ($_GET['bad_inscription'] == "3") {
+    } elseif ($_GET['bad_inscription'] === "3") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Votre Pseudo est trop grand !</div></div></div></div>';
-    } elseif ($_GET['bad_inscription'] == "4") {
+    } elseif ($_GET['bad_inscription'] === "4") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Tous les champs doivent être complétés !</div></div></div></div>';
-    } elseif ($_GET['bad_inscription'] == "5") {
+    } elseif ($_GET['bad_inscription'] === "5") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Veuillez coché le Captcha !</div></div></div></div>';
     }
 } elseif (isset($_GET['ok_inscription'])) {
-    if ($_GET['ok_inscription'] == "1") {
+    if ($_GET['ok_inscription'] === "1") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-success zIndex2" role="alert" >Votre compte a bien été crée !</div></div></div></div>';
     }
 } elseif (isset($_GET['bad_vote'])) {
-    if ($_GET['bad_vote'] == "1") {
+    if ($_GET['bad_vote'] === "1") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" >Vous devez etre connecter pour voter !</div></div></div></div>';
-    } elseif ($_GET['bad_vote'] == "2") {
+    } elseif ($_GET['bad_vote'] === "2") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" >Vous avez deja voter il y a moins de 3H !</div></div></div></div>';
-    } elseif ($_GET['bad_vote'] == "3") {
+    } elseif ($_GET['bad_vote'] === "3") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" >[ID INVALIDE] L ID du serveur ne correspond pas !</div></div></div></div>';
-    } elseif ($_GET['bad_vote'] == "4") {
+    } elseif ($_GET['bad_vote'] === "4") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" >[IP INVALIDE] La requête ne vient pas de Liste-serveurs-minecraft.org !</div></div></div></div>';
     }
 } elseif (isset($_GET['ok_vote'])) {
-    if ($_GET['ok_vote'] == "1") {
+    if ($_GET['ok_vote'] === "1") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-success zIndex2" role="alert" >Votre vote a ete pris en compte !</div></div></div></div>';
     }
 } elseif (isset($_GET['expireSession'])) {
-    if ($_GET['expireSession'] == "1") {
+    if ($_GET['expireSession'] === "1") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" >Votre session a expiré !</div></div></div></div>';
     }
 }
@@ -67,6 +67,7 @@ if (!empty($_SESSION['expire'])) {
     }
 }
 ?>
+
 <body class="maxHeight zIndex1">
 <div class="menusize">
     <div class="globalMenu">
