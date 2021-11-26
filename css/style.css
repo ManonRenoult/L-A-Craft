@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family:newPolice;
+    font-family: newPolice;
     background-color: lightgray;
 }
 
@@ -17,7 +17,6 @@ body {
 .containerC h4 {
     color: #fff !important;
 }
-
 
 
 .linkWikiFooter {
@@ -54,7 +53,8 @@ body {
     min-width: 100%;
     min-height: 100%;
 }
-p{
+
+p {
     margin-left: auto;
     margin-right: auto;
     /*font-size: 4em;*/
@@ -62,34 +62,35 @@ p{
 }
 
 .menuAfftitre p {
-    font-size:4em;
+    font-size: 4em;
 }
 
 .menuAffsoustitre p {
-    font-size:4em;
+    font-size: 4em;
 }
-.menuAffnbjoueurs
-{
+
+.menuAffnbjoueurs {
     width: 100%;
 }
 
-.menuAfftitre
-{
+.menuAfftitre {
     width: 100%;
     height: 15%;
     margin-top: 15%;
     margin-bottom: auto;
 }
 
-.menuAffsoustitre{
+.menuAffsoustitre {
     width: 100%;
     margin-bottom: auto;
     font-size: 0.5em;
 }
+
 footer {
     background-color: grey;
 }
-.menuA,.menuB {
+
+.menuA, .menuB {
     list-style-type: none;
     height: 100%;
 }
@@ -113,7 +114,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100%;
-    position:relative;
+    position: relative;
 }
 
 .menuB a li {
@@ -130,7 +131,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100%;
-    position:relative;
+    position: relative;
 }
 
 .menuA a li:hover, .menuB a li:hover {
@@ -141,16 +142,16 @@ footer {
 }
 
 
-.menusize
-{
-    position:relative;
+.menusize {
+    position: relative;
 }
 
 
-footersize{
+footersize {
     height: 100%;
-    position:relative;
+    position: relative;
 }
+
 @media screen and (min-width: 992px) {
     .globalMenu {
         height: 100%;
@@ -168,8 +169,9 @@ footersize{
          */
     }
 }
+
 .menuBar {
-    background: rgba(100,100,100,0.4);
+    background: rgba(100, 100, 100, 0.4);
 }
 
 .containerA {
@@ -179,7 +181,7 @@ footersize{
 }
 
 .containerB {
-    z-index:3;
+    z-index: 3;
     /*box-shadow: 1px 1px 10px black inset;*/
 
     height: 100%;
@@ -191,11 +193,13 @@ footersize{
     padding-top: 10%;
     padding-bottom: 10%;
 }
-.menuTitre{
+
+.menuTitre {
     height: auto;
     position: relative;
 }
-.containerBbis{
+
+.containerBbis {
     z-index: 3;
     position: relative;
     background: #E0E0E0;
@@ -208,17 +212,19 @@ footersize{
 .titreInfos p {
     color: #212529 !important;
 }
-.infosPres{
+
+.infosPres {
     text-align: center;
     padding-bottom: 3%;
 
 }
 
 .infosPres p {
-    padding-top:5%;
+    padding-top: 5%;
     color: #212529 !important;
 }
-.cardPres{
+
+.cardPres {
     padding: 0px;
 }
 
@@ -243,17 +249,16 @@ footersize{
     color: white;
     justify-content: center;
     align-items: center;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     font-size: 2em;
     border-radius: 10px;
     width: max-content;
     bottom: 10%;
     margin: 0 auto;
     margin-top: 10%;
-    padding-right:5%;
+    padding-right: 5%;
     padding-left: 5%;
 }
-
 
 
 .containerC {
@@ -263,13 +268,14 @@ footersize{
 }
 
 .containerC hr {
-    border-top: 1px solid rgba(200,200,200,.2);
+    border-top: 1px solid rgba(200, 200, 200, .2);
 }
+
 .cardAll a {
     text-decoration: none;
 }
 
-.footer{
+.footer {
     /*border-top: solid 5px #3a3a3b;
     border-top-color: rgb(58, 58, 59);*/
     /*box-shadow: 0px 0px 15px black;*/
@@ -280,7 +286,7 @@ footersize{
 }
 
 
-.cardAllJoin{
+.cardAllJoin {
     background: url("../images/nousRejoindre.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -289,7 +295,7 @@ footersize{
     height: 100%;
 }
 
-.cardAllEvent{
+.cardAllEvent {
     background: url("../images/event.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -308,36 +314,38 @@ footersize{
     width: 100%;
     padding-right: 0;
     padding-left: 0;
-    padding-top:0;
-    border : none;
+    padding-top: 0;
+    border: none;
 }
 
 .cardTitle {
-    height :15%;
+    height: 15%;
     color: whitesmoke;
     width: 100%;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    background-color: rgba(2,2,2,0.5);
+    background-color: rgba(2, 2, 2, 0.5);
     font-size: 3.5vh;
 }
 
 .cardTitle .tucasse {
     justify-content: center;
     align-items: center;
-    max-height:100%;
-    height:100%
+    max-height: 100%;
+    height: 100%
 }
 
 .imageClc {
     height: 50%;
-    width:20%;
+    width: 20%;
 }
+
 @media (min-width: 1200px) {
     .container {
         max-width: 100%;
     }
 }
+
 @media (min-width: 576px) {
     .container {
         max-width: 100%;
@@ -355,14 +363,16 @@ footersize{
         max-width: 100%;
     }
 }
-@media screen and (max-width: 992px)
-{
+
+@media screen and (max-width: 992px) {
     .btnconnect {
         padding-left: 0% !important;
     }
+
     .mediaQueryCard {
         margin-top: 5%;
     }
+
     .globalMenu {
         height: auto;
         background: url("../images/testbanniere.png") no-repeat center center;
@@ -372,8 +382,7 @@ footersize{
         background-size: cover;
     }
 
-    .menusize
-    {
+    .menusize {
         height: auto;
     }
 }
@@ -398,27 +407,28 @@ footersize{
 
 .connectCard {
     background-color: grey;
-    border-radius : 10px;
+    border-radius: 10px;
 }
 
-.parentBtnInscription{
+.parentBtnInscription {
     text-align: center;
     width: 100%;
 }
+
 .btnInscription {
     justify-content: center;
     background-color: #1a1e21;
-    color:  white;
+    color: white;
     font-size: 2em;
     width: 100%;
 }
 
-.padding-top-2{
-    padding-top:2%;
+.padding-top-2 {
+    padding-top: 2%;
 }
 
-.padding-top-4{
-    padding-top:4%;
+.padding-top-4 {
+    padding-top: 4%;
 }
 
 .txtConnexion {
@@ -434,7 +444,7 @@ footersize{
 .boxAttention {
     background-color: gray;
     padding: 1%;
-    border-radius : 10px;
+    border-radius: 10px;
     margin-bottom: 2%;
 }
 
@@ -450,97 +460,93 @@ footersize{
     padding-top: 5%;
 }
 
-.divPhotoUser
-{
+.divPhotoUser {
     padding: 0px;
     text-align: center;
 }
 
-.divInfosUser
-{
+.divInfosUser {
 
     padding: 0px;
 }
 
-.photoUser
-{
-    text-align : center;
+.photoUser {
+    text-align: center;
 
 }
 
-.cardPhotoUser
-{
+.cardPhotoUser {
     padding-top: 15%;
 }
 
-.userName
-{
-    text-align : center;
+.userName {
+    text-align: center;
     font-size: 30px;
 }
-.infos{
+
+.infos {
     float: left;
     font-size: 25px;
     padding: 30px;
 }
 
-.userInfos
-{
+.userInfos {
     text-align: center;
     vertical-align: center;
 }
 
-.infosTitle
-{
+.infosTitle {
     font-weight: bold;
     float: left;
     font-size: 25px;
     padding: 30px;
 }
-.divInfosUser{
+
+.divInfosUser {
     background-color: #c9c9c9;
     box-shadow: 1px 1px 10px black;
 }
 
-.fa
-{
-    padding-top: 20px ;
+.fa {
+    padding-top: 20px;
 }
 
-.photo{
-    width : 60%;
-    border-radius : 50%; box-shadow: 1px 1px 10px black;
+.photo {
+    width: 60%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px black;
 }
+
 @media screen and (max-width: 992px) {
 
     .photoUser {
         width: 100%;
 
     }
-    .cardPhotoUser{
+
+    .cardPhotoUser {
         padding-top: 0px;
         text-align: center;
     }
-    .userName
-    {
-        text-align : center;
+
+    .userName {
+        text-align: center;
         font-size: 50px;
     }
-    .infos{
+
+    .infos {
         float: left;
         font-size: 35px;
         padding: 15px;
     }
 
-    .userInfos
-    {
+    .userInfos {
         text-align: center;
         vertical-align: center;
         padding-bottom: 10px;
     }
 
-    .infosTitle
-    {
+    .infosTitle {
         font-weight: bold;
         float: left;
         font-size: 40px;
@@ -550,18 +556,16 @@ footersize{
 
 /*Style page nous rejoindre*/
 
-.containerRejoindre
-{
-    position : relative;
+.containerRejoindre {
+    position: relative;
     z-index: 3;
     font-size: 2em;
     background-color: #e3e3e3;
-    padding-top:5%;
+    padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.nousRejoindreexpl
-{
+.nousRejoindreexpl {
     text-align: justify;
     font-size: large;
 }
@@ -571,11 +575,12 @@ footersize{
 }
 
 .commandesExpl p {
-    padding-top:5%;
+    padding-top: 5%;
     padding-bottom: 5%;
     color: currentColor;
 }
-.cardAllJoin{
+
+.cardAllJoin {
     background: url("../images/nousRejoindre.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -584,7 +589,7 @@ footersize{
     height: 100%;
 }
 
-.cardCommands{
+.cardCommands {
     background: url("../images/minecraft-commands.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -593,25 +598,27 @@ footersize{
     height: 100%;
 }
 
-.map{
+.map {
     height: 600px;
 }
 
 /*Style gestion des erreurs */
 
 #errorCheck {
-    position:absolute;
+    position: absolute;
     z-index: 3;
 }
 
 .zIndex1 {
     z-index: 1;
 }
+
 .zIndex2 {
     text-align: center;
     width: 100%;
     z-index: 2;
 }
+
 .zIndex3 {
     z-index: 3;
     position: relative;
@@ -621,16 +628,16 @@ footersize{
 /*Style page voter*/
 
 .trophe1 {
-    color: #FFD700!important;
+    color: #FFD700 !important;
 }
 
 .trophe2 {
-    color : #C0C0C0 !important;
+    color: #C0C0C0 !important;
 }
 
 .trophe3 {
     color: #CD7F32 !important;
- }
+}
 
 .rowInfoVote {
     padding-top: 5%;
@@ -643,13 +650,13 @@ footersize{
     margin-top: 40%;
 }
 
-.scoreBoard{
+.scoreBoard {
     padding-left: 20%;
     padding-right: 20%;
     padding-bottom: 5%;
 }
 
-.scoreTitle{
+.scoreTitle {
     padding-left: 20%;
     padding-top: 3%;
 }
@@ -696,18 +703,18 @@ footersize{
 
 /*style page events*/
 
-.testcard
-{
+.testcard {
     margin-top: 65%;
     font-size: 1.5em;
     color: white;
 }
+
 .cardEvent:hover ~ .test {
     opacity: .5;
     display: block;
 }
 
-.cardHungerGame{
+.cardHungerGame {
     background: url("../images/hungergame.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -716,7 +723,7 @@ footersize{
     height: 100%;
 }
 
-.cardBedWar{
+.cardBedWar {
     background: url("../images/bedwar.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -725,7 +732,7 @@ footersize{
     height: 100%;
 }
 
-.cardEventAutre{
+.cardEventAutre {
     background: url("../images/eventautre.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -734,16 +741,16 @@ footersize{
     height: 100%;
 }
 
-.cardAllEvents{
+.cardAllEvents {
     box-shadow: 1px 1px 10px black;
     border-radius: 6px;
     opacity: 1;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-    height: auto   ;
+    height: auto;
 }
 
-.cardTwitter{
+.cardTwitter {
     height: 50%;
 }
 
@@ -752,6 +759,7 @@ footersize{
 a:link, a:visited {
     text-decoration: none;
 }
+
 .noStyleLink div {
     text-decoration: none;
 }
@@ -765,5 +773,5 @@ a:link, a:visited {
 }
 
 .colorBlack {
-    color: #ccc!important;
+    color: #ccc !important;
 }
