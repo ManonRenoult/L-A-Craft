@@ -1,4 +1,4 @@
-<?php include 'menu.php'; ?>
+<?php include 'menu2.php'; ?>
     <div class="container containerB">
         <div class="row maxHeight">
             <div class="col-lg-4 col-md-12 col-sm-12 boxCard">
@@ -37,4 +37,4 @@
             </div>
         </div>
     </div>
-<?php include 'footer.php'; ?>
+<?php include 'footer2.php'; ?>

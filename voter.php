@@ -1,4 +1,4 @@
-<?php include 'menu.php'; ?>
+<?php include 'menu2.php'; ?>
 
     <div class="container containerVoter">
         <div class="row voter">
@@ -154,4 +154,4 @@
             </table>
         </div>
     </div>
-<?php include 'footer.php'; ?>
+<?php include 'footer2.php'; ?>

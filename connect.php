@@ -1,5 +1,5 @@
 <?php
-include 'menu.php';
+include 'menu2.php';
 $_SESSION['link'] = $_SERVER['PHP_SELF'];
 $link = $_SESSION['link'];
 if (!empty ($_SESSION['username'])) {
@@ -163,4 +163,4 @@ if (isset($_POST['formconnect'])) {
             </div>
         </div>
     </div>
-<?php include 'footer.php'; ?>
+<?php include 'footer2.php'; ?>

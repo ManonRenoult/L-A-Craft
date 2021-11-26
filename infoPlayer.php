@@ -1,4 +1,4 @@
-<?php include 'menu.php';
+<?php include 'menu2.php';
 try {
     $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew');
     $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -148,4 +148,4 @@ $uuidLuckPerm = '';
     </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include 'footer2.php'; ?>

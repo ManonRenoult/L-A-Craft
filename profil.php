@@ -1,4 +1,4 @@
-<?php include 'menu.php';
+<?php include 'menu2.php';
 if (empty ($_SESSION['username'])) {
     header("Location: ./");
 }
@@ -125,4 +125,4 @@ if (empty ($_SESSION['username'])) {
     </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include 'footer2.php'; ?>
