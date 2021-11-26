@@ -15,7 +15,7 @@ session_start();
 $_SESSION['link'] = $_SERVER['PHP_SELF'];
 $link = $_SESSION['link'];
 //    Erreur de connexion
-if (isset($_GET['bad_connect'])) {ok
+if (isset($_GET['bad_connect'])) {
     if ($_GET['bad_connect'] == "1") {
         echo '<div class="container-fluid" id="errorCheck"><div class="row"><div class="offset-2 col-8"><div class="alert alert-danger zIndex2" role="alert" id="errorCheck">Pseudo ou mot de passe incorrect</div></div></div></div>';
     } elseif ($_GET['bad_connect'] == "2") {
