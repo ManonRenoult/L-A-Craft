@@ -1,5 +1,6 @@
 <?php
 include 'menu.php';
+include 'bdd.php';
 
 $_SESSION['link'] = $_SERVER['PHP_SELF'];
 $link = $_SESSION['link'];
@@ -26,12 +27,6 @@ function encryptPass($Pass, $randomSalt2)
 }
 
 if (isset($_POST['forminscription'])) {
-    try {
-        $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew');
-        $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        echo "Erreur : " . $e->getMessage();
-    }
     if ($_POST['g-recaptcha-response'] != "") {
         if (!empty($_POST['username']) && !empty($_POST['mdp']) && !empty($_POST['mdp2'])) {
 
@@ -41,6 +36,7 @@ if (isset($_POST['forminscription'])) {
             $mdp2 = encryptPass($_POST['mdp2'], $randomSalt);
 
             if (strlen($username) <= 50) {
+                global $bdh;
                 $reqpseudo = $bdh->prepare("SELECT * FROM authme WHERE realname = ?");
                 $reqpseudo->execute(array($username));
                 $pseudoexist = $reqpseudo->rowCount();

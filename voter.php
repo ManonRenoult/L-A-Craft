@@ -1,15 +1,11 @@
-<?php include 'menu.php'; ?>
-
+<?php
+include 'menu.php';
+include 'bdd.php';
+?>
     <div class="container containerVoter">
         <div class="row voter">
             <div class="offset-3 col-6 testCenter">
                 <?php
-                try {
-                    $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew');
-                    $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                } catch (PDOException $e) {
-                    echo "Erreur : " . $e->getMessage();
-                }
                 function getTimeLastVote($bdh, $nbFunc)
                 {
                     if (!empty($_SESSION['username']) && !empty($_SESSION['mdp'])) {
@@ -47,6 +43,7 @@
                 }
 
                 if (!empty($_SESSION['username']) && !empty($_SESSION['mdp'])) {
+                    global $bdh;
                     if ((int)getTimeLastVote($bdh, 2) >= 3) {
                         echo '<a href="#" class="width20" onclick="window.open(\'https://www.liste-serveurs-minecraft.org/vote/?idc=202960&nickname=' . $_SESSION['username'] . '\',\'_blank\');"><button type="button"  class="btn btn-primary btnVoterConnecter"><i class="fas fa-thumbs-up"></i>&nbsp;Voter</button></a>';
                     } else {
