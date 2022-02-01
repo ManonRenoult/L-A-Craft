@@ -1,4 +1,4 @@
-var urlServer = "https://api.minetools.eu/ping/frhb62360ds.ikexpress.com"
+var urlServer = "https://api.minetools.eu/ping/mc.l-a-craft-server.fr"
 
 $.getJSON(urlServer, function(r) {
     if(r.error){
