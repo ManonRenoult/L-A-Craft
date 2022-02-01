@@ -1,54 +1,28 @@
-<?php
-session_start();
-?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="fr" class="maxHeight">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/3821d4a8a5.js" crossorigin="anonymous"></script>
+<div class="header">
+    <div class="child_header_grid">
+        <div class="child_header_menu">
+            <ul class="menu">
+                <a href="#" onclick="document.location.href='./';">
+                    <li>Accueil</li>
+                </a>
+                <a href="#" onclick="document.location.href='./map';">
+                    <li class="two">Map</li>
+                </a>
+                <a href="#" onclick="document.location.href='./voter';">
+                    <li class="three">Voter</li>
+                </a>
+                <a href="#" onclick="document.location.href='./wiki';">
+                    <li class="four">Wiki</li>
+                </a>
 
-    <title>Isayev Server</title>
-</head>
-<body class="maxHeight">
-<?php
-//    Erreur de connexion
-if (isset($_GET['bad_connect']) && $_GET['bad_connect'] == "1") {
-    echo '<div class="alert alert-danger" role="alert" id="errorCheck">Pseudo ou mot de passe incorrect</div>';
-}
+                <a href="#" onclick="document.location.href='./connexion';">
+                    <li class="menu_btn_connect">&nbsp;Se connecter</li>
+                </a>
 
-if(isset($erreur)) {
-    echo $erreur;
-}
-if(isset($validation)) {
-    echo $validation;
-}
-?>
-    <div class="globalMenu">
-        <div class="container-fluid containerA">
-            <div class="row menuBar maxHeight">
-                <div class="col-10 col-md-6 maxHeight">
-                    <ul class="menuA">
-                        <a href="#" onclick="document.location.href='./index.php';"><li>Accueil</li></a>
-                        <a href="#" onclick="document.location.href='./map.php';"><li>Map</li></a>
-                        <a href="#" onclick="document.location.href='./index.php';"><li>Voter</li></a>
-                        <a href="#" onclick="document.location.href='./wiki.php';"><li>Wiki</li></a>
-                    </ul>
-                </div>
-                <div class="col-2 col-md-6 maxHeight">
-                    <ul class="menuB">
-                        <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';"><li><div class="btnConnect"><i class="far fa-user"></i>&nbsp;<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'Se déconnecter';}else {echo 'Se connecter';}?></div></li></a>'
-                    </ul>
-                </div>
-            </div>
+            </ul>
         </div>
-        <div class="container-fluid containerAB">
-            <div class="row maxHeight">
-                <div class="offset-lg-4 offset-md-3 offset-sm-3 col-lg-4 col-md-6 col-sm-6 maxHeight rowNbPlayer">
-
-                    <div id="nbPLayer"><img src="images/world.png" width="10%">&nbsp;&nbsp;Chargement ...</div>
-                </div>
-            </div>
+        <div class="child_header_player">
+            <div id="nbPLayer"><i class="fas fa-users"></i>&nbsp;&nbsp;Chargement ...</div>
         </div>
     </div>
+</div>
