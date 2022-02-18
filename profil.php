@@ -1,3 +1,4 @@
+
 <?php
 include 'menu.php';
 include 'bdd.php';
@@ -117,4 +118,4 @@ if (empty ($_SESSION['username'])) {
     </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include 'footer2.php'; ?>

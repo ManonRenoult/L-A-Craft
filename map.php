@@ -1,4 +1,4 @@
-<?php include 'menu.php'; ?>
+<?php include 'menu2.php'; ?>
 
     <div class="container containerRejoindre">
         <div class="row rejoindre">
@@ -10,4 +10,4 @@
         </div>
     </div>
 
-<?php include 'footer.php'; ?>
+<?php include 'footer2.php'; ?>

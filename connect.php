@@ -159,4 +159,4 @@ if (isset($_POST['formconnect'])) {
             </div>
         </div>
     </div>
-<?php include 'footer.php'; ?>
+<?php include 'footer2.php'; ?>

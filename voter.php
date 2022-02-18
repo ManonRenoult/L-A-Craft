@@ -1,7 +1,9 @@
+
 <?php
 include 'menu.php';
 include 'bdd.php';
 ?>
+
     <div class="container containerVoter">
         <div class="row voter">
             <div class="offset-3 col-6 testCenter">
@@ -151,4 +153,4 @@ include 'bdd.php';
             </table>
         </div>
     </div>
-<?php include 'footer.php'; ?>
+<?php include 'footer2.php'; ?>
