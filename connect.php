@@ -1,5 +1,7 @@
 <?php
-include 'menu2.php';
+include 'menu.php';
+include 'bdd.php';
+
 $_SESSION['link'] = $_SERVER['PHP_SELF'];
 $link = $_SESSION['link'];
 if (!empty ($_SESSION['username'])) {
@@ -67,13 +69,6 @@ function getAllParameters($userName, $bdh)
     }
 }
 
-try {
-    $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew');
-    $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Erreur : " . $e->getMessage();
-}
-
 if (isset($_POST['formconnect'])) {
     /*if($_POST['g-recaptcha-response'] != ""){*/
     if (isset($_POST['username']) && isset($_POST['mdp'])) {
@@ -83,6 +78,7 @@ if (isset($_POST['formconnect'])) {
         if ($responseData->success) {*/
         $pseudo = $_POST['username'];
         $passPost = $_POST['mdp'];
+        global $bdh;
         $passBDD = getPass($pseudo, $bdh);
         $RescueSha = substr($passBDD, -64);
         $rescueSalt = substr($passBDD, -81, 16);

@@ -1,7 +1,12 @@
-<?php include 'menu2.php';
+
+<?php
+include 'menu.php';
+include 'bdd.php';
+
 if (empty ($_SESSION['username'])) {
     header("Location: ./");
 }
+
 ?>
 
 <div class="container containerProfil zIndex3">
@@ -47,12 +52,6 @@ if (empty ($_SESSION['username'])) {
                     </div>
                     <div class="col-lg-5 col-md-12 col-sm-12 infos">
                         <?php
-                        try {
-                            $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew');
-                            $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                        } catch (PDOException $e) {
-                            echo "Erreur : " . $e->getMessage();
-                        }
                         if (!empty ($_SESSION['username'])) {
                             $getParams = $bdh->prepare("SELECT * FROM jobs_users where username = ?");
                             /*mysqli_real_escape_string($bdh,json_encode($_GET['player']));*/
@@ -95,19 +94,13 @@ if (empty ($_SESSION['username'])) {
                     </div>
                     <div class="col-lg-5 col-md-12 col-sm-12 infos">
                         <?php
-                        try {
-                            $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew');
-                            $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                        } catch (PDOException $e) {
-                            echo "Erreur : " . $e->getMessage();
-                        }
-
                         if (!empty ($_SESSION['username']) && !empty ($_SESSION['mdp'])) {
                             $getTimeNbVote = $bdh->prepare("SELECT * FROM votes where username = ?");
                             $getTimeNbVote->execute(array($_SESSION['username']));
                             $allLastGet = $getTimeNbVote->fetchAll();
                             foreach ($allLastGet as $passGet) {
-                                $nbVote = strval($passGet['nbVote']);
+                                $nbVote = (string)$passGet['nbVote'];
+                                #$nbVote = strval($passGet['nbVote']);
                                 echo $nbVote;
                             }
                         } else {
