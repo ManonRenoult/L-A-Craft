@@ -4,6 +4,7 @@
         </div>
         <div class="Logo">
             <img src="images/logoLADiscordSF.png" width="200">
+
         </div>
         <div class="lien_utile">
             <h4>Liens utiles</h4>
@@ -35,8 +36,9 @@
             <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
         </div>
         <div class="copyright">
-            <p>Copyright © 2021 L-A.Craft - Tous droits réservés.</p><br>
+            <p>Copyright © <?php $dateToday = new DateTime("now"); echo $dateToday->format('Y'); ?> L-A.Craft - Tous droits réservés.</p><br>
             <p>L-A-Craft n’est en aucun cas affilié à Mojang ou Minecraft</p>
+
         </div>
     </div>
 </div>
