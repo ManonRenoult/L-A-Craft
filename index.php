@@ -14,9 +14,7 @@ session_start();
     <div class="grid">
         <?php include 'menu.php';?>
         <div class="body">
-
-            <div class="body_index_grid">
-
+            <div class="body_grid">
                 <a class="cardLink image_nous_rejoindre" href="#" onclick="document.location.href='./rejoindre';">
                     <div class="titre_image_grid">
                         <div class="titre_image_index">
@@ -38,11 +36,6 @@ session_start();
                 <img alt="TOP Serveurs Minecraft" src="https://www.liste-serveurs-minecraft.org/wp-content/themes/DL/framework/img/logo3.png">
                 </a>
             </div>
-                <a class="logo_liste_server" href="https://www.liste-serveurs-minecraft.org">
-                    <img alt="TOP Serveurs Minecraft" src="https://www.liste-serveurs-minecraft.org/wp-content/themes/DL/framework/img/logo3.png">
-                </a>
-            </div>
-
         </div>
         <?php include 'footer.php';?>
     </div>
