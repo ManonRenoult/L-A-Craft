@@ -1,5 +1,8 @@
 <?php
-include 'menu.php';
+session_start();
+include 'bdd.php';
+global $bdh;
+
 $_SESSION['link'] = $_SERVER['PHP_SELF'];
 $link = $_SESSION['link'];
 
@@ -44,7 +47,6 @@ function getAllParameters($userName, $bdh) {
                 $_SESSION['rang'] = $rang;
             }
         }
-
         $_SESSION['permission'] = $paramGet['permission'];
     }
     $getParams = $bdh->prepare("SELECT * FROM jobs_users where username = ?");
@@ -52,12 +54,8 @@ function getAllParameters($userName, $bdh) {
     $allParamGet = $getParams->fetchAll();
     foreach ($allParamGet as $paramGet) {
         $arr = explode(":", $paramGet['quests'], 2);
-
-
         $jobs= $arr[0];
-
         $_SESSION['jobs'] = $jobs;
-        echo $_SESSION['jobs'];
         $_SESSION['uuidJob'] = $paramGet['player_uuid'];
     }
     $getParams = $bdh->prepare("SELECT * FROM Economy where Name = ?");
@@ -68,99 +66,91 @@ function getAllParameters($userName, $bdh) {
     }
 }
 
-try{
-    $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew' );
-    $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch(PDOException $e){
-    echo "Erreur : " . $e->getMessage();
-}
-
 if (isset($_POST['formconnect'])) {
-    /*if($_POST['g-recaptcha-response'] != ""){*/
-        if (isset($_POST['username']) && isset($_POST['mdp'])) {
-            /*$secret = '6Le1u4kbAAAAAIwrtgRaFB5ad7YCOB8iLlC7A8Dn';
+    if($_POST['g-recaptcha-response']){
+        if (isset($_POST['username'], $_POST['mdp'])) {
+            $secret = '6Le1u4kbAAAAAIwrtgRaFB5ad7YCOB8iLlC7A8Dn';
             $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
-            $responseData = json_decode($verifyResponse);
-            if ($responseData->success) {*/
+            try {
+                $responseData = json_decode($verifyResponse, false, 512, JSON_THROW_ON_ERROR);
+            } catch (JsonException $e) {
+            }
+            if ($responseData->success) {
                 $pseudo = $_POST['username'];
                 $passPost = $_POST['mdp'];
                 $passBDD = getPass($pseudo, $bdh);
                 $RescueSha = substr($passBDD, -64);
                 $rescueSalt = substr($passBDD, -81, 16);
                 $passACheck = encryptPass($passPost, $rescueSalt);
-                if ($passACheck == $passBDD) {
+                if ($passACheck === $passBDD) {
                     $_SESSION['username'] = $pseudo;
                     $_SESSION['mdp'] = $passPost;
                     getAllParameters($_SESSION['username'], $bdh);
-                    if ((isset($_GET['connectOption']))) {
-                        if ($_GET['connectOption'] = 1) {
+                    if ((isset($_GET['connectOption']))){
+                        if($_GET['connectOption'] = 1){
                             header("Location: ./voter.php");
                         } else {
-
                             header("Location: ./index.php");
                         }
-                    } else {
-                        echo $_SESSION['username'].'<br>';
-                        echo $_SESSION['rang'].'<br>';
-                        echo $_SESSION['uuidLuckPerm'].'<br>';
-                        echo $_SESSION['jobs'].'<br>';
-                        echo $_SESSION['uuidJob'].'<br>';
-                        echo $_SESSION['permission'].'<br>';
-                        /*header("Location: ./index.php");*/
+                    }else {
+                        header("Location: ./index.php");
                     }
                 } else {
                     header("location: $link" . "?bad_connect=1");
                 }
-            /*}*/
+            }
         }else {
             header("location: $link" . "?bad_connect=2");
         }
-    /*}else{
+    }else{
+        echo 'dont ok';
+        sleep(5);
         header("location: $link" . "?bad_connect=3");
-    }*/
+    }
 }
 ?>
-    <div class="container zIndex3 containerConnect">
-        <div class="row">
-            <div class="col-12">
-                <form method="post" action="" class="formConnect">
-                    <div class="row">
-                        <h1 class="offset-3 col-4">Connexion</h1>
-                        <div class="col-4">Pas encore inscrit ?&nbsp;<a href="#" style="text-decoration: none;" onclick="document.location.href='./inscription.php';"><div class="btn btn-success">S'inscrire</div></a></div>
-                    </div>
-                    <div class="row">
-                        <label class="offset-3 col-6" for="username">Nom d'utilisateur Minecraft :</label>
-                    </div>
-                    <div class="row">
-                        <input class="offset-3 col-6" type="text" placeholder="Votre nom d'utilisateur" name="username" id="username">
-                    </div>
-
-                    <br>
-                    <div class="row">
-                        <label class="offset-3 col-6" for="mdp">Mot de passe :</label>
-                    </div>
-                    <div class="row">
-                        <input class="offset-3 col-6" type="password" placeholder="Votre mot de passe" name="mdp" id="mdp">
-                    </div>
-                    <div class="row" style="padding-top:2.5%">
-                        <!--<div class="offset-3 col-6 g-recaptcha" data-sitekey="6Le1u4kbAAAAACM8ajaPEq-kw0S0RzCuRV9FRPy1"></div>-->
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="offset-3 col-6 boxAttention">
-                            <p class="titleBoxAttention">Attention !!!</p>
-                            <p>Le Nom d'utilisateur dois être celui de vôtre compte Minecraft</p>
-                            <p>Et le mot de passe dois être le meme qu'a la connexion au serveur L-A-Craft</p>
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Connexion . L-A Craft</title>
+    </head>
+    <body>
+        <div class="grid">
+            <?php include 'menu.php';?>
+            <div class="body">
+                <div class="body_connect_grid">
+                    <form method="post" action="" class="form_connect">
+                        <div class="title_form_connect"><h2>Connexion</h2></div>
+                        <div class="user_form_connect">
+                            <label class="label_user_form_connect" for="username">Nom d'utilisateur Minecraft :</label><br/>
+                            <input type="text" name="username" id="username" />
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="offset-3 col-6">
-                            <button class="btn btn-primary" name="formconnect" type="submit">Connexion</button>
+                        <div class="password_form_connect">
+                            <label class="label_user_form_connect" for="mdp" >Mot de passe :</label><br/>
+                            <input type="password" name="mdp" id="mdp" />
                         </div>
-                    </div>
-                </form>
+                        <div class="captcha_form_connect">
+                            <div class="g-recaptcha" data-sitekey="6Le1u4kbAAAAACM8ajaPEq-kw0S0RzCuRV9FRPy1"></div>
+                        </div>
+                        <div class="message_form_connect">
+                            <div class="boxAttention_form_connect">
+                                <p class="titleBoxAttention_form_connect">Attention !!!</p>
+                                <p>Le Nom d'utilisateur dois être celui de vôtre compte Minecraft</p>
+                                <p>Et le mot de passe dois être le meme qu'a la connexion au serveur L-A-Craft</p>
+                            </div>
+                        </div>
+                        <div class="btn_connect_form_connect">
+                            <button name="formconnect" type="submit">Connexion</button>
+                        </div>
+                    </form>
+                </div>
             </div>
+            <?php include 'footer.php';?>
         </div>
-    </div>
-<?php include 'footer.php'; ?>
+    </body>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/getPlayer.js"></script>
+</html>

@@ -1,18 +1,19 @@
-<?php include 'menu.php';?>
+<?php include 'menu2.php'; ?>
 
     <div class="container containerRejoindre">
         <div class="row rejoindre">
-            <div class="offset-2 col-8 nousRejoindreexpl">
-                <p><li style="list-style-type: none;font-size: 1.25em"> Gestion des points de téléportation </li>
-                /spawn : se téléporter au spawn <br>
-                /sethome : définir un point de téléportation dans son terrain <br>
-                /home : se téléporter sur le point de téléportation dans son terrain <br>
-                <li style="list-style-type: none;font-size: 1.25em"> Gestion de la monnaie</li>
-                /money : voir son argent <br>
-                /money pay <pseudo> <montant> : envoyer de l'argent à un autre joueur <br>
+            <div class="offset-2 col-8 commandesExpl">
+
+                <p>Suivez ces étapes pour nous rejoindre : <br>
+                    Téléchargez la version premium de <a href="https://www.minecraft.net/fr-fr/">minecraft</a> ou un <a
+                            href="https://tlauncher.org/en/">crack</a> <br>
+                    Sélectionnez une version du jeu en 1.18.1 <br>
+                    Ouvrez le menu "Multijoueur", puis cliquez sur "Nouveau serveur"<br>
+                    Tapez l'adresse "mc.l-a-craft-server.fr" dans "Adresse du serveur". <br>
+                    Connectez-vous et profitez du meilleur serveur survie ! <br>
                 </p>
             </div>
         </div>
     </div>
 
-<?php include 'footer.php';?>
+<?php include 'footer2.php'; ?>

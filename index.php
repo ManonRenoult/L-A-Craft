@@ -1,77 +1,45 @@
-<?php include 'menu.php';?>
-<div class="container containerB">
-    <div class="row maxHeight">
-        <div class="col-lg-5 col-md-12 col-sm-12 boxCard">
-            <div class="cardAll">
-                <a class="cardLink" href="#"  onclick="document.location.href='./rejoindre.php';">
-                    <div class="btn cardAllJoin">
-                        <div class="cardTitle">
-                            <div class="tucasse">Nous rejoindre</div>
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
+    <link rel="icon" type="image/png" href="https://membres.l-a-craft-server.fr/images/Litle-logoLADiscordSF.png">
+    <title>L-A Craft</title>
+</head>
+<body>
+    <div class="grid">
+        <?php include 'menu.php';?>
+        <div class="body">
+            <div class="body_grid">
+                <a class="cardLink image_nous_rejoindre" href="#" onclick="document.location.href='./rejoindre';">
+                    <div class="titre_image_grid">
+                        <div class="titre_image_index">
+                            <p>Nous rejoindre</p>
                         </div>
                     </div>
                 </a>
-            </div>
-        </div>
-        <div class="offset-lg-2 col-lg-5 col-md-12 col-sm-12 boxCard mediaQueryCard">
-            <div class="cardAll">
-                <a class="cardLink" href="#"  onclick="document.location.href='./events.php';">
-                    <div class="btn cardAllEvent">
-                        <div class="cardTitle">
-                            <div class="tucasse">Evenements</div>
+                <a class="cardLink image_nous_evenements" href="#" onclick="document.location.href='./rejoindre';">
+                    <div class="titre_image_grid">
+                        <div class="titre_image_index">
+                            <p>Evenements</p>
                         </div>
                     </div>
                 </a>
+                 <div class = discordWidget>
+                        <iframe src="https://discordapp.com/widget?id=862374067129810964&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                    </div>
+                <a class="logo_liste_server" href="https://www.liste-serveurs-minecraft.org">
+                <img alt="TOP Serveurs Minecraft" src="https://www.liste-serveurs-minecraft.org/wp-content/themes/DL/framework/img/logo3.png">
+                </a>
             </div>
         </div>
+        <?php include 'footer.php';?>
     </div>
-    <div class="row rowBtnListeServer">
-        <div class="offset-3 col-6 testCenter">
-            <a href="https://www.liste-serveurs-minecraft.org"><img alt="TOP Serveurs Minecraft" src="https://www.liste-serveurs-minecraft.org/wp-content/themes/DL/framework/img/logo3.png"></a>
-        </div>
-    </div>
-</div>
-<div class="container containerBbis">
-    <div class="row titreInfos">
-        <p>L-A craft c'est,</p>
-    </div>
-    <div class="row infosPres">
-        <div class="col-lg-4 col-md-12 col-sm-12 ">
-            <row>
-                <div class="col-12">
-                    <i class="fas fa-user-friends fa-10x logoIndex"></i>
-                </div>
-            </row>
-            <row>
-                <div class="col-12">
-                    <p>Une communauté mature et impliquée</p>
-                </div>
-            </row>
-
-        </div>
-        <div class="col-lg-4 col-md-12 col-sm-12 ">
-            <row>
-                <div class="col-12">
-                    <i class="fas fa-server fa-10x logoIndex"></i>
-                </div>
-            </row>
-            <row>
-                <div class="col-12">
-                    <p>Un serveur cracké en version 16.5</p>
-                </div>
-            </row>
-        </div>
-        <div class="col-lg-4 col-md-12 col-sm-12 ">
-            <row>
-                <div class="col-12">
-                    <i class="fas fa-calendar-week fa-10x logoIndex"></i>
-                </div>
-            </row>
-            <row>
-                <div class="col-12">
-                    <p>Des evenements pour mieux se retrouver</p>
-                </div>
-            </row>
-        </div>
-    </div>
-</div>
-<?php include 'footer.php';?>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/getPlayer.js"></script>
+</html>
