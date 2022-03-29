@@ -17,10 +17,11 @@
         </div>
         <div class="reseau">
             <h4>Réseaux sociaux</h4>
+            <a style="text-decoration: none; float: left;" href="#" onclick="window.open('https://discord.gg/9GTTT6y8tH');">&nbsp;&nbsp;<i class="fab fa-discord fa-3x"></i></a>
+            <a style="text-decoration: none; float: right" href="#">&nbsp;&nbsp;<i class="fab fa-twitter fa-3x"></i></a>
         </div>
         <div class="copyright">
-            <p>Copyright © 2021 L-A.Craft - Tous droits réservés.</p>
+            <p>Copyright © <?php $dateToday = new DateTime("now"); echo $dateToday->format('Y'); ?> L-A.Craft - Tous droits réservés.</p>
         </div>
     </div>
 </div>
-
