@@ -15,10 +15,10 @@ session_start();
         <?php include 'menu.php';?>
         <div class="body">
             <div class="body_grid">
-                <a class="cardLink image_nous_rejoindre" href="#" onclick="document.location.href='./rejoindre';">
+                <a class="cardLink image_nous_rejoindre" href="#" onclick="document.location.href='./commandes';">
                     <div class="titre_image_grid">
                         <div class="titre_image_index">
-                            <p>Nous rejoindre</p>
+                            <p>Les commandes</p>
                         </div>
                     </div>
                 </a>
