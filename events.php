@@ -1,4 +1,11 @@
-<?php include 'menu2.php'; ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Connexion . L-A Craft</title>
+</head>
+<?php include 'menu.php'; ?>
     <div class="container containerB">
         <div class="row maxHeight">
             <div class="col-lg-4 col-md-12 col-sm-12 boxCard">
@@ -28,13 +35,14 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 boxCard mediaQueryCard">
-                <div class="cardAll">
-                    <a class="twitter-timeline" data-lang="fr" data-height="450" data-theme="dark"
-                       href="https://twitter.com/FrMinecraft?ref_src=twsrc%5Etfw">Tweets by FrMinecraft</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-            </div>
         </div>
     </div>
-<?php include 'footer2.php'; ?>
+<?php include 'footer.php'; ?>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/getPlayer.js"></script>
+<script src="https://use.fontawesome.com/1654f7ca2e.js"></script>
+<script src="https://kit.fontawesome.com/3821d4a8a5.js" crossorigin="anonymous"></script>
+</html>

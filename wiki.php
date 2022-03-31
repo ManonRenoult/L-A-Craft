@@ -42,13 +42,13 @@
       <div class="answers">
         <p><strong>Pour gagner de l’argent, plusieurs métiers vous sont proposés. Vous pourrez choisir d’en rejoindre un au rez-de chaussée de pôle emploi et le quitter à l’étage. Il est possible d’avoir deux métiers en même temps. Vous retrouverez les informations pour chaque métier en cliquant sur le panneau situé à côté du pnj correspondant</strong></p> 
         <h2>Mineur</h2> 
-        <p>La chambre des métiers est le lieu où vous pourrez choisir jusqu’à deux métiers. Pour rejoindre un métier il vous suffit de cliquer sur le pnj correspondant, vous pouvez également consulter les détails de chaque métier en cliquant sur le panneau info.</p> 
+        <p>Gagnez de l'argent en minant des blocs.</p> 
         <h2>Agriculteur</h2> 
-        <p>La chambre des métiers est le lieu où vous pourrez choisir jusqu’à deux métiers. Pour rejoindre un métier il vous suffit de cliquer sur le pnj correspondant, vous pouvez également consulter les détails de chaque métier en cliquant sur le panneau info.</p> 
+        <p>Gagnez de l'argent en cultivant et en vous occupant de vos animaux.</p> 
         <h2>Chasseur</h2> 
-        <p>La chambre des métiers est le lieu où vous pourrez choisir jusqu’à deux métiers. Pour rejoindre un métier il vous suffit de cliquer sur le pnj correspondant, vous pouvez également consulter les détails de chaque métier en cliquant sur le panneau info.</p> 
+        <p>Gagnez de l'argent en tuant des mobs.</p> 
         <h2>Bûcheron</h2> 
-        <p>La chambre des métiers est le lieu où vous pourrez choisir jusqu’à deux métiers. Pour rejoindre un métier il vous suffit de cliquer sur le pnj correspondant, vous pouvez également consulter les détails de chaque métier en cliquant sur le panneau info.</p>       
+        <p>Gagnez de l'argent en coupant du bois.</p>       
       </div>
     </div>
       

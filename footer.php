@@ -11,12 +11,12 @@
                 <li>&nbsp;&nbsp;<a href="#" class="linkWikiFooter" onclick="document.location.href='./wiki';">Wiki</a></li>
             </ul>
             <ul>
-                <li>&nbsp;&nbsp;<a href="#" class="linkWikiFooter" onclick="document.location.href='./wiki';">Règlement</a></li>
+                <li>&nbsp;&nbsp;<a href="#" class="linkWikiFooter" onclick="document.location.href='./reglement';">Règlement</a></li>
             </ul>
             <ul>
-                <li>&nbsp;&nbsp;<a href="#" class="linkWikiFooter" onclick="document.location.href='./wiki';">Voter</a></li>
+                <li>&nbsp;&nbsp;<a href="#" class="linkWikiFooter" onclick="document.location.href='./voter';">Voter</a></li>
             </ul><ul>
-                <li>&nbsp;&nbsp;<a href="#" class="linkWikiFooter" onclick="document.location.href='./wiki';">Créer un ticket</a></li>
+                <li>&nbsp;&nbsp;<a target="_blank" href="https://tickets.l-a-craft-server.fr/index.php" class="linkWikiFooter">Créer un ticket</a></li>
             </ul>
         </div>
         <div class="nous_contacter">

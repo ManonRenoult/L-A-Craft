@@ -206,7 +206,7 @@ body {
     background-size: cover;
     background-position: center;
     grid-column: 2 / 6;
-    grid-row: 2;
+    grid-row: 3;
     box-shadow: 1px 1px 10px black;
     border-radius: 6px;
     opacity: 1;
@@ -246,7 +246,7 @@ body {
     background-size: cover;
     background-position: center;
     grid-column: 2 / 6;
-    grid-row: 3;
+    grid-row: 2;
     box-shadow: 1px 1px 10px black;
     border-radius: 6px;
     opacity: 1;
@@ -264,6 +264,18 @@ body {
     grid-row: 2;
 }
 
+.twitter{
+    grid-column: 7/ 10;
+    grid-row: 3;
+    width: 350px;
+    height: 500px;
+}
+
+.timeline-Widget{
+    height: 500px;
+}
+
+
 .logo_liste_server {
     height: 100%;
     grid-row: 4;
@@ -276,6 +288,17 @@ body {
     margin: 0 auto;
     width: 100px;
 }
+
+/*------------------------------- Règlement -------------------------------*/
+
+.reglement{
+    color: white;
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
 
 /*------------------------------- InfoPlayer -------------------------------*/
 
