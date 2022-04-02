@@ -1,4 +1,14 @@
-<?php include 'menu2.php'; ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="L-A-Craft est un serveur dans lequel vous pourrez avoir votre métier et gagner votre argent pour vous acheter un terrain, des items, services et bien plus !">
+    <meta name="robots" content="index,map,voter,wiki,status">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Connexion . L-A Craft</title>
+</head>
+<?php include 'menu.php'; ?>
     <div class="container containerB">
         <div class="row maxHeight">
             <div class="col-lg-4 col-md-12 col-sm-12 boxCard">
@@ -28,13 +38,11 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 boxCard mediaQueryCard">
-                <div class="cardAll">
-                    <a class="twitter-timeline" data-lang="fr" data-height="450" data-theme="dark"
-                       href="https://twitter.com/FrMinecraft?ref_src=twsrc%5Etfw">Tweets by FrMinecraft</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-            </div>
         </div>
     </div>
-<?php include 'footer2.php'; ?>
+<?php include 'footer.php'; ?>
+
+</body>
+<script src="js/50cab66c4a.js" crossorigin="anonymous" async defer></script>
+<script src="js/jquery.min.js"></script>
+</html>

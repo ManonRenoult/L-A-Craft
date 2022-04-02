@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d41c15e-3fb1-46db-b7bf-cdbdfc1294bf" name="Default Changelist" comment="" />
+    <list default="true" id="8e5726ae-ac06-49cd-9a85-5bb84acbd3e4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,11 +10,18 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectId" id="1uYHk12D5r54dXv10cPCTCmP46a" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="24OSVi0qnfWeeUk3yx6oeVzXCf3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,35 +30,49 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/L-A-Craft-b181dace580dd6f901efa56e579758912876a3c1/voter.php" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\refonte_lacraft_grid\vote" />
+      <recent name="C:\wamp64\www\refonte_lacraft_grid" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7d41c15e-3fb1-46db-b7bf-cdbdfc1294bf" name="Default Changelist" comment="" />
-      <created>1624835742250</created>
+      <changelist id="8e5726ae-ac06-49cd-9a85-5bb84acbd3e4" name="Changes" comment="" />
+      <created>1643500168474</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1624835742250</updated>
-      <workItem from="1624835745106" duration="606000" />
-      <workItem from="1624885135140" duration="1738000" />
+      <updated>1643500168474</updated>
+      <workItem from="1643500169708" duration="53000" />
+      <workItem from="1643619035646" duration="343000" />
+      <workItem from="1643650588156" duration="12798000" />
+      <workItem from="1643731765731" duration="3077000" />
+      <workItem from="1643736025174" duration="5238000" />
+      <workItem from="1643755864065" duration="1000" />
+      <workItem from="1643839859845" duration="9000" />
+      <workItem from="1645624243724" duration="27494000" />
+      <workItem from="1645730634487" duration="13580000" />
+      <workItem from="1645786123529" duration="15891000" />
+      <workItem from="1645835786885" duration="400000" />
+      <workItem from="1645880119366" duration="4114000" />
+      <workItem from="1646915318669" duration="1236000" />
+      <workItem from="1647731792860" duration="2642000" />
+      <workItem from="1648142891858" duration="9675000" />
+      <workItem from="1648556975233" duration="85000" />
+      <workItem from="1648557100930" duration="1212000" />
+      <workItem from="1648563605428" duration="597000" />
+      <workItem from="1648564327498" duration="2900000" />
+      <workItem from="1648567395561" duration="1275000" />
+      <workItem from="1648915676845" duration="3747000" />
     </task>
-    <task id="LOCAL-00001" summary="add gitignore">
-      <created>1624885355428</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1624885355428</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
   </component>
 </project>

@@ -8,23 +8,8 @@ if (isset($_GET['bad_connect'])) {
     }elseif ($_GET['bad_connect'] == "3"){
         echo '<div class="message_error_red" id="errorCheck"><div>Veuillez coché le Captcha !</div></div>';
     }
-} elseif (isset($_GET['bad_inscription'])){
-    if($_GET['bad_inscription'] == "1"){
-        echo '<div class="message_error_red" id="errorCheck"><div>Vos Mot de passe de corresponde pas !</div></div>';
-    }elseif ($_GET['bad_inscription'] == "2"){
-        echo '<div class="message_error_red" id="errorCheck"><div>Ce pseudo existe deja !</div></div>';
-    }elseif ($_GET['bad_inscription'] == "3"){
-        echo '<div class="message_error_red" id="errorCheck"><div>Votre Pseudo est trop grand !</div></div>';
-    }elseif ($_GET['bad_inscription'] == "4"){
-        echo '<div class="message_error_red" id="errorCheck"><div>Tous les champs doivent être complétés !</div></div>';
-    }elseif ($_GET['bad_inscription'] == "5"){
-        echo '<div class="message_error_red" id="errorCheck"><div>Veuillez coché le Captcha !</div></div>';
-    }
-} elseif (isset($_GET['ok_inscription'])){
-    if($_GET['ok_inscription'] == "1"){
-        echo '<div class="message_error_green" id="errorCheck"><div>Votre compte a bien été crée !</div></div>';
-    }
-} elseif (isset($_GET['bad_vote'])){
+}
+/*elseif (isset($_GET['bad_vote'])){
     if($_GET['bad_vote'] == "1"){
         echo '<div class="message_error_red" id="errorCheck"><div>Vous devez etre connecter pour voter !</div></div>';
     }elseif($_GET['bad_vote'] == "2"){
@@ -38,7 +23,7 @@ if (isset($_GET['bad_connect'])) {
     if($_GET['ok_vote'] == "1"){
         echo '<div class="message_error_green" id="errorCheck"><div>Votre vote a ete pris en compte !</div></div>';
     }
-}
+}*/
 ?>
 <div class="header">
     <div class="child_header_grid">
@@ -75,8 +60,11 @@ if (isset($_GET['bad_connect'])) {
         <div class="child_header_player">
             <div id="copy_target" title="Cliqué pour copié l'ip dans le presse papier !">
                 <div id="nbPLayer"><i class="fa fa-users"></i>&nbsp;&nbsp;Chargement ...</div>
-                <div class="targetServer" id="content-copy">mc.l-a-craft-server.fr</div>
+                <div class="targetServer" id="content-copy">play.l-a-craft.fr</div>
             </div>
+        </div>
+        <div class="child_header_online_discord">
+            <div class="online_member_discord"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Communauté Discord<br><b class="color_number_member_discord">456</b> membres en ligne</div>
         </div>
     </div>
 </div>
