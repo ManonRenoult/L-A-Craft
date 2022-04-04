@@ -2,6 +2,9 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="description" content="L-A-Craft est un serveur dans lequel vous pourrez avoir votre métier et gagner votre argent pour vous acheter un terrain, des items, services et bien plus !">
+        <meta name="robots" content="index,map,voter,wiki,status">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
         <title>Connexion . L-A Craft</title>
     </head>
@@ -88,9 +91,6 @@ Les joueurs peuvent réaliser un dé à coudre. En outre, si le joueur parvient 
     <?php include 'footer.php'; ?>
     </div>
 </body>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="js/getPlayer.js"></script>
-<script src="https://use.fontawesome.com/1654f7ca2e.js"></script>
-<script src="https://kit.fontawesome.com/3821d4a8a5.js" crossorigin="anonymous"></script>
+<script src="js/50cab66c4a.js" crossorigin="anonymous" async defer></script>
+<script src="js/jquery.min.js"></script>
 </html>

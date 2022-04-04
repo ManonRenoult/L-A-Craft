@@ -22,7 +22,7 @@
         <div class="nous_contacter">
             <h4>Nous contacter</h4>
              <ul>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;<a class="linkWikiFooter" href="mailto:dev@l-a-craft-server.fr">dev@l-a-craft-server.fr </li></a>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;<a class="linkWikiFooter" href="mailto:contact@l-a-craft.fr">contact@l-a-craft.fr </li></a>
             </ul>
         </div>
         <div class="line">
