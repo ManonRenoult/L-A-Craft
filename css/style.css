@@ -19,7 +19,7 @@ body {
     height: auto;
     display: grid;
     grid-template-columns: repeat(10, 10%);
-    //grid-template-rows: 590px 80% 25%;
+   // grid-template-rows: 590px 80% 25%;
     grid-template-areas:
         "header header header header header header header header header header header header"
         "body body body body body body body body body body body body"
@@ -323,13 +323,46 @@ body {
 
 /*------------------------------- InfoPlayer -------------------------------*/
 
-.image_profile {
-    grid-column: 5 / 7;
-    grid-row: 2;
-    background-image: url('../images/userPhoto.jpg');
+.container_profil {
+    height: 100%;
+    text-decoration: none;
+    background-color: white;
     background-size: cover;
     background-position: center;
-    height: 100% !important;
+    grid-column: 3 / 9;
+    grid-row: 2;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 6px;
+    opacity: 1;
+    transition-delay: 2s;
+}
+
+.profil_image_grid {
+    height: 100%;
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.profil_image_index {
+    background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(192, 142, 5, .25)),
+            url("../images/userPhoto.jpg");
+    height: 100%;
+    text-align: center;
+    font-size: 2.8vh;
+    color: rgb(226, 223, 219);
+    background-color: rgba(2, 2, 2, 0.5);
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+
+.image_nous_evenements:hover {
+    background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(107, 80, 5, .5)),
+            url("../images/eventautre.jpg");
 }
 
 

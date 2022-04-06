@@ -66,10 +66,21 @@
           </div>
         </div>
 
-            <div>
+        <div>
       <input type="checkbox" id="question4" name="q" class="questions">
       <div class="plus">+</div>
       <label for="question4" class="question">
+        CLAIM DE CHUNK
+      </label>
+      <div class="answers"> 
+    <p>Dans le monde job vous avez la possibilité de claim des chunks pour le prix de 2000$ par chunk. Claim des chunk vous permet de protéger votre zone et éviter qu'elle soit déteriorée par d'autres joueurs. Vous pouvez donner l'autorisation à des joueurs de poser et casser des blocs ans vos chunks. Mais vous vous tiendrez responsable en cas de détérioration par ceux-ci. Retrouvez comment claim des chunk dans la page des commandes. Vous pouvez posséder jusqu'à 50 chunks. </p>
+          </div>
+        </div>
+
+            <div>
+      <input type="checkbox" id="question5" name="q" class="questions">
+      <div class="plus">+</div>
+      <label for="question5" class="question">
         LES MINIS JEUX
       </label>
       <div class="answers"> 
@@ -87,6 +98,26 @@ Les joueurs peuvent réaliser un dé à coudre. En outre, si le joueur parvient 
 </p>
           </div>
         </div>
+
+        <div>
+      <input type="checkbox" id="question6" name="q" class="questions">
+      <div class="plus">+</div>
+      <label for="question6" class="question">
+        SIGNALER UN PROBLEME
+      </label>
+      <div class="answers"> 
+    <p>Vous avez la possibilité de nous avertir si vous rencontrez un problème en jeu en créant un ticket. Si vous n'avez pas encore de compte enregistrez vous avec une commande Minecraft. <br>
+Tapez /ticket register &lt;mot de passe&gt;<br>
+
+Ensuite rendez-vous sur Les tickets
+Connectez vous avec votre identifiant Minecraft et le mot de passe que vous avez mis dans la commande plus haut.<br>
+
+Une fois connecté vous pourrez ouvrir un ticket et nous décrire votre problème<br>
+
+Ainsi nous pourrons régler votre problème dans les plus brefs délais ! </p>
+          </div>
+        </div>
+
     </div>
     <?php include 'footer.php'; ?>
     </div>
