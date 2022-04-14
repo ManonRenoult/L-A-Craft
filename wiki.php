@@ -6,7 +6,7 @@
         <meta name="robots" content="index,map,voter,wiki,status">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
-        <title>Connexion . L-A Craft</title>
+        <title>Wiki . L-A Craft</title>
     </head>
           <?php include 'menu.php';?> 
     <body bgcolor="#2a2d2f">

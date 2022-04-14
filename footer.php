@@ -1,9 +1,7 @@
 <div class="footer">
     <div class="footer_grid">
-        <div class="empty">
-        </div>
         <div class="Logo">
-            <img src="images/logoLADiscordSF.png" width="200">
+            <img src="images/logoLADiscordSF.png" width="100%">
         </div>
         <div class="lien_utile">
             <h4>Liens utiles</h4>

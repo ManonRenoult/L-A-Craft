@@ -24,6 +24,18 @@ if (isset($_GET['bad_connect'])) {
         echo '<div class="message_error_green" id="errorCheck"><div>Votre vote a ete pris en compte !</div></div>';
     }
 }*/
+
+$json_options = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Authorization: Bot OTI3Njg4MjUwNzE2NDgzNTk1.YdN3Ag.oxxawqKw7vhJ1N85zipfnihvCzY"
+    ]
+];
+
+$json_context = stream_context_create($json_options);
+$json_get = file_get_contents('https://discordapp.com/api/guilds/862374067129810964/members?limit=1000', false, $json_context);
+$json_decode  = json_decode($json_get, true);
+
 ?>
 <div class="header">
     <div class="child_header_grid">
@@ -64,7 +76,7 @@ if (isset($_GET['bad_connect'])) {
             </div>
         </div>
         <div class="child_header_online_discord">
-            <div class="online_member_discord"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Communauté Discord<br><b class="color_number_member_discord">456</b> membres en ligne</div>
+            <div class="online_member_discord"><i class="fa-brands fa-discord"></i>&nbsp;&nbsp;Communauté Discord<br><b class="color_number_member_discord"><?php echo count($json_decode)?></b> membres inscrits</div>
         </div>
     </div>
 </div>

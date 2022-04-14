@@ -33,8 +33,8 @@ session_start();
                     </div>
                 </a>
                
-                 <div class = discordWidget>
-                        <iframe src="https://discordapp.com/widget?id=862374067129810964&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                 <div class="discordWidget">
+                        <iframe src="https://discordapp.com/widget?id=862374067129810964&theme=dark" width="100%" height="100%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                     </div>
 
                 <a class="logo_liste_server" href="https://www.liste-serveurs-minecraft.org">

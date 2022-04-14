@@ -1,11 +1,11 @@
-<!--<?php
+<?php
 session_start();
 include 'bdd.php';
 $player = $_GET['player'];
 $rangFinal = '';
 $uuidLuckPerm = '';
 
-!-->
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
