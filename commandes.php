@@ -35,7 +35,10 @@
             <li>/home <nomspawn> : se téléporter sur le point de téléportation dans son terrain</li>
                 <li>/tpa <nomjoueur> : envoyer une demande de téléportation vers un joueur</li>
                     <li>/tpaccept : accepter la demande de téléportation d’un joueur</li>
-                </p>       
+
+                    <li>/rtp : se téléporter aléatoirement sur la map job (coût : 500$)</li> 
+                </p>      
+
             </div>
         </div>
         <div>
@@ -47,8 +50,7 @@
         <div class="answers"> 
             <p><ul>
              <li> /money ou /bal ou / balance : voir son argent</li>
-             <li>/pay &lt;pseudo&gt; &lt;montant&gt; : envoyer de l'argent à un autre joueur</li>
-
+             <li>/pay &lt;joueur&gt; &lt;montant&gt; : envoyer de l'argent à un autre joueur</li>
          </ul></p>
      </div>
  </div>
@@ -82,21 +84,43 @@
 </div>
 </div>
 <div>
-  <input type="checkbox" id="question5" name="q" class="questions">
+          <input type="checkbox" id="question6" name="q" class="questions">
+          <div class="plus">+</div>
+          <label for="question6" class="question">
+            CLAIM DE CHUNK
+        </label>
+        <div class="answers"> 
+            <p><ul>
+                <li>/chunk help : affichier la liste des commandes disponibles</li>
+             <li> /chunk claim : claim le chunk sur lequel le joueur se tient (coût 2000$ par chunk). Un joueur peut posséder 50 chunks</li>
+             <li>/chunk unclaim : unclaim le chunk sur lequel le joueur est (rapporte 1000$ par chunk)</li>
+             <li>/chunk access &lt;joueur&gt; : autorise l'accès au joueur défini à tous vos chunks. Ils ne peuvent pas claim vos chunk ou les retirer, mais ils peuvent interagir avec les blocs à l'intérieur des morceaux</li>
+             <li>/chunk give &lt;joueur&gt; : donner le chunk sur lequel le joueur se tient à un joueur</li>
+             <li>/chunk info : connaître les infos du chunk sur lequel le joueur se tient</li>
+             <li>/chunk name &lt;name&gt; : modifie le nom affiché lorsque quelqu'un entre dans le terrain du joueur</li>
+             <li>/chunk altert : active/désactive la récpetion d'alertes losque qu'un joueur entre dans vos chunks</li>
+             <li>/chunk show &lt;secondes&gt; : Affiche un contour de bloc autour du bloc actuel (secondes entre 1 et 10). Particules uniquement visibles par vous</li>
+
+         </ul></p>
+     </div>
+ </div>
+<div>
+  <input type="checkbox" id="question7" name="q" class="questions">
   <div class="plus">+</div>
-  <label for="question5" class="question">
+  <label for="question7" class="question">
     VERROUILLER LES COFFRES ET LES PORTES
 </label>
 <div class="answers"> 
     <p>
-    Accroupissez-vous et faites un clic droit sur un bloc verrouillable avec une main vide et vous verrez l'interface graphique pour verrouiller/déverrouiller les blocs. Vous pouvez autoriser vos amis à utiliser vos coffres ou portes en leur donnant l’autorisation grâce à l’interface.</p>
+    Accroupissez-vous et faites un clic droit sur un bloc verrouillable avec une main vide et vous verrez l'interface graphique pour verrouiller/déverrouiller les blocs. Vous pouvez autoriser vos amis à utiliser vos coffres ou portes en leur donnant l’autorisation grâce à l’interface.<br>
+/blocprot settings : configurer automatiquement les autorisations des qu'un coffre ou porte est posé</p>
 </p>
 </div>
 </div>
 <div>
-  <input type="checkbox" id="question5" name="q" class="questions">
+  <input type="checkbox" id="question8" name="q" class="questions">
   <div class="plus">+</div>
-  <label for="question5" class="question">
+  <label for="question8" class="question">
     CONNAITRE SON TEMPS DE JEU
 </label>
 <div class="answers"> 
