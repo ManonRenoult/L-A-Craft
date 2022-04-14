@@ -42,7 +42,7 @@ body {
                 "body body body body body body body body body body body body"
                 "footer footer footer footer footer footer footer footer footer footer footer footer";
     }
-
+  
     html {
         font-size: .5em;
     }
@@ -124,6 +124,7 @@ body {
     font-size: 2em;
     border-radius: 10px;
 }
+
 
 .child_header_online_discord > div {
     padding-top: 1%;
