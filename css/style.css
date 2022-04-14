@@ -14,7 +14,7 @@ body {
     padding: 0;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 950px) {
     .grid {
         height: auto;
         display: grid;
@@ -31,7 +31,7 @@ body {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
     .grid {
         height: auto;
         display: grid;
@@ -139,7 +139,7 @@ body {
     color: rgb(255, 219, 26);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 950px) {
     .child_header_logo {
         width: 100%;
         height: 100%;
@@ -160,7 +160,7 @@ body {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
     .child_header_logo {
         width: 100%;
         height: 100%;
@@ -290,7 +290,7 @@ body {
             url("../images/eventautre.jpg");
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 950px) {
     .body_grid {
         width: 100%;
         display: inline-grid;
@@ -345,7 +345,7 @@ body {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
     .body_grid {
         width: 100%;
         display: inline-grid;
@@ -1008,7 +1008,7 @@ td.text-right {
     bottom: 0;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 950px) {
     .Logo {
         width: 100%;
         height: 100%;
@@ -1017,7 +1017,7 @@ td.text-right {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
     .Logo {
         width: 100%;
         height: 100%;
