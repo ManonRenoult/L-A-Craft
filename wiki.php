@@ -6,6 +6,7 @@
         <meta name="robots" content="index,map,voter,wiki,status">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" href="https://l-a-craft.fr/images/Litle-logoLADiscordSF.png">
         <title>Wiki . L-A Craft</title>
     </head>
           <?php include 'menu.php';?> 
