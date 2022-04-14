@@ -5,13 +5,6 @@ $player = $_GET['player'];
 $rangFinal = '';
 $uuidLuckPerm = '';
 
-
-?>
-
-<?php
-session_start();
-?>
-
 !-->
 <!DOCTYPE html>
 <html lang="fr">

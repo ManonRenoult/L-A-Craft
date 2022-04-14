@@ -35,8 +35,10 @@
             <li>/home <nomspawn> : se téléporter sur le point de téléportation dans son terrain</li>
                 <li>/tpa <nomjoueur> : envoyer une demande de téléportation vers un joueur</li>
                     <li>/tpaccept : accepter la demande de téléportation d’un joueur</li>
+
                     <li>/rtp : se téléporter aléatoirement sur la map job (coût : 500$)</li> 
                 </p>      
+
             </div>
         </div>
         <div>
@@ -49,7 +51,6 @@
             <p><ul>
              <li> /money ou /bal ou / balance : voir son argent</li>
              <li>/pay &lt;joueur&gt; &lt;montant&gt; : envoyer de l'argent à un autre joueur</li>
-
          </ul></p>
      </div>
  </div>

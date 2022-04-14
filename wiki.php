@@ -65,7 +65,6 @@
     <p>Vous pouvez acheter un terrain afin de créer votre maison. Pour se faire, il suffit de choisir un terrain parmi ceux proposés et de cliquer sur le panneau où le prix est affiché. Après avoir cliqué sur le panneau, ouvrez le tchat avec la touche “t” et cliquez dans le chat pour interagir.</p>
           </div>
         </div>
-
         <div>
       <input type="checkbox" id="question4" name="q" class="questions">
       <div class="plus">+</div>
