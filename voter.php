@@ -176,4 +176,5 @@ function whatNum($num){
 </body>
 <script src="js/50cab66c4a.js" crossorigin="anonymous" async defer></script>
 <script src="js/jquery.min.js"></script>
+<script src="js/getPlayer.js"></script>
 </html>
