@@ -56,6 +56,9 @@ $json_decode  = json_decode($json_get, true);
                 <a href="#" onclick="document.location.href='./status';">
                     <li class="five">Status</li>
                 </a>
+                <a href="#" onclick="document.location.href='./bannis';">
+                    <li class="five">Bannis</li>
+                </a>
                 <?php
                     if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
                         echo '<a href="#" onclick="document.location.href=\'./profil.php\'"><li class="six">Profil</li></a>';

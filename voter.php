@@ -113,9 +113,9 @@ function whatNum($num){
                 <table class="vote_table_body table-fill">
                     <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Pseudo</th>
-                        <th scope="col">Nombre de votes</th>
+                        <th class="thVote" scope="col">#</th>
+                        <th class="thVote" scope="col">Pseudo</th>
+                        <th class="thVote" scope="col">Nombre de votes</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -159,8 +159,8 @@ function whatNum($num){
                         for ($i = 0; $i <= (int)count($allName) - 1; $i++) {
                             echo '<tr>
                                                     <th scope="row">' . ($i + 1) . ' ' . whatNum($i) . '</th>
-                                                    <td class="vote_table_username vote_table_cursor_onclick" onclick="document.location.href=\'./infoPlayer.php?player=' . $allName[$i] . '\'"> <div class="vote_table_username">' . $allRang[$i] . $allName[$i] . '</div> </td>
-                                                    <td class="vote_table_cursor_onclick" onclick="document.location.href=\'./infoPlayer.php?player=' . $allName[$i] . '\'">' . $allVote[$i] . '</td>
+                                                    <td class=" tdVote vote_table_username vote_table_cursor_onclick" onclick="document.location.href=\'./infoPlayer.php?player=' . $allName[$i] . '\'"> <div class="vote_table_username">' . $allRang[$i] . $allName[$i] . '</div> </td>
+                                                    <td class="tdVote vote_table_cursor_onclick" onclick="document.location.href=\'./infoPlayer.php?player=' . $allName[$i] . '\'">' . $allVote[$i] . '</td>
                                                 </tr>
                                             ';
                         }
