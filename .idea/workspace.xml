@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d41c15e-3fb1-46db-b7bf-cdbdfc1294bf" name="Default Changelist" comment="add gitignore">
+      <change afterPath="$PROJECT_DIR$/coreBanList.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.php" beforeDir="false" afterPath="$PROJECT_DIR$/map.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/status.php" beforeDir="false" afterPath="$PROJECT_DIR$/status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/banlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/voter.php" beforeDir="false" afterPath="$PROJECT_DIR$/voter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wiki.php" beforeDir="false" afterPath="$PROJECT_DIR$/wiki.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,8 @@
       <workItem from="1650728627797" duration="515000" />
       <workItem from="1650741477753" duration="1386000" />
       <workItem from="1650744711916" duration="66000" />
-      <workItem from="1651566976130" duration="277000" />
+      <workItem from="1651566976130" duration="871000" />
+      <workItem from="1651838568371" duration="6737000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1624885355428</created>
