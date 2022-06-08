@@ -37,9 +37,7 @@ session_start();
                         <iframe src="https://discordapp.com/widget?id=862374067129810964&theme=dark" width="100%" height="100%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                     </div>
 
-                <a class="logo_liste_server" href="https://www.liste-serveurs-minecraft.org">
-                <img alt="TOP Serveurs Minecraft" src="https://www.liste-serveurs-minecraft.org/wp-content/themes/DL/framework/img/logo3.png">
-                </a>
+                <a class="vote_site" href="https://www.liste-serveurs-minecraft.org"><img alt="Serveurs Minecraft" src="https://www.liste-serveurs-minecraft.org/wp-content/themes/DL/framework/img/logo3.png"></a>
             </div>
         </div>
         <?php include 'footer.php';?>
