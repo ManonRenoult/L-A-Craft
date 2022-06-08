@@ -42,7 +42,28 @@ body {
                 "body body body body body body body body body body body body"
                 "footer footer footer footer footer footer footer footer footer footer footer footer";
     }
-  
+
+    html {
+        font-size: .5em;
+    }
+
+    ul > a > li {
+        font-size: 1.5em !important;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .grid {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(10, 10%);
+        grid-template-rows: 680px 80% 25%;
+        grid-template-areas:
+                "header header header header header header header header header header header header header header"
+                "body body body body body body body body body body body body body body"
+                "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+
     html {
         font-size: .5em;
     }
@@ -159,7 +180,26 @@ body {
         grid-column: 2 / 8;
     }
 }
+@media screen and (min-width: 1900px) {
+    .child_header_logo {
+        width: 100%;
+        height: 100%;
+        grid-row: 2 / 6;
+        grid-column: 8 / 14;
+    }
 
+    .child_header_online_discord {
+        bottom: 0;
+        grid-row: 7 / 8;
+        grid-column: 14 / 20;
+    }
+
+    .child_header_player {
+        bottom: 0;
+        grid-row: 7 / 8;
+        grid-column: 2 / 8;
+    }
+}
 @media screen and (max-width: 950px) {
     .child_header_logo {
         width: 100%;

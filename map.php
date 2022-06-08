@@ -18,12 +18,23 @@ session_start();
     <?php include 'menu.php';?>
     <div class="body_map">
         <div class="body_map_grid">
-            <iframe class="iframe_map" src="https://map.l-a-craft.fr/" scrolling="no" frameborder="0" style="height: 100%; width: 100%"></iframe>
+            <iframe id="thisMap" class="iframe_map" src="https://mapp.l-a-craft.fr/" scrolling="no" frameborder="0" style="height: 100%; width: 100%"></iframe>
         </div>
     <?php include 'footer.php';?>
 </div>
 </body>
-<script src="js/50cab66c4a.js" crossorigin="anonymous" async defer></script>
 <script src="js/jquery.min.js"></script>
+<script>
+    var status = false;
+    var iframe = document.getElementById("thisMap");
+    iframe.onload = function () {
+        status = true;
+    }
+    if (status === 'false') {
+        $('#thisMap').html("<p>La carte n'est pas disponible pour le moment :( </p>");
+    }
+</script>
+<script src="js/50cab66c4a.js" crossorigin="anonymous" async defer></script>
+
 <script src="js/getPlayer.js"></script>
 </html>
