@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d41c15e-3fb1-46db-b7bf-cdbdfc1294bf" name="Default Changelist" comment="add gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/banlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/banlist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/coreBanList.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,7 @@
       <workItem from="1653929105259" duration="1883000" />
       <workItem from="1654088215844" duration="2034000" />
       <workItem from="1654173345351" duration="1471000" />
-      <workItem from="1654679080523" duration="5203000" />
+      <workItem from="1654679080523" duration="5362000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1624885355428</created>

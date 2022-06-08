@@ -380,7 +380,7 @@ function format_uuid($uuid) {
                                                 <td class="tdPunish"><a class="a_punish" href="info?type=ban&id=' . $row['id'] . '">' . $row['id'] . '</a></td>
                                                 <td class="tdPunish"><img draggable="false" src="https://mc-heads.net/avatar/' .  username_to_uuid(getName($row['uuid'], $bdh)) . '/30">' . getRankPlayer($row['uuid'], $bdh) .'<a class="a_punish" href="./infoPlayer.php?player=' . getName($row['uuid'], $bdh) . '">' . getName($row['uuid'], $bdh) . '</a></td>
                                                 <td class="tdPunish"><img draggable="false" src="https://mc-heads.net/avatar/' . username_to_uuid(getName($row['punisher'], $bdh)) . '/30"> '. getRankPlayer($row['punisher'], $bdh) .' '. getName($row['punisher'], $bdh) .'</td>
-                                                <td class="tdPunish">' .  date("d/m/Y H:i:s", strtotime('+2 hours', strtotime( $thisDay ))) . '</td>
+                                                <td class="tdPunish">' .  $thisDay  . '</td>
                                                 <td class="tdPunish">' . $endban . '</td>
                                                 <td class="tdreason tdPunish">' . MinecraftColorcodes::convert($row['reason'], true) . '</td>
                                                 </tr>';
