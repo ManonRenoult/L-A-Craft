@@ -336,7 +336,7 @@ body {
         transition-delay: 2s;
     }
 
-    .logo_liste_server {
+    .vote_site{
         height: 100%;
         grid-row: 4;
         grid-column: -7 / -5;
@@ -391,7 +391,7 @@ body {
         transition-delay: 2s;
     }
 
-    .logo_liste_server {
+    .vote_site {
         height: 100%;
         grid-row: 6;
         grid-column: -7 / -5;
@@ -483,7 +483,7 @@ body {
     grid-template-rows: repeat(8, 1fr);
 }
 
-.form_connect {
+#form_connect {
     height: 100%;
     border-radius: 6px;
     display: inline-grid;

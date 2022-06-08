@@ -407,7 +407,7 @@ function format_uuid($uuid) {
                                         $endban = '<span class="label label-danger">' . $lang['VARIABLE_TEMPIPBAN'] . '</span>';
                                     }
                                 }
-                                $thisDay = date("d-m-Y H:i:s", $row["time"] / 1000);
+                                $thisDay = date("d/m/Y H:i:s", $row["time"] / 1000);
                                 echo '<tr>
                                                 <td class="tdPunish"><a class="a_punish" href="info?type=ban&id=' . $row['id'] . '">' . $row['id'] . '</a></td>
                                                 <td class="tdPunish"><img draggable="false" src="https://mc-heads.net/avatar/' .  username_to_uuid(getName($row['uuid'], $bdh)) . '/30">' . getRankPlayer($row['uuid'], $bdh) .'<a class="a_punish" href="./infoPlayer.php?player=' . getName($row['uuid'], $bdh) . '">' . getName($row['uuid'], $bdh) . '</a></td>

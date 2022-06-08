@@ -65,17 +65,20 @@ function getAllParameters($userName, $bdh) {
         $_SESSION['moneyEconomy'] = $paramGet['Balance'];
     }
 }
-
-if (isset($_POST['formconnect'])) {
-    if($_POST['g-recaptcha-response']){
+if (isset($_POST['username'], $_POST['mdp'])) {
+    if(isset($_POST['g-recaptcha-response'])){
         if (isset($_POST['username'], $_POST['mdp'])) {
-            $secret = '6Le1u4kbAAAAAIwrtgRaFB5ad7YCOB8iLlC7A8Dn';
-            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
-            try {
-                $responseData = json_decode($verifyResponse, false, 512, JSON_THROW_ON_ERROR);
-            } catch (JsonException $e) {
-            }
-            if ($responseData->success) {
+            $secret_key = '6Le-tlMgAAAAABvXhQsjg2Dg3VU-9bG3MgiO5q-X';
+            $url = 'https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response'];
+            $curl = curl_init();
+            curl_setopt($curl, CURLOPT_URL, $url);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_HEADER, false);
+            $data = curl_exec($curl);
+            curl_close($curl);
+            $response = json_decode($data);
+
+            if ($response->success) {
                 $pseudo = $_POST['username'];
                 $passPost = $_POST['mdp'];
                 $passBDD = getPass($pseudo, $bdh);
@@ -115,13 +118,16 @@ if (isset($_POST['formconnect'])) {
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/style.css">
         <title>Connexion . L-A Craft</title>
+
+
+
     </head>
     <body>
         <div class="grid">
             <?php include 'menu.php';?>
             <div class="body">
                 <div class="body_connect_grid">
-                    <form method="post" action="" class="form_connect">
+                    <form method="post" action="" id="form_connect">
                         <div class="title_form_connect"><h2>Connexion</h2></div>
                         <div class="user_form_connect">
                             <label class="label_user_form_connect" for="username">Nom d'utilisateur Minecraft :</label><br/>
@@ -131,9 +137,6 @@ if (isset($_POST['formconnect'])) {
                             <label class="label_user_form_connect" for="mdp" >Mot de passe :</label><br/>
                             <input type="password" name="mdp" id="mdp" />
                         </div>
-                        <div class="captcha_form_connect">
-                            <div class="g-recaptcha" data-sitekey="6Le1u4kbAAAAACM8ajaPEq-kw0S0RzCuRV9FRPy1"></div>
-                        </div>
                         <div class="message_form_connect">
                             <div class="boxAttention_form_connect">
                                 <p class="titleBoxAttention_form_connect">Attention !!!</p>
@@ -142,7 +145,7 @@ if (isset($_POST['formconnect'])) {
                             </div>
                         </div>
                         <div class="btn_connect_form_connect">
-                            <button name="formconnect" type="submit">Connexion</button>
+                            <button class="g-recaptcha" data-sitekey="6Le-tlMgAAAAAMYR5njZLeDELUdd27EMzLSKqnEB" data-callback='onSubmit' >Connexion</button>
                         </div>
                     </form>
                 </div>
@@ -151,6 +154,11 @@ if (isset($_POST['formconnect'])) {
         </div>
     </body>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("form_connect").submit();
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/getPlayer.js"></script>
 </html>
