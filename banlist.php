@@ -177,9 +177,32 @@ function getRankPlayer($uuid, $bdh){
                 if (strpos($paramGet3['permission'], 'group.') !== false) {
                     $rang = ucfirst(substr($paramGet3['permission'], 6));
                     if ($rang === 'Vendeur') {
-                        $rangColor = '<div style="color:yellow !important;"> ' . '[ Vendeur ]' . '</div>';
+                        $rangColor = '<div> 
+                            <span style="color:white">[</span>
+                            <span style="color:#FFFF55 ">V</span>
+                            <span style="color:#FFFF55">e</span>
+                            <span style="color:#FFFF55">n</span>
+                            <span style="color:#FFFF55">d</span>
+                            <span style="color:#FFFF55">e</span>
+                            <span style="color:#FFFF55">u</span>
+                            <span style="color:#FFFF55">r</span>
+                            <span style="color:white">]</span>
+                </div>';
                     } else if ($rang === 'Moderateur') {
-                        $rangColor = '<div style="color:#6f42c1 !important;"> ' . '[ Moderateur ]' . '</div>';
+                        $rangColor = '<div> 
+                            <span style="color:white">[</span>
+                            <span style="color:#AA00AA ">M</span>
+                            <span style="color:#AA00AA">o</span>
+                            <span style="color:#AA00AA">d</span>
+                            <span style="color:#AA00AA">e</span>
+                            <span style="color:#AA00AA">r</span>
+                            <span style="color:#AA00AA">a</span>
+                            <span style="color:#AA00AA">t</span>
+                            <span style="color:#AA00AA">e</span>
+                            <span style="color:#AA00AA">u</span>
+                            <span style="color:#AA00AA">r</span>
+                            <span style="color:white">]</span>
+                            </div>';
                     } else if ($rang === 'Admin') {
                         $rangColor = '<div style="color:orangered !important;"> ' . '[ Admin ]' . '</div>';
                     } else if ($rang === 'Fondateur' || $rang === 'Fondateur2') {
@@ -200,7 +223,16 @@ function getRankPlayer($uuid, $bdh){
                 }
             }
             if ($rangColor === ''){
-                $rangColor = '<div style="color:green !important;"> ' . '[ Membre ]' . '</div>';
+                $rangColor = '<div> 
+                            <span style="color:white">[</span>
+                            <span style="color:#55FF55 ">M</span>
+                            <span style="color:#55FF55">e</span>
+                            <span style="color:#55FF55">m</span>
+                            <span style="color:#55FF55">b</span>
+                            <span style="color:#55FF55">r</span>
+                            <span style="color:#55FF55">e</span>
+                            <span style="color:white">]</span>
+                </div>';
             }
     }
     return $rangColor;
@@ -366,7 +398,7 @@ function format_uuid($uuid) {
                             $iterator = new IteratorIterator($stmt);
                             foreach ($iterator as $row) {
 
-                                $endban = '<span class="label label-warning">' . date("d-m-Y H:i:s", $row["end"] / 1000) . '</span>';
+                                $endban = '<span class="label label-warning">' . date("d/m/Y H:i:s", $row["end"] / 1000) . '</span>';
                                 if ($row['end'] == '-1') {
                                     $endban = '<span class="label label-danger">' . $lang['VARIABLE_PERMANENT'] . '</span>';
                                     if ($row['type'] == '5' || $row['type'] == '6') {
