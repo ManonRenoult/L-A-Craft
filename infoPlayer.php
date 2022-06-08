@@ -16,7 +16,7 @@ $uuidLuckPerm = '';
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
     <link rel="icon" type="image/png" href="https://l-a-craft.fr/images/Litle-logoLADiscordSF.png">
-    <title>L-A Craft</title>
+s    <title>L-A Craft</title>
 </head>
 
 <body>

@@ -606,12 +606,18 @@ body {
     display: inline-grid;
     grid-template-columns: repeat(10, 10%);
     grid-template-rows: 1fr 8fr 1fr;
+    overflow:hidden;
 }
 
 .iframe_map {
+    height: 100%;
+    width: 100%;
     grid-column: 2 / 10;
     grid-row: 2;
+    overflow: hidden;
 }
+
+
 
 /*------------------------------- Vote -------------------------------*/
 
