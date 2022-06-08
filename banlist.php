@@ -181,7 +181,21 @@ function getRankPlayer($uuid, $bdh){
                     } else if ($rang === 'Moderateur') {
                         $rangColor = '<div style="color:#6f42c1 !important;"> ' . '[ Moderateur ]' . '</div>';
                     } else if ($rang === 'Admin') {
-                        $rangColor = '<div style="color:red !important;"> ' . '[ Fondateur ]' . '</div>';
+                        $rangColor = '<div style="color:orangered !important;"> ' . '[ Admin ]' . '</div>';
+                    } else if ($rang === 'Fondateur' || $rang === 'Fondateur2') {
+                        $rangColor = '<div> 
+                            <span style="color:white">[</span>
+                            <span style="color:#FF5555 ">F</span>
+                            <span style="color:#FFAA00">o</span>
+                            <span style="color:#FFFF55">n</span>
+                            <span style="color:#55FF55">d</span>
+                            <span style="color:#5555FF">a</span>
+                            <span style="color:#55FFFF">t</span>
+                            <span style="color:#AA00AA">e</span>
+                            <span style="color:#FF5555">u</span>
+                            <span style="color:#FFAA00">r</span>
+                            <span style="color:white">]</span>
+                            </div>';
                     }
                 }
             }
@@ -258,11 +272,12 @@ function getRankPlayer($uuid, $bdh){
                                         $endban = '<span class="label label-danger">' . $lang['VARIABLE_TEMPIPBAN'] . '</span>';
                                     }
                                 }
+                                $thisDay = date("d-m-Y H:i:s", $row["time"] / 1000);
                                 echo '<tr>
                                                 <td class="tdPunish"><a class="a_punish" href="info?type=ban&id=' . $row['id'] . '">' . $row['id'] . '</a></td>
                                                 <td class="tdPunish"><img draggable="false" src="https://crafatar.com/avatars/' . $row['uuid'] . '?size=30">' . getRankPlayer($row['uuid'], $bdh) .'<a class="a_punish" href="./infoPlayer.php?player=' . getName($row['uuid'], $bdh) . '">' . getName($row['uuid'], $bdh) . '</a></td>
                                                 <td class="tdPunish"><img draggable="false" src="https://crafatar.com/avatars/' . $row['punisher'] . '?size=30"> '. getRankPlayer($row['punisher'], $bdh) .' '. getName($row['punisher'], $bdh) .'</td>
-                                                <td class="tdPunish">' . date("d-m-Y H:i:s", $row["time"] / 1000) . '</td>
+                                                <td class="tdPunish">' .  date("d/m/Y H:i:s", strtotime('+2 hours', strtotime( $thisDay ))) . '</td>
                                                 <td class="tdPunish">' . $endban . '</td>
                                                 <td class="tdreason tdPunish">' . MinecraftColorcodes::convert($row['reason'], true) . '</td>
                                                 </tr>';
@@ -272,7 +287,7 @@ function getRankPlayer($uuid, $bdh){
                             echo '<p>' . $lang['MESSAGE_NORESULTS'] . '</p>';
                         }
                     } catch (Exception $e) {
-                        echo $e;
+                        echo '<p>' . $lang['MESSAGE_NORESULTS'] . '</p>';
                     }
                     ?>
                     </tbody>
