@@ -142,13 +142,19 @@ function whatNum($num){
                                     $allVote[] = $paramGet2['nbVote'];
                                     $rangColor = '';
                                     if ($rang === 'Vendeur') {
-                                        $rangColor = '<div style="color:yellow !important;"> ' . '[ Vendeur ]' . '</div>';
+                                        $rangColor = '<div class="infoplayer_rank" style="color:yellow !important;"> ' . '[ Vendeur ]' . '</div>';
                                     } else if ($rang === 'Moderateur') {
-                                        $rangColor = '<div style="color:#6f42c1 !important;"> ' . '[ Moderateur ]' . '</div>';
+                                        $rangColor = '<div class="infoplayer_rank" style="color:#6f42c1 !important;"> ' . '[ Moderateur ]' . '</div>';
                                     } else if($rang === 'Admin'){
-                                        $rangColor = '<div style="color:red !important;"> ' . '[ Fondateur ]' . '</div>';
+                                        $rangColor = '<div class="infoplayer_rank" style="color:red !important;"> ' . '[ Admin ]' . '</div>';
+                                    } else if($rang === 'VIP'){
+                                        $rangColor = '<div class="infoplayer_rank" style="color:red !important;"> ' . '[ VIP ]' . '</div>';
+                                    } else if($rang === 'Fondateur'){
+                                        $rangColor = '<div class="infoplayer_rank" style="color:red !important;"> ' . '[ Fondateur ]' . '</div>';
+                                    } else if($rang === 'Fondateur2'){
+                                        $rangColor = '<div class="infoplayer_rank" style="color:deeppink !important;"> ' . '[ Fondateur ]' . '</div>';
                                     } else {
-                                        $rangColor = '<div style="color:green !important;"> ' . '[ Membre ]' . '</div>';
+                                        $rangColor = '<div class="infoplayer_rank" style="color:green !important;"> ' . '[ Membre ]' . '</div>';
                                     }
                                     $allRang[] = $rangColor;
                                 }
