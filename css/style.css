@@ -492,14 +492,10 @@ body {
 }
 
 .profil_image_index {
-    background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(192, 142, 5, .25)),
-            url("../images/userPhoto.jpg");
     height: 100%;
     text-align: center;
     font-size: 2.8vh;
-    color: rgb(226, 223, 219);
-    background-color: rgba(2, 2, 2, 0.5);
+    background-color: rgb(42, 43, 70);
     grid-column: 1 / 2;
     grid-row: 1;
 }
@@ -1195,4 +1191,14 @@ td.text-right {
 
 .copyright p {
     margin : 0px;
+}
+
+
+/*
+#==================== Info player =====================#
+*/
+
+
+.infoplayer_rank {
+    margin-bottom: 2px;
 }
