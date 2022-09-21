@@ -36,8 +36,6 @@ $rangColor = '';
             }
         }
     }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -66,6 +64,11 @@ $rangColor = '';
                             echo $rangColor;
                             echo '<img draggable="false" src="https://mc-heads.net/body/' .  username_to_uuid($player) . '/30">';
 
+                            ?>
+                        </div>
+                        <div class="">
+                            <?php
+                            $_SESSION['username']
                             ?>
                         </div>
                     </div>
