@@ -2,7 +2,7 @@
 session_start();
 include 'bdd.php';
 global $bdh;
-$player = $_GET['player'];
+$player = strip_tags($_GET['player'], '');
 $rangFinal = '';
 $uuidLuckPerm = '';
 include 'func_getprofile.php';
