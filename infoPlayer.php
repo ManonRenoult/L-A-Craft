@@ -49,7 +49,20 @@ $rangColor = '';
     <link rel="icon" type="image/png" href="https://l-a-craft.fr/images/Litle-logoLADiscordSF.png">
     <title>L-A Craft</title>
 </head>
+<?php
 
+
+// Read the JSON file
+$json = file_get_contents('User_PlayTime_Data.json');
+
+// Decode the JSON file
+$json_data = json_decode($json, true);
+
+// Display data
+echo $json_data;
+
+
+?>
 <body>
     <div class="grid">
         <?php include 'menu.php';?>
@@ -60,16 +73,37 @@ $rangColor = '';
                         <div class="profil_image_index">
 
                             <?php
-                            echo '<div>' . $player . '</div>';
-                            echo $rangColor;
-                            echo '<img draggable="false" src="https://mc-heads.net/body/' .  username_to_uuid($player) . '/30">';
+                            $clearRank = '<div class="infoplayer_rank" style="color:green !important;"> ' . '[ Membre ]' . '</div>';
+                            if($rangColor != ""){
+                                $clearRank = $rangColor;
+                            }
+                            echo '<div class="showNameInfoPlayer"><p>' . $player . '</p></div>';
+                            echo '<div class="showRankInfoPlayer">' . $clearRank . '</div>';
+                            echo '<div class="showBodyInfoPlayer"><img draggable="false" src="https://mc-heads.net/body/' .  username_to_uuid($player) . '/100"></div>';
 
                             ?>
                         </div>
-                        <div class="">
-                            <?php
-                            $_SESSION['username']
-                            ?>
+                        <div class="nameCaseInfoPlayer">
+                            <div class="metierNameInfoPlayer">
+                                <p>Metier = </p>
+                            </div>
+                            <div class="moneyNameInfoPlayer">
+                                <p>Money = </p>
+                            </div>
+                            <div class="testNameInfoPlayer">
+                                <p>Temp de jeu = </p>
+                            </div>
+                        </div>
+                        <div class="resultCaseInfoPlayer">
+                            <div class="metierResultInfoPlayer">
+                                <p>Metier = </p>
+                            </div>
+                            <div class="moneyResultInfoPlayer">
+                                <p>Money = </p>
+                            </div>
+                            <div class="testResultInfoPlayer">
+                                <p>Test = </p>
+                            </div>
                         </div>
                     </div>
                 </div>
