@@ -5,6 +5,9 @@ global $bdh;
 $player = strip_tags($_GET['player'], '');
 $rangFinal = '';
 $uuidLuckPerm = '';
+$nbJobs = 0;
+$uuidPLayer = 0;
+$moneyPlayer = 0;
 $jobs = "Aucun";
 include 'func_getprofile.php';
 $rangColor = '';
@@ -18,8 +21,17 @@ $rangColor = '';
         $getParams7->BindParam(':player_uuid', $paramGet['uuid'], PDO::PARAM_STR);
         $getParams7->execute();
         $allParamGet7 = $getParams7->fetchAll();
+        $nbJobs = count($allParamGet7);
+        #print_r($allParamGet7);
+        $uuidPLayer = $paramGet['uuid'];
         foreach ($allParamGet7 as $paramGet7) {
-            $jobs = strtok((String)$paramGet7['quests'], ":");
+            if($nbJobs > 1){
+                $jobs = "";
+                $jobs = (array)$jobs;
+
+            }elseif($nbJobs === 1){
+                $jobs = strtok((String)$paramGet7['quests'], ":");
+            }
         }
         $getParams3 = $bdh->prepare("SELECT * FROM luckperms_user_permissions where uuid = ?");
         $getParams3->execute(array($paramGet['uuid']));
@@ -46,30 +58,13 @@ $rangColor = '';
         }
     }
 
-function secondsToTimeOld($seconds) {
-    $dtF = new \DateTime('@0');
-    $dtT = new \DateTime("@$seconds");
-    return $dtF->diff($dtT)->format('%a jours %h heures, %i minutes et %s secondes');
-}
-
-function secondsToTime($inputSeconds) {
-    $secondsInAMinute = 60;
-    $secondsInAnHour  = 60 * $secondsInAMinute;
-    $secondsInADay    = 24 * $secondsInAnHour;
-    $days = floor($inputSeconds / $secondsInADay);
-    $hourSeconds = $inputSeconds % $secondsInADay;
-    $hours = floor($hourSeconds / $secondsInAnHour);
-    $minuteSeconds = $hourSeconds % $secondsInAnHour;
-    $minutes = floor($minuteSeconds / $secondsInAMinute);
-    $remainingSeconds = $minuteSeconds % $secondsInAMinute;
-    $seconds = ceil($remainingSeconds);
-    $obj = array(
-        'd' => (int) $days,
-        'h' => (int) $hours,
-        'm' => (int) $minutes,
-        's' => (int) $seconds,
-    );
-    return $obj;
+$timetempsDateRegister = 0;
+$getParamsRegister = $bdh->prepare("SELECT * FROM librepremium_data where last_nickname=:last_nickname");
+$getParamsRegister->BindParam(':last_nickname', $player,PDO::PARAM_STR);
+$getParamsRegister->execute();
+$allParamGetRegister = $getParamsRegister->fetchAll();
+foreach ($allParamGetRegister as $paramGetRegister) {
+    $timetempsDateRegister = $paramGetRegister['joined'];
 }
 
 function seconds2human($ss) {
@@ -95,8 +90,23 @@ for ($i = 0; $i < (int)count($json_data); $i++) {
     }
 }
 
+function getMoney($uuid){
+    $lines = file('Money/' . (String)$uuid . '.yml');
+    #$arrayMoney = yaml_parse('Money/' . (String)$uuid . '.yml');
+    #$arrayMoney = Yaml::decode(file_get_contents('Money/' . (String)$uuid . '.yml'));
+    #print_r($lines);
+    $allLine = "";
 
+    foreach ($lines as $line) {
+        if (strpos($line, 'Money') !== false) {
+            $allLine = (String)$line;
+        }
+        #$allLine = (String)$line['Money'];
 
+    }
+    return (String)$allLine;
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -132,10 +142,25 @@ for ($i = 0; $i < (int)count($json_data); $i++) {
                         </div>
                         <div class="nameCaseInfoPlayer">
                             <div class="metierNameInfoPlayer">
-                                <p>Metier = <?php echo $jobs; ?></p>
+                                <p>Metier = <?php
+                                        if($jobs === "Fisherman"){
+                                            echo "Pêcheur";
+                                        }elseif ($jobs === "Miner"){
+                                            echo "Mineur";
+                                        } else {
+                                            echo $jobs;
+                                        }
+                                    ?></p>
                             </div>
                             <div class="moneyNameInfoPlayer">
-                                <p>Money = </p>
+                                <p>Date d'inscription = <?php
+                                        if($timetempsDateRegister === 0){
+                                            echo 'Jamais';
+                                        }else {
+                                            $finalDateRegister = strtotime($timetempsDateRegister);
+                                            echo date('d/m/Y', $finalDateRegister);
+                                        }
+                                    ?></p>
                             </div>
                             <div class="testNameInfoPlayer">
                                 <p>Temp de jeu = <?php echo seconds2human($time); ?> </p>
@@ -146,10 +171,14 @@ for ($i = 0; $i < (int)count($json_data); $i++) {
                                 <p>Connexion au serveur = <?php echo (String)$joins;?></p>
                             </div>
                             <div class="moneyResultInfoPlayer">
-                                <p>Money = </p>
+                                <p>Argents = <?php
+                                    $arr = explode(':', (String)getMoney($uuidPLayer));
+                                    $newStrMoney = str_replace("'", "", $arr);
+                                    $euro = number_format((int)$newStrMoney[1], 0, ",", " ") . " $";
+                                    echo $euro;?></p>
                             </div>
                             <div class="testResultInfoPlayer">
-                                <p>Test = </p>
+
                             </div>
                         </div>
                     </div>
