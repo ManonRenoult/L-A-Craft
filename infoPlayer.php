@@ -92,20 +92,13 @@ for ($i = 0; $i < (int)count($json_data); $i++) {
 
 function getMoney($uuid){
     $lines = file('Money/' . (String)$uuid . '.yml');
-    #$arrayMoney = yaml_parse('Money/' . (String)$uuid . '.yml');
-    #$arrayMoney = Yaml::decode(file_get_contents('Money/' . (String)$uuid . '.yml'));
-    #print_r($lines);
     $allLine = "";
-
     foreach ($lines as $line) {
         if (strpos($line, 'Money') !== false) {
             $allLine = (String)$line;
         }
-        #$allLine = (String)$line['Money'];
-
     }
     return (String)$allLine;
-
 }
 ?>
 <!DOCTYPE html>
@@ -147,6 +140,8 @@ function getMoney($uuid){
                                             echo "Pêcheur";
                                         }elseif ($jobs === "Miner"){
                                             echo "Mineur";
+                                        }elseif ($jobs === "Farmer"){
+                                            echo "Fermier";
                                         } else {
                                             echo $jobs;
                                         }
