@@ -492,12 +492,105 @@ body {
 }
 
 .profil_image_index {
+    border-right: solid black;
     height: 100%;
     text-align: center;
     font-size: 2.8vh;
     background-color: rgb(42, 43, 70);
     grid-column: 1 / 2;
     grid-row: 1;
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 16% 14% 70%;
+}
+
+.showNameInfoPlayer{
+    height: 100%;
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.showRankInfoPlayer {
+    height: 100%;
+    text-align: center;
+    font-size: 2.8vh;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.showBodyInfoPlayer{
+    height: 100%;
+    text-align: center;
+    font-size: 2.8vh;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.nameCaseInfoPlayer {
+    border-right: solid black;
+    height: 100%;
+    text-align: center;
+    font-size: 2.8vh;
+    background-color: rgb(232, 230, 227);
+    grid-column: 2 / 3;
+    grid-row: 1;
+    display: inline-grid;
+    grid-template-columns: 1fr;
+}
+
+.metierNameInfoPlayer {
+    height: 100%;
+    text-align: center;
+    font-size: 2.8vh;
+    grid-column: 1;
+}
+
+.moneyNameInfoPlayer {
+    height: 100%;
+    text-align: center;
+    font-size: 2.8vh;
+    grid-column: 1;
+}
+
+.testNameInfoPlayer {
+    height: 100%;
+    text-align: center;
+    font-size: 2.8vh;
+    grid-column: 1;
+}
+
+.resultCaseInfoPlayer {
+    border-right: solid black;
+    height: 100%;
+    text-align: center;
+    font-size: 2.8vh;
+    background-color: rgb(255, 219, 26);
+    grid-column: 3 / 4;
+    grid-row: 1;
+    display: inline-grid;
+    grid-template-columns: 1fr;
+}
+
+.metierResultInfoPlayer {
+    height: 100%;
+    text-align: center;
+    font-size: 2.8vh;
+    grid-column: 1;
+}
+
+.moneyResultInfoPlayer {
+    height: 100%;
+    text-align: center;
+    font-size: 2.8vh;
+    grid-column: 1;
+}
+
+.testResultInfoPlayer {
+    height: 100%;
+    text-align: center;
+    font-size: 2.8vh;
+    grid-column: 1;
 }
 
 

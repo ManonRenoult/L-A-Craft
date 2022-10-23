@@ -5,6 +5,7 @@ global $bdh;
 $player = strip_tags($_GET['player'], '');
 $rangFinal = '';
 $uuidLuckPerm = '';
+$jobs = "Aucun";
 include 'func_getprofile.php';
 $rangColor = '';
     $userNameLower = strtolower($player);
@@ -12,6 +13,14 @@ $rangColor = '';
     $getParams->execute(array($userNameLower));
     $allParamGet = $getParams->fetchAll();
     foreach ($allParamGet as $paramGet) {
+        $getParams7 = $bdh->prepare("SELECT * FROM jobs_users where username=:username AND player_uuid=:player_uuid AND quests IS NOT NULL");
+        $getParams7->BindParam(':username', $player, PDO::PARAM_STR);
+        $getParams7->BindParam(':player_uuid', $paramGet['uuid'], PDO::PARAM_STR);
+        $getParams7->execute();
+        $allParamGet7 = $getParams7->fetchAll();
+        foreach ($allParamGet7 as $paramGet7) {
+            $jobs = strtok((String)$paramGet7['quests'], ":");
+        }
         $getParams3 = $bdh->prepare("SELECT * FROM luckperms_user_permissions where uuid = ?");
         $getParams3->execute(array($paramGet['uuid']));
         $allParamGet3 = $getParams3->fetchAll();
@@ -36,6 +45,58 @@ $rangColor = '';
             }
         }
     }
+
+function secondsToTimeOld($seconds) {
+    $dtF = new \DateTime('@0');
+    $dtT = new \DateTime("@$seconds");
+    return $dtF->diff($dtT)->format('%a jours %h heures, %i minutes et %s secondes');
+}
+
+function secondsToTime($inputSeconds) {
+    $secondsInAMinute = 60;
+    $secondsInAnHour  = 60 * $secondsInAMinute;
+    $secondsInADay    = 24 * $secondsInAnHour;
+    $days = floor($inputSeconds / $secondsInADay);
+    $hourSeconds = $inputSeconds % $secondsInADay;
+    $hours = floor($hourSeconds / $secondsInAnHour);
+    $minuteSeconds = $hourSeconds % $secondsInAnHour;
+    $minutes = floor($minuteSeconds / $secondsInAMinute);
+    $remainingSeconds = $minuteSeconds % $secondsInAMinute;
+    $seconds = ceil($remainingSeconds);
+    $obj = array(
+        'd' => (int) $days,
+        'h' => (int) $hours,
+        'm' => (int) $minutes,
+        's' => (int) $seconds,
+    );
+    return $obj;
+}
+
+function seconds2human($ss) {
+    $s = $ss%60;
+    $m = floor(($ss%3600)/60);
+    $h = floor(($ss%86400)/3600);
+    $d = floor(($ss%2592000)/86400);
+    $M = floor($ss/2592000);
+
+    return " $d jours, $h heures et $m minutes";
+}
+
+$json = file_get_contents('User_PlayTime_Data.json');
+$json_data = json_decode($json, true);
+$newArray[] = $json_data;
+$joins = 0;
+$time = 0;
+
+for ($i = 0; $i < (int)count($json_data); $i++) {
+    if($json_data[$i]["lastName"] === $player) {
+        $joins += (int)$json_data[$i]["joins"];
+        $time += (int)$json_data[$i]["time"];
+    }
+}
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -49,7 +110,6 @@ $rangColor = '';
     <link rel="icon" type="image/png" href="https://l-a-craft.fr/images/Litle-logoLADiscordSF.png">
     <title>L-A Craft</title>
 </head>
-
 <body>
     <div class="grid">
         <?php include 'menu.php';?>
@@ -60,16 +120,37 @@ $rangColor = '';
                         <div class="profil_image_index">
 
                             <?php
-                            echo '<div>' . $player . '</div>';
-                            echo $rangColor;
-                            echo '<img draggable="false" src="https://mc-heads.net/body/' .  username_to_uuid($player) . '/30">';
+                            $clearRank = '<div class="infoplayer_rank" style="color:green !important;"> ' . '[ Membre ]' . '</div>';
+                            if($rangColor != ""){
+                                $clearRank = $rangColor;
+                            }
+                            echo '<div class="showNameInfoPlayer"><p>' . $player . '</p></div>';
+                            echo '<div class="showRankInfoPlayer">' . $clearRank . '</div>';
+                            echo '<div class="showBodyInfoPlayer"><img draggable="false" src="https://mc-heads.net/body/' .  username_to_uuid($player) . '/100"></div>';
 
                             ?>
                         </div>
-                        <div class="">
-                            <?php
-                            $_SESSION['username']
-                            ?>
+                        <div class="nameCaseInfoPlayer">
+                            <div class="metierNameInfoPlayer">
+                                <p>Metier = <?php echo $jobs; ?></p>
+                            </div>
+                            <div class="moneyNameInfoPlayer">
+                                <p>Money = </p>
+                            </div>
+                            <div class="testNameInfoPlayer">
+                                <p>Temp de jeu = <?php echo seconds2human($time); ?> </p>
+                            </div>
+                        </div>
+                        <div class="resultCaseInfoPlayer">
+                            <div class="metierResultInfoPlayer">
+                                <p>Connexion au serveur = <?php echo (String)$joins;?></p>
+                            </div>
+                            <div class="moneyResultInfoPlayer">
+                                <p>Money = </p>
+                            </div>
+                            <div class="testResultInfoPlayer">
+                                <p>Test = </p>
+                            </div>
                         </div>
                     </div>
                 </div>

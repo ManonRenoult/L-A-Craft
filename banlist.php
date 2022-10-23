@@ -223,6 +223,7 @@ function getRankPlayer($uuid, $bdh){
                     }
                 }
             }
+
             if ($rangColor === ''){
                 $rangColor = '<div> 
                             <span style="color:white">[</span>
@@ -309,7 +310,7 @@ function getRankPlayer($uuid, $bdh){
                                 echo '<tr>
                                                 <td class="tdPunish"><a class="a_punish" href="info?type=ban&id=' . $row['id'] . '">' . $row['id'] . '</a></td>
                                                 <td class="tdPunish"><img draggable="false" src="https://mc-heads.net/avatar/' .  username_to_uuid(getName($row['uuid'], $bdh)) . '/30">' . getRankPlayer($row['uuid'], $bdh) .'<a class="a_punish" href="./infoPlayer.php?player=' . getName($row['uuid'], $bdh) . '">' . getName($row['uuid'], $bdh) . '</a></td>
-                                                <td class="tdPunish"><img draggable="false" src="https://mc-heads.net/avatar/' . username_to_uuid(getName($row['punisher'], $bdh)) . '/30"> '. getRankPlayer($row['punisher'], $bdh) .' '. getName($row['punisher'], $bdh) .'</td>
+                                                <td class="tdPunish"><img draggable="false" src="https://mc-heads.net/avatar/' . username_to_uuid(getName($row['punisher'], $bdh)) . '/30"> '. getRankPlayer($row['punisher'], $bdh) .'<a class="a_punish" href="./infoPlayer.php?player=' . getName($row['punisher'], $bdh) . '">' . getName($row['punisher'], $bdh) .'</td>
                                                 <td class="tdPunish">' .  $thisDay  . '</td>
                                                 <td class="tdPunish">' . $endban . '</td>
                                                 <td class="tdreason tdPunish">' . MinecraftColorcodes::convert($row['reason'], true) . '</td>
