@@ -101,6 +101,7 @@ function getMoney($uuid){
     return (String)$allLine;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
