@@ -469,6 +469,157 @@ body {
 
 /*------------------------------- InfoPlayer -------------------------------*/
 
+.popup {
+    background: rgba(100, 100, 100, 0.35);
+    position: fixed;
+    display: none;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+.wrapper {
+    width: 23%;
+    max-width: 600px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 0px rgba(#000000, 0.4);
+    display: inline-grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+}
+
+.new-chat-window {
+    position: relative;
+    height: auto;
+    margin: 10px auto;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+}
+
+.new-chat-window .fa {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+.new-chat-window-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 219, 26, 0.48);
+}
+
+
+.new-chat-window-input {
+    vertical-align: middle;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    line-height: 30px;
+    padding-left: 30px;
+    width: 100%;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.course_divider {
+    left: 0;
+    padding-top: 10%;
+    position: absolute;
+    top: 27px;
+    width: 100%;
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+.course_divider hr {
+    background-color: #000000;
+    border: 1px solid black;
+    border-radius: 7px 7px 7px 7px;
+    height: 2px;
+}
+
+.TitleConnect {
+    width: 100%;
+    grid-column: 2 / 10;
+    grid-row: 1;
+}
+
+.TitleConnect > h1 {
+    margin: 0px !important;
+}
+
+.pseudoFormConnect {
+    width: 100%;
+    grid-column: 2 / 10;
+    grid-row: 2;
+}
+
+.mdpFormConnect {
+    width: 100%;
+    grid-column: 2 / 10;
+    grid-row: 3;
+}
+
+.saveMeConnect {
+    width: 100%;
+    grid-column: 2 / 6;
+    grid-row: 4;
+}
+
+.saveMeConnect > label {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.btnConnectForm {
+    width: 100%;
+    grid-column: 6 / 10;
+    grid-row: 4;
+    margin-top:5%;
+}
+
+.txtConnectForm {
+    width: 100%;
+    grid-column: 2 / 10;
+    grid-row: 5;
+}
+
+.btnConnectForm_btn {
+    background-color: rgba(255, 219, 26, 1);
+    border-radius: 50px;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 550;
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btnConnectForm_btn:hover {
+    background-color: rgb(213, 182, 33);
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
 .container_profil {
     height: 100%;
     text-decoration: none;

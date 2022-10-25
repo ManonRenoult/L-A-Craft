@@ -118,9 +118,6 @@ if (isset($_POST['username'], $_POST['mdp'])) {
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/style.css">
         <title>Connexion . L-A Craft</title>
-
-
-
     </head>
     <body>
         <div class="grid">

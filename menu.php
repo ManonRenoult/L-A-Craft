@@ -37,6 +37,7 @@ $json_get = file_get_contents('https://discordapp.com/api/guilds/862374067129810
 $json_decode  = json_decode($json_get, true);
 
 ?>
+
 <div class="header">
     <div class="child_header_grid">
         <div class="child_header_menu">
@@ -64,9 +65,16 @@ $json_decode  = json_decode($json_get, true);
                         echo '<a href="#" onclick="document.location.href=\'./profil.php\'"><li class="six">Profil</li></a>';
                     }
                 ?>
-                <a href="#" onclick="document.location.href='./<?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} ?>.php';">
-                    <li class="menu_btn_connect"><?php if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'Se Deconnecter';}else{echo 'Se connecter';}?></li>
-                </a>
+                <?php
+                    if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
+                       echo 'Se Deconnecter';
+                    }else {
+                        echo ' <a href="#" onclick="openPopup(\'#myPopup\')" ><li class="menu_btn_connect">Se connecter</li></a>';
+                    }
+                ?>
+                <!--<a href="#" onclick="document.location.href='./<?php /*if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} */?>.php';">
+                    <li class="menu_btn_connect"><?php /*if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'Se Deconnecter';}else{echo 'Se connecter';}*/?></li>
+                </a>-->
             </ul>
         </div>
         <div class="child_header_logo">
@@ -83,7 +91,7 @@ $json_decode  = json_decode($json_get, true);
         </div>
     </div>
 </div>
-
+<?php include 'connect_popup.php';?>
 <div id="notif_copy" class="notif_copy">
     <p>L'ip a été copié dans le presse papier !</p>
 </div>
