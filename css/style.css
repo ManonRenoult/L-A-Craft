@@ -5,6 +5,7 @@
 
 html {
     height: auto;
+    font-size: 1vw;
 }
 
 body {
@@ -14,21 +15,18 @@ body {
     padding: 0;
 }
 
+
 @media screen and (min-width: 950px) {
     .grid {
         height: auto;
         display: grid;
         grid-template-columns: repeat(10, 10%);
-        grid-template-rows: 680px 80% 25%;
         grid-template-areas:
                 "header header header header header header header header header header header header"
                 "body body body body body body body body body body body body"
                 "footer footer footer footer footer footer footer footer footer footer footer footer";
     }
 
-    html {
-        font-size: 1em;
-    }
 }
 
 @media screen and (max-width: 950px) {
@@ -36,15 +34,10 @@ body {
         height: auto;
         display: grid;
         grid-template-columns: repeat(10, 10%);
-        grid-template-rows: 375px 80% 25%;
         grid-template-areas:
                 "header header header header header header header header header header header header"
                 "body body body body body body body body body body body body"
                 "footer footer footer footer footer footer footer footer footer footer footer footer";
-    }
-
-    html {
-        font-size: .5em;
     }
 
     ul > a > li {
@@ -52,24 +45,19 @@ body {
     }
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1500px) {
     .grid {
         height: auto;
         display: grid;
         grid-template-columns: repeat(10, 10%);
-        grid-template-rows: 680px 80% 25%;
         grid-template-areas:
                 "header header header header header header header header header header header header header header"
                 "body body body body body body body body body body body body body body"
                 "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
     }
 
-    html {
-        font-size: .5em;
-    }
-
     ul > a > li {
-        font-size: 1.5em !important;
+        font-size: 1vh;
     }
 }
 
@@ -142,7 +130,7 @@ body {
     padding-bottom: 1%;
     text-align: center;
     background: rgba(24, 26, 27, 0.5);
-    font-size: 2em;
+    font-size: 2vw;
     border-radius: 10px;
 }
 
@@ -152,7 +140,7 @@ body {
     padding-bottom: 1%;
     text-align: center;
     background: rgba(24, 26, 27, 0.5);
-    font-size: 2em;
+    font-size: 2vw;
     border-radius: 10px;
 }
 
@@ -160,7 +148,7 @@ body {
     color: rgb(255, 219, 26);
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 950px) and (max-width: 1499px){
     .child_header_logo {
         width: 100%;
         height: 100%;
@@ -178,9 +166,10 @@ body {
         bottom: 0;
         grid-row: 7 / 8;
         grid-column: 2 / 8;
+        font-size: 1vw !important;
     }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1500px){
     .child_header_logo {
         width: 100%;
         height: 100%;
@@ -198,6 +187,7 @@ body {
         bottom: 0;
         grid-row: 7 / 8;
         grid-column: 2 / 8;
+        font-size: 1vw !important;
     }
 }
 @media screen and (max-width: 950px) {
@@ -212,14 +202,14 @@ body {
         bottom: 0;
         grid-row: 7 / 8;
         grid-column: 13 / 20;
-        font-size: .65em !important;
+        font-size: 1vw !important;
     }
 
     .child_header_player {
         bottom: 0;
         grid-row: 7 / 8;
         grid-column: 2 / 9;
-        font-size: .65em !important;
+        font-size: 1vw !important;
     }
 }
 
@@ -259,7 +249,7 @@ body {
 }
 
 .child_header_menu li {
-    font-size: 2em;
+    font-size: 2vw !important;
     margin-left: .5%;
     margin-right: .5%;
     padding: 1% 1% 1% 1%;
@@ -331,6 +321,7 @@ body {
 }
 
 @media screen and (min-width: 950px) {
+
     .body_grid {
         width: 100%;
         display: inline-grid;
@@ -538,7 +529,7 @@ body {
     position: absolute;
     top: 27px;
     width: 100%;
-    grid-column: 2 / 4;
+    grid-column: 1 / 4;
     grid-row: 1;
 }
 
@@ -551,7 +542,7 @@ body {
 
 .TitleConnect {
     width: 100%;
-    grid-column: 2 / 10;
+    grid-column: 1 / 10;
     grid-row: 1;
 }
 
@@ -561,25 +552,33 @@ body {
 
 .pseudoFormConnect {
     width: 100%;
-    grid-column: 2 / 10;
+    grid-column: 1 / 10;
     grid-row: 2;
 }
 
 .mdpFormConnect {
     width: 100%;
-    grid-column: 2 / 10;
+    grid-column: 1 / 10;
     grid-row: 3;
 }
 
 .saveMeConnect {
     width: 100%;
-    grid-column: 2 / 6;
+    grid-column: 1 / 6;
     grid-row: 4;
 }
 
+.saveMeConnect > input {
+    vertical-align: middle;
+    position: relative;
+
+}
 .saveMeConnect > label {
     font-size: 15px;
     font-weight: 300;
+    vertical-align: middle;
+    position: relative;
+    display: inline-block
 }
 
 .btnConnectForm {
@@ -591,16 +590,18 @@ body {
 
 .txtConnectForm {
     width: 100%;
-    grid-column: 2 / 10;
+    grid-column: 1 / 10;
     grid-row: 5;
 }
 
+
 .btnConnectForm_btn {
+    cursor: pointer;
     background-color: rgba(255, 219, 26, 1);
     border-radius: 50px;
     border: none;
     color: black;
-    padding: 15px 32px;
+    padding: 10%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -609,6 +610,7 @@ body {
     -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    width: 100%;
 }
 
 .btnConnectForm_btn:hover {
@@ -626,7 +628,7 @@ body {
     background-color: white;
     background-size: cover;
     background-position: center;
-    grid-column: 3 / 9;
+    grid-column: 2 / 9;
     grid-row: 2;
     box-shadow: 1px 1px 10px black;
     border-radius: 6px;
@@ -877,7 +879,7 @@ body {
 .body_map {
     grid-area: body;
     background-color: rgb(42, 45, 47);
-    height: 200%;
+    height: 150%;
 }
 
 .body_map_grid {
@@ -885,7 +887,7 @@ body {
     width: 100%;
     display: inline-grid;
     grid-template-columns: repeat(10, 10%);
-    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-rows: 5% auto 5%;
     overflow:hidden;
 }
 
@@ -1326,7 +1328,6 @@ td.text-right {
 .footer {
     background-color: black;
     grid-area: footer;
-    height: 100%;
 }
 
 .footer_grid {

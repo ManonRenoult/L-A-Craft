@@ -18,7 +18,7 @@ session_start();
     <?php include 'menu.php';?>
     <div class="body_map">
         <div class="body_map_grid">
-            <iframe id="thisMap" class="iframe_map" src="https://mapp.l-a-craft.fr/" scrolling="no" frameborder="0" style="height: 100%; width: 100%"></iframe>
+            <iframe id="thisMap" class="iframe_map" src="https://map.l-a-craft.fr/" scrolling="no" frameborder="0" style="height: 100%; width: 100%"></iframe>
         </div>
     <?php include 'footer.php';?>
 </div>

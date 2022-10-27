@@ -61,20 +61,17 @@ $json_decode  = json_decode($json_get, true);
                     <li class="five">Bannis</li>
                 </a>
                 <?php
-                    if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
-                        echo '<a href="#" onclick="document.location.href=\'./profil.php\'"><li class="six">Profil</li></a>';
+                    if(!empty($_SESSION['loginConnect_btn'])){
+                        echo '<a href="#" onclick="document.location.href=\'./profil\'"><li class="six">Profil</li></a>';
                     }
                 ?>
                 <?php
-                    if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){
-                       echo 'Se Deconnecter';
+                    if(!empty($_SESSION['loginConnect_btn'])){
+                       echo '<a href="#" onclick="document.location.href=\'./deconnexion.php\';"><li class="menu_btn_connect">Se Deconnecter</li></a>';
                     }else {
-                        echo ' <a href="#" onclick="openPopup(\'#myPopup\')" ><li class="menu_btn_connect">Se connecter</li></a>';
+                        echo '<a href="#" onclick="openPopup(\'#myPopup\')" ><li class="menu_btn_connect">Se connecter</li></a>';
                     }
                 ?>
-                <!--<a href="#" onclick="document.location.href='./<?php /*if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'deconnexion';}else {echo 'connect';} */?>.php';">
-                    <li class="menu_btn_connect"><?php /*if(!empty($_SESSION['username']) && !empty($_SESSION['mdp'])){echo 'Se Deconnecter';}else{echo 'Se connecter';}*/?></li>
-                </a>-->
             </ul>
         </div>
         <div class="child_header_logo">

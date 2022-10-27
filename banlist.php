@@ -262,8 +262,7 @@ function getRankPlayer($uuid, $bdh){
                 <table class="vote_table_body table-fill">
                     <thead>
                     <tr>
-                        <th class="thPunish" scope="col">Ban ID</th>
-                        <th class="thPunish" scope="col">Pseudo</th>
+                        <th class="thPunish" scope="col">Bannis</th>
                         <th class="thPunish" scope="col">Punisher</th>
                         <th class="thPunish" scope="col">Banni le</th>
                         <th class="thPunish" scope="col">Banni jusqu'au</th>
@@ -298,17 +297,16 @@ function getRankPlayer($uuid, $bdh){
                             foreach ($iterator as $row) {
 
                                 $endban = '<span class="label label-warning">' . date("d/m/Y H:i:s", $row["end"] / 1000) . '</span>';
-                                if ($row['end'] == '-1') {
+                                if ($row['end'] == '-1' || $row['end'] == '0') {
                                     $endban = '<span class="label label-danger">' . $lang['VARIABLE_PERMANENT'] . '</span>';
                                     if ($row['type'] == '5' || $row['type'] == '6') {
-                                        $endban = '<span class="label label-danger">' . $lang['VARIABLE_IPBAN'] . '</span>';
+                                        $endban = '<span class="label label-danger">Permanent</span>';
                                     } elseif ($row['type'] == '7' || $row['type'] == '8') {
                                         $endban = '<span class="label label-danger">' . $lang['VARIABLE_TEMPIPBAN'] . '</span>';
                                     }
                                 }
                                 $thisDay = date("d/m/Y H:i:s", $row["time"] / 1000);
                                 echo '<tr>
-                                                <td class="tdPunish"><a class="a_punish" href="info?type=ban&id=' . $row['id'] . '">' . $row['id'] . '</a></td>
                                                 <td class="tdPunish"><img draggable="false" src="https://mc-heads.net/avatar/' .  username_to_uuid(getName($row['uuid'], $bdh)) . '/30">' . getRankPlayer($row['uuid'], $bdh) .'<a class="a_punish" href="./infoPlayer.php?player=' . getName($row['uuid'], $bdh) . '">' . getName($row['uuid'], $bdh) . '</a></td>
                                                 <td class="tdPunish"><img draggable="false" src="https://mc-heads.net/avatar/' . username_to_uuid(getName($row['punisher'], $bdh)) . '/30"> '. getRankPlayer($row['punisher'], $bdh) .'<a class="a_punish" href="./infoPlayer.php?player=' . getName($row['punisher'], $bdh) . '">' . getName($row['punisher'], $bdh) .'</td>
                                                 <td class="tdPunish">' .  $thisDay  . '</td>
