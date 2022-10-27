@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d41c15e-3fb1-46db-b7bf-cdbdfc1294bf" name="Default Changelist" comment="add gitignore">
-      <change afterPath="$PROJECT_DIR$/connect_popup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/banlist.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connect_popup.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect_popup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infoPlayer.php" beforeDir="false" afterPath="$PROJECT_DIR$/infoPlayer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deconnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/deconnexion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +94,10 @@
       <workItem from="1663793225667" duration="3546000" />
       <workItem from="1663847331593" duration="675000" />
       <workItem from="1666526062117" duration="26590000" />
-      <workItem from="1666638189344" duration="16903000" />
+      <workItem from="1666638189344" duration="16983000" />
+      <workItem from="1666705643009" duration="47000" />
+      <workItem from="1666705703074" duration="6445000" />
+      <workItem from="1666875424539" duration="4574000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1624885355428</created>

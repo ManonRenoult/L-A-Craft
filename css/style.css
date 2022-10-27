@@ -538,7 +538,7 @@ body {
     position: absolute;
     top: 27px;
     width: 100%;
-    grid-column: 2 / 4;
+    grid-column: 1 / 4;
     grid-row: 1;
 }
 
@@ -551,7 +551,7 @@ body {
 
 .TitleConnect {
     width: 100%;
-    grid-column: 2 / 10;
+    grid-column: 1 / 10;
     grid-row: 1;
 }
 
@@ -561,25 +561,33 @@ body {
 
 .pseudoFormConnect {
     width: 100%;
-    grid-column: 2 / 10;
+    grid-column: 1 / 10;
     grid-row: 2;
 }
 
 .mdpFormConnect {
     width: 100%;
-    grid-column: 2 / 10;
+    grid-column: 1 / 10;
     grid-row: 3;
 }
 
 .saveMeConnect {
     width: 100%;
-    grid-column: 2 / 6;
+    grid-column: 1 / 6;
     grid-row: 4;
 }
 
+.saveMeConnect > input {
+    vertical-align: middle;
+    position: relative;
+
+}
 .saveMeConnect > label {
     font-size: 15px;
     font-weight: 300;
+    vertical-align: middle;
+    position: relative;
+    display: inline-block
 }
 
 .btnConnectForm {
@@ -591,16 +599,18 @@ body {
 
 .txtConnectForm {
     width: 100%;
-    grid-column: 2 / 10;
+    grid-column: 1 / 10;
     grid-row: 5;
 }
 
+
 .btnConnectForm_btn {
+    cursor: pointer;
     background-color: rgba(255, 219, 26, 1);
     border-radius: 50px;
     border: none;
     color: black;
-    padding: 15px 32px;
+    padding: 10%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -609,6 +619,7 @@ body {
     -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    width: 100%;
 }
 
 .btnConnectForm_btn:hover {
@@ -626,7 +637,7 @@ body {
     background-color: white;
     background-size: cover;
     background-position: center;
-    grid-column: 3 / 9;
+    grid-column: 2 / 9;
     grid-row: 2;
     box-shadow: 1px 1px 10px black;
     border-radius: 6px;
