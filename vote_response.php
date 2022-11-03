@@ -14,7 +14,7 @@ if ($_SERVER['REMOTE_ADDR'] == $lsm_ip) {
             error_log(date('[Y-m-d H:i] ') . "[VOTE OK] [player]=$player [ip]=$user_ip" . PHP_EOL, 3, LOG_FILE);
         }
         try {
-            $bdh = new PDO('mysql:host=frhb62360ds.ikexpress.com;dbname=s1_IsayevDB', 'u1_PlNrhoxlDp', 'DlJor==WI5YEM84TYgzgsOew');
+            $bdh = new PDO('mysql:host=127.0.0.1;dbname=s1_IsayevDB', 'u1_B8cE4o9sqw', 'j7A9dPE.esjl=eTGpPg@oxnn');
             $bdh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             echo "Erreur : " . $e->getMessage();

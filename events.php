@@ -5,7 +5,7 @@
     <meta name="description" content="L-A-Craft est un serveur dans lequel vous pourrez avoir votre métier et gagner votre argent pour vous acheter un terrain, des items, services et bien plus !">
     <meta name="robots" content="index,map,voter,wiki,status">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.0">
     <link rel="icon" type="image/png" href="https://l-a-craft.fr/images/Litle-logoLADiscordSF.png">
     <title>Events . L-A Craft</title>
 </head>

@@ -65,7 +65,7 @@ function whatNum($num){
     <meta name="description" content="L-A-Craft est un serveur dans lequel vous pourrez avoir votre métier et gagner votre argent pour vous acheter un terrain, des items, services et bien plus !">
     <meta name="robots" content="index,map,voter,wiki,status">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
     <title>Vote . L-A Craft</title>
     <link rel="icon" type="image/png" href="https://l-a-craft.fr/images/Litle-logoLADiscordSF.png">
@@ -79,7 +79,7 @@ function whatNum($num){
                 <div class="vote_grid_btn">
                     <div class="vote_allBtn">
                         <?php
-                        if (!empty($_SESSION['username']) && !empty($_SESSION['mdp'])) {
+                        if (!empty($_SESSION['loginConnect_btn'])) {
                             $nbHours = getTimeLastVote($bdh, 2);
                             $nbVote = getNbVote($bdh);
                             $timeLastVote = (int)$nbHours;
@@ -89,7 +89,7 @@ function whatNum($num){
                                 echo '<button type="button" class="vote_btnVoterWait">Vous devez attendre 3H entre chaque vote !</button>';
                             }
                         } else {
-                            echo '<a href="#" onclick="document.location.href=\'./connexion?connectOption=1\'"> <button type="button" role="button" class="vote_btnVoter">Veuillez vous connecter pour voter</button></a>';
+                            echo '<a href="#"> <button type="button" role="button" class="vote_btnVoter">Veuillez vous connecter pour voter</button></a>';
                         }
                         ?>
                     </div>
