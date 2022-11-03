@@ -248,7 +248,7 @@ function getRankPlayer($uuid, $bdh){
     <meta name="description" content="L-A-Craft est un serveur dans lequel vous pourrez avoir votre métier et gagner votre argent pour vous acheter un terrain, des items, services et bien plus !">
     <meta name="robots" content="index,map,voter,wiki,status">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
     <link rel="icon" type="image/png" href="https://l-a-craft.fr/images/Litle-logoLADiscordSF.png">
     <title>Sanctions . L-A Craft</title>
@@ -272,7 +272,7 @@ function getRankPlayer($uuid, $bdh){
                     <tbody>
                     <?php
                     try {
-                        $total = $bdh->query('SELECT COUNT(*) FROM nm_punishments WHERE type in (1,2,3,4,5,6,7,8)');
+                        $total = $bdh->query('SELECT COUNT(*) FROM nm_punishments WHERE type in (1,2,3,4,5,6,7,8) AND active != 1');
                         $total = $total->fetchColumn();
                         $limit = 10;
                         $pages = ceil($total / $limit);
@@ -287,7 +287,7 @@ function getRankPlayer($uuid, $bdh){
                         $end = min(($offset + $limit), $total);
                         $prevlink = ($page > 1) ? '<a href="bans?p=' . ($page - 1) . '" title=' . $lang['MESSAGE_PREVIOUSPAGE'] . '><i class="material-icons-paging">keyboard_arrow_left</i></a>' : '';
                         $nextlink = ($page < $pages) ? '<a href="bans?p=' . ($page + 1) . '" title=' . $lang['MESSAGE_NEXTPAGE'] . '><i class="material-icons-paging">keyboard_arrow_right</i></a>' : '';
-                        $stmt = $bdh->prepare('SELECT * FROM nm_punishments WHERE type in (1,2,3,4,5,6,7,8) ORDER BY id DESC LIMIT ? OFFSET ?');
+                        $stmt = $bdh->prepare('SELECT * FROM nm_punishments WHERE type in (1,2,3,4,5,6,7,8) AND active = 1 ORDER BY id DESC LIMIT ? OFFSET ?');
                         $stmt->bindParam(1, $limit, PDO::PARAM_INT);
                         $stmt->bindParam(2, $offset, PDO::PARAM_INT);
                         $stmt->execute();
