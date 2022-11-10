@@ -105,14 +105,14 @@ if (isset($_POST['mdpConnect_btn'], $_POST['loginConnect_btn'])) {
                 <label for="loginConnect_btn">Login</label>
                 <div class="new-chat-window">
                     <i class="fa fa-user-circle-o"></i>
-                    <input type="text" class="new-chat-window-input" placeholder="Pseudo" name="loginConnect_btn" id="loginConnect_btn"/>
+                    <input type="text" class="new-chat-window-input" placeholder="Pseudo" name="loginConnect_btn" id="loginConnect_btn" disabled/>
                 </div>
             </div>
             <div class="mdpFormConnect">
                 <label for="mdpConnect_btn">Mot de passe</label>
                 <div class="new-chat-window">
                     <i class="fa fa-unlock-alt"></i>
-                    <input type="password" class="new-chat-window-input" placeholder="*************" name="mdpConnect_btn" id="mdpConnect_btn"/>
+                    <input type="password" class="new-chat-window-input" placeholder="*************" name="mdpConnect_btn" id="mdpConnect_btn" disabled/>
                 </div>
             </div>
             <div class="saveMeConnect">
@@ -120,7 +120,7 @@ if (isset($_POST['mdpConnect_btn'], $_POST['loginConnect_btn'])) {
                 <label for="saveMeConnect_btn">Se souvenir de moi</label>-->
             </div>
             <div class="btnConnectForm">
-                <button type="submit" class="g-recaptcha btnConnectForm_btn" data-sitekey="6Le-tlMgAAAAAMYR5njZLeDELUdd27EMzLSKqnEB" data-callback='onSubmit'>Se connecter</button>
+                <button type="submit" class="g-recaptcha btnConnectForm_btn" data-sitekey="6Le-tlMgAAAAAMYR5njZLeDELUdd27EMzLSKqnEB" data-callback='onSubmit' disabled>Se connecter</button>
             </div>
             <div class="txtConnectForm">
                 <p>Le Nom d'utilisateur dois être celui de votre compte Minecraft</p>

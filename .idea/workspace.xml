@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7d41c15e-3fb1-46db-b7bf-cdbdfc1294bf" name="Default Changelist" comment="add gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/banlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/banlist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commandes.php" beforeDir="false" afterPath="$PROJECT_DIR$/commandes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events.php" beforeDir="false" afterPath="$PROJECT_DIR$/events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infoPlayer.php" beforeDir="false" afterPath="$PROJECT_DIR$/infoPlayer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.php" beforeDir="false" afterPath="$PROJECT_DIR$/map.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reglement.php" beforeDir="false" afterPath="$PROJECT_DIR$/reglement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/status.php" beforeDir="false" afterPath="$PROJECT_DIR$/status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vote_response.php" beforeDir="false" afterPath="$PROJECT_DIR$/vote_response.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voter.php" beforeDir="false" afterPath="$PROJECT_DIR$/voter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wiki.php" beforeDir="false" afterPath="$PROJECT_DIR$/wiki.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connect_popup.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect_popup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +96,8 @@
       <workItem from="1666904173946" duration="1360000" />
       <workItem from="1666974560457" duration="567000" />
       <workItem from="1667170768763" duration="420000" />
-      <workItem from="1667487324852" duration="357000" />
+      <workItem from="1667487324852" duration="551000" />
+      <workItem from="1668088811214" duration="35000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <created>1624885355428</created>
