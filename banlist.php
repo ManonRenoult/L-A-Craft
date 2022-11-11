@@ -307,7 +307,15 @@ function getRankPlayer($uuid, $bdh){
                                 }
                                 $thisDay = date("d/m/Y H:i:s", $row["time"] / 1000);
                                 echo '<tr>
-                                                <td class="tdPunish"><img draggable="false" src="https://mc-heads.net/avatar/' .  username_to_uuid(getName($row['uuid'], $bdh)) . '/30">' . getRankPlayer($row['uuid'], $bdh) .'<a class="a_punish" href="./infoPlayer.php?player=' . getName($row['uuid'], $bdh) . '">' . getName($row['uuid'], $bdh) . '</a></td>
+                                                <td class="tdPunish"><img draggable="false" src="https://mc-heads.net/avatar/' .  username_to_uuid(getName($row['uuid'], $bdh)) . '/30"> <div> 
+                            <span style="color:black">[</span>
+                            <span style="color:red ">B</span>
+                            <span style="color:red">a</span>
+                            <span style="color:red">n</span>
+                            <span style="color:red">n</span>
+                            <span style="color:red">i</span>
+                            <span style="color:black">]</span>
+                </div>  <a class="a_punish" href="./infoPlayer.php?player=' . getName($row['uuid'], $bdh) . '">' . getName($row['uuid'], $bdh) . '</a></td>
                                                 <td class="tdPunish"><img draggable="false" src="https://mc-heads.net/avatar/' . username_to_uuid(getName($row['punisher'], $bdh)) . '/30"> '. getRankPlayer($row['punisher'], $bdh) .'<a class="a_punish" href="./infoPlayer.php?player=' . getName($row['punisher'], $bdh) . '">' . getName($row['punisher'], $bdh) .'</td>
                                                 <td class="tdPunish">' .  $thisDay  . '</td>
                                                 <td class="tdPunish">' . $endban . '</td>
